@@ -24,7 +24,6 @@
     --date-txt: #6e6e73;
 }
 
-
 @media (prefers-color-scheme: dark) {
     :root {
         --white-opacity-8: rgba(0, 0, 0, .8);
