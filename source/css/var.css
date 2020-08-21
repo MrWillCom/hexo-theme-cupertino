@@ -24,7 +24,7 @@
     --date-txt: #6e6e73;
 }
 
-/*
+
 @media (prefers-color-scheme: dark) {
     :root {
         --white-opacity-8: rgba(0, 0, 0, .8);
@@ -47,5 +47,6 @@
         --body-bg: #101010;
         --card-bg: #181818;
         --card-border: #1c1c1d;
+        --date-txt: #6e6e73;
     }
 }
