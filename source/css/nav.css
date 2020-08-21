@@ -29,22 +29,13 @@ nav .title {
     font-size: 20px;
     font-weight: normal;
     line-height: 48px;
-    min-width: 256px;
-    max-width: calc(100vw - 32px);
     color: var(--black-2)!important;
 }
 
 nav .nav-items {
-    width: calc(100vw - 32px - 256px);
     height: 48px;
     float: right;
-	display:flex;
-}
-
-@media screen and (min-width: 800px) {
-    nav .nav-items {
-        width: calc(800px - 32px - 256px);
-    }
+    text-align: right;
 }
 
 nav .nav-item {
@@ -53,4 +44,5 @@ nav .nav-item {
     font-size: 16px;
     height: 48px;
     line-height: 48px;
+    padding: 0 16px;
 }
