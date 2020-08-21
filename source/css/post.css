@@ -1,0 +1,38 @@
+body {
+    background-color: var(--white);
+}
+
+.post {
+    margin: 128px 0;
+}
+
+.time {
+    color: var(--grey);
+    font-weight: 600;
+}
+
+.title {
+    font-size: 48px;
+    margin-top: 16px;
+}
+
+p, h1, h2, h3, h4, h5, h6, .time, figure, .divider, .container, hr {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+}
+
+.divider, hr {
+    border: none;
+    border-top: 1px solid var(--white-1);
+    margin: 32px auto;
+}
+
+.divider {
+    margin: 64px auto;
+}
+
+img {
+    width: 100%;
+}

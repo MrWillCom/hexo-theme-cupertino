@@ -1,0 +1,6 @@
+nav:
+  title: Blog
+  items:
+    Archives: /archives
+    About: /about
+rss: /atom.xml

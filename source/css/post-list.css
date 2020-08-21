@@ -1,0 +1,43 @@
+.post-list-item {
+    background-color: var(--card-bg);
+    padding: 18px;
+    margin-bottom: 21px;
+    border-bottom: 1px solid var(--card-border);
+    transition: all 200ms ease;
+}
+
+.post-list-item:hover {
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.04), -10px 0 20px 0px rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid transparent;
+}
+
+.post-list-item .title a, .post-list-item .title a:hover, .post-list-item .title a:focus, .post-list-item .title a:active, .post-list-item .title a:link, .post-list-item .title a:visited {
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--black-2);
+    text-decoration: none;
+}
+
+.post-list-item .content {
+    font-size: 17px;
+    color: var(--black);
+}
+
+.post-list-item .time{
+    font-size: 12px;
+}
+
+.post-list-item .read-more {
+    text-align: right;
+}
+
+.post-list-item .read-more button {
+    font-size: 12px;
+    outline: none;
+    border: none;
+    background-color: var(--blue);
+    color: var(--white-txt-on-blue-bg);
+    padding: 6px 12px;
+    border-radius: 32px;
+    cursor: pointer;
+}

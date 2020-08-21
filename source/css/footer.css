@@ -1,0 +1,11 @@
+footer{
+    background-color: var(--white);
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+}
+
+.inner {
+    max-width: 800px;
+    margin: auto;
+    padding: 32px 16px;
+}

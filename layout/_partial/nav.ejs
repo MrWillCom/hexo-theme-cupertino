@@ -1,0 +1,10 @@
+<nav>
+    <div class="inner">
+        <a class="title" href="/"><%= theme.nav.title %></a>
+        <div class="nav-items">
+            <% for (const i in theme.nav.items) { %>
+            <a class="nav-item" href="<%- url_for(theme.nav.items[i]) %>"><%= i %></a>
+            <% } %>
+        </div>
+    </div>
+</nav>

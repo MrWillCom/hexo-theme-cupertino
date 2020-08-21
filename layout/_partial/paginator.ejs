@@ -1,0 +1,8 @@
+<% if (page.total > 1){ %>
+<footer class="paginator">
+    <%- paginator({
+        prev_text: "&laquo;" + __('prev'),
+        next_text: __('next') + "&raquo;"
+      }) %>
+</footer>
+<% } %>
