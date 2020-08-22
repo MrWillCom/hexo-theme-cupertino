@@ -1,4 +1,4 @@
-footer{
+footer {
     background-color: var(--white);
     width: 100%;
     border-top: 1px solid var(--border-color);
@@ -8,4 +8,35 @@ footer{
     max-width: 800px;
     margin: auto;
     padding: 32px 16px;
+}
+
+footer .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+    footer .links {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    footer .links {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer .group {
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+footer .title {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+footer .item {
+    display: block;
 }

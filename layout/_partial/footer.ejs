@@ -1,6 +1,16 @@
 <footer>
     <div class="inner">
-        &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+        <div class="links">
+            <% for (const i in theme.footer) { %>
+            <div class="group">
+                <h4 class="title"><%= i %></h4>
+                <% for (const n in theme.footer[i]) { %>
+                <a href="<%- theme.footer[i][n] %>" class="item" target="_blank"><%= n %></a>
+                <% } %>
+            </div>
+            <% } %>
+        </div>
+        &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br />
         <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
 </footer>

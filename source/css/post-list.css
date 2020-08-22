@@ -1,3 +1,15 @@
+.post-list {
+    user-select: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+    .post-list {
+        display: initial;
+    }
+}
+
 .post-list-item {
     background-color: var(--card-bg);
     padding: 18px;
@@ -9,6 +21,14 @@
 .post-list-item:hover {
     box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.04), -10px 0 20px 0px rgba(0, 0, 0, 0.04);
     border-bottom: 1px solid transparent;
+}
+
+.post-list-item:nth-child(2n-1) {
+    margin-right: 8px;
+}
+
+.post-list-item:nth-child(2n) {
+    margin-left: 8px;
 }
 
 .post-list-item .title a, .post-list-item .title a:hover, .post-list-item .title a:focus, .post-list-item .title a:active, .post-list-item .title a:link, .post-list-item .title a:visited {
@@ -23,7 +43,13 @@
     color: var(--black);
 }
 
-.post-list-item .time{
+@media screen and (max-width: 800px) {
+    .post-list-item .content {
+        font-size: 12px;
+    }
+}
+
+.post-list-item .time {
     font-size: 12px;
 }
 

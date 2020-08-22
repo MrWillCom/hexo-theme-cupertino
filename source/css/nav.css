@@ -1,4 +1,5 @@
 nav {
+    height: 48px;
     background-color: var(--white-opacity-8);
     border-bottom: 1px solid var(--border-color);
     user-select: none;

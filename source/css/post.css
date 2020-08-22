@@ -6,17 +6,17 @@ body {
     margin: 128px 0;
 }
 
-.time {
+.meta .time {
     color: var(--grey);
     font-weight: 600;
 }
 
-.title {
+.meta .title {
     font-size: 48px;
     margin-top: 16px;
 }
 
-p, h1, h2, h3, h4, h5, h6, .time, figure, .divider, .container, hr {
+.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .time, .content figure, .divider, .container, hr, .meta .title {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;

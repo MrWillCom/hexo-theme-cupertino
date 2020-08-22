@@ -8,59 +8,61 @@
     </div>
     <% } %>
 
-    <% page.posts.each(function (post) { %>
-    <article class="post-list-item">
-        <div class="title">
-            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
-        </div>
-        <div class="content">
-            <%- post.excerpt %>
-        </div>
-        <div class="time">
-            <% if (post.date.month() == 0) { %>
-            <span>January</span>
-            <% } %>
-            <% if (post.date.month() == 1) { %>
-            <span>February</span>
-            <% } %>
-            <% if (post.date.month() == 2) { %>
-            <span>March</span>
-            <% } %>
-            <% if (post.date.month() == 3) { %>
-            <span>April</span>
-            <% } %>
-            <% if (post.date.month() == 4) { %>
-            <span>May</span>
-            <% } %>
-            <% if (post.date.month() == 5) { %>
-            <span>June</span>
-            <% } %>
-            <% if (post.date.month() == 6) { %>
-            <span>July</span>
-            <% } %>
-            <% if (post.date.month() == 7) { %>
-            <span>August</span>
-            <% } %>
-            <% if (post.date.month() == 8) { %>
-            <span>September</span>
-            <% } %>
-            <% if (post.date.month() == 9) { %>
-            <span>October</span>
-            <% } %>
-            <% if (post.date.month() == 10) { %>
-            <span>November</span>
-            <% } %>
-            <% if (post.date.month() == 11) { %>
-            <span>December</span>
-            <% } %>
-            <span><%- post.date.date() %>,</span>
-            <span><%- post.date.year() %></span>
-        </div>
-        <div class="read-more">
-            <button onclick="window.open('<%- url_for(post.path) %>')"><%= __('read_more') %></button>
-        </div>
-    </article>
-    <% }) %>
+    <div class="post-list">
+        <% page.posts.each(function (post) { %>
+        <article class="post-list-item">
+            <div class="title">
+                <a href="<%- url_for(post.path) %>" target="_blank"><%= post.title %></a>
+            </div>
+            <div class="content">
+                <%- post.excerpt %>
+            </div>
+            <div class="time">
+                <% if (post.date.month() == 0) { %>
+                <span>January</span>
+                <% } %>
+                <% if (post.date.month() == 1) { %>
+                <span>February</span>
+                <% } %>
+                <% if (post.date.month() == 2) { %>
+                <span>March</span>
+                <% } %>
+                <% if (post.date.month() == 3) { %>
+                <span>April</span>
+                <% } %>
+                <% if (post.date.month() == 4) { %>
+                <span>May</span>
+                <% } %>
+                <% if (post.date.month() == 5) { %>
+                <span>June</span>
+                <% } %>
+                <% if (post.date.month() == 6) { %>
+                <span>July</span>
+                <% } %>
+                <% if (post.date.month() == 7) { %>
+                <span>August</span>
+                <% } %>
+                <% if (post.date.month() == 8) { %>
+                <span>September</span>
+                <% } %>
+                <% if (post.date.month() == 9) { %>
+                <span>October</span>
+                <% } %>
+                <% if (post.date.month() == 10) { %>
+                <span>November</span>
+                <% } %>
+                <% if (post.date.month() == 11) { %>
+                <span>December</span>
+                <% } %>
+                <span><%- post.date.date() %>,</span>
+                <span><%- post.date.year() %></span>
+            </div>
+            <div class="read-more">
+                <button onclick="window.open('<%- url_for(post.path) %>')"><%= __('read_more') %></button>
+            </div>
+        </article>
+        <% }) %>
+    </div>
 
     <%- partial('_partial/paginator') %>
 </div>
