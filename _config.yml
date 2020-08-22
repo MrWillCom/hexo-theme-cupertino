@@ -1,8 +1,13 @@
+# REMEMBER TO EDIT THIS BEFORE DEPLOY!!!
+
 nav:
   title: Blog
   items:
     Archives: /archives
     About: /about
+    GitHub: https://github.com/MrWillCom
+    Patreon: https://www.patreon.com/MrWillCom
+    CodePen: https://codepen.io/mrwillcom
 rss: /atom.xml
 
 footer:
@@ -10,6 +15,7 @@ footer:
     Blog: /
     Archives: /archives
     About: /about
+    RSS: /atom.xml
   Projects:
     Transmister: https://github.com/transmister
     Theme Cupertino: https://github.com/MrWillCom/hexo-theme-cupertino
@@ -17,4 +23,10 @@ footer:
   Me:
     GitHub: https://github.com/MrWillCom
     Patreon: https://www.patreon.com/MrWillCom
+    CodePen: https://codepen.io/mrwillcom
     Email: mailto:mr.will.com@outlook.com
+
+license: CC BY-NC 4.0
+license_link: https://creativecommons.org/licenses/by-nc/4.0
+
+# REMEMBER TO EDIT THIS BEFORE DEPLOY!!!

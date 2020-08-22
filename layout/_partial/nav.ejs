@@ -3,7 +3,15 @@
         <a class="title" href="/"><%= theme.nav.title %></a>
         <div class="nav-items">
             <% for (const i in theme.nav.items) { %>
+            <% if (i == 'GitHub' || i == 'github' || i == 'gh') { %>
+            <a class="nav-item nav-item-github nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank">&nbsp;</a>
+            <% } else if (i == 'Patreon' || i == 'patreon') { %>
+            <a class="nav-item nav-item-patreon nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank">&nbsp;</a>
+            <% } else if (i == 'CodePen' || i == 'codepen') { %>
+            <a class="nav-item nav-item-codepen nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank">&nbsp;</a>
+            <% } else { %>
             <a class="nav-item" href="<%- url_for(theme.nav.items[i]) %>"><%= i %></a>
+            <% } %>
             <% } %>
         </div>
     </div>

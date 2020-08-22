@@ -2,6 +2,7 @@ footer {
     background-color: var(--white);
     width: 100%;
     border-top: 1px solid var(--border-color);
+    user-select: none;
 }
 
 .inner {

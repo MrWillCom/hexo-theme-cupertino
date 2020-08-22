@@ -7,6 +7,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
+    -webkit-backdrop-filter: var(--blur);
     backdrop-filter: var(--blur);
 }
 
@@ -40,10 +41,44 @@ nav .nav-items {
 }
 
 nav .nav-item {
+    display: inline-block;
     text-align: center;
     flex: 1;
     font-size: 16px;
     height: 48px;
     line-height: 48px;
     padding: 0 16px;
+}
+
+nav .nav-item-icon {
+    width: 32px;
+    height: 48px;
+    background-position: center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+nav .nav-item-github {
+    background-image: url(/theme-img/github-mark-dark.png);
+}
+
+nav .nav-item-patreon {
+    background-image: url(/theme-img/patreon-logo-black.png);
+}
+
+nav .nav-item-codepen {
+    background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png);
+}
+
+@media (prefers-color-scheme: dark) {
+    nav .nav-item-github {
+        background-image: url(/theme-img/github-mark-light.png);
+    }
+    nav .nav-item-patreon {
+        background-image: url(/theme-img/patreon-logo-white.png);
+    }
+    nav .nav-item-codepen {
+        background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png);
+    }
 }

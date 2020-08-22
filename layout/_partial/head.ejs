@@ -8,7 +8,7 @@
   var title = page.title;
 
   if (is_archive()){
-    title = __('archive_a');
+    title = __('archive');
 
     if (is_month()){
       title += ': ' + page.year + '/' + page.month;
@@ -24,6 +24,7 @@
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
   <%- css('css/var') %>
   <%- css('css/main') %>
+  <%- css('css/typography') %>
   <%- css('css/nav') %>
   <%- css('css/footer') %>
   <%- css('css/post-list') %>

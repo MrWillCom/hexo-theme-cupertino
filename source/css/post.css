@@ -16,23 +16,24 @@ body {
     margin-top: 16px;
 }
 
-.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .time, .content figure, .divider, .container, hr, .meta .title {
+.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .time, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .about {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 16px;
 }
 
-.divider, hr {
-    border: none;
-    border-top: 1px solid var(--white-1);
-    margin: 32px auto;
+.content blockquote {
+    max-width: calc(800px - 16px * 2);
+    padding: 0 8px;
 }
 
-.divider {
+.about {
+    background-color: var(--body-bg);
+    padding: 16px;
     margin: 64px auto;
 }
 
-img {
-    width: 100%;
+.about h1 {
+    margin: 0;
 }
