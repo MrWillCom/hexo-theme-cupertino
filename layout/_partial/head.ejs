@@ -22,6 +22,10 @@
   }
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <% if (theme.favicon){ %>
+    <%- favicon_tag(theme.favicon) %>
+  <% } %>
+
   <%- css('css/var') %>
   <%- css('css/main') %>
   <%- css('css/typography') %>

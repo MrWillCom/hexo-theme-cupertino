@@ -1,5 +1,7 @@
 # REMEMBER TO EDIT THIS BEFORE DEPLOY!!!
 
+favicon: /favicon.png
+
 nav:
   title: Blog
   items:
