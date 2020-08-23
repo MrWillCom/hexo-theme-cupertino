@@ -6,6 +6,7 @@ nav:
   title: Blog
   items:
     Archives: /archives
+    Projects: /projects
     About: /about
     GitHub: https://github.com/MrWillCom
     Patreon: https://www.patreon.com/MrWillCom
@@ -16,10 +17,12 @@ footer:
   Blog:
     Blog: /
     Archives: /archives
+    Projects: /projects
     About: /about
     RSS: /atom.xml
   Projects:
     Transmister: https://github.com/transmister
+    CSS&JS Windows UWP XAML Controls: https://github.com/MrWillCom/css-and-js-windows-uwp-xaml-controls
     Theme Cupertino: https://github.com/MrWillCom/hexo-theme-cupertino
     GitHub Dark Mode: https://github.com/MrWillCom/github-dark-mode
   Me:

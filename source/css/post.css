@@ -6,7 +6,7 @@ body {
     margin: 128px 0;
 }
 
-.meta .time {
+.meta .date {
     color: var(--grey);
     font-weight: 600;
 }
@@ -16,7 +16,7 @@ body {
     margin-top: 16px;
 }
 
-.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .time, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .about {
+.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .date, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .about {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;

@@ -24,3 +24,7 @@ a:visited {
     margin: auto;
     padding: 0 16px;
 }
+
+.theme-command {
+    display: none;
+}
