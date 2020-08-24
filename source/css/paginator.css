@@ -1,0 +1,26 @@
+.paginator {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+}
+
+.paginator>* {
+    border-radius: 32px;
+    padding: 6px 12px;
+    margin: 0 2px;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+.paginator>*:hover {
+    background-color: var(--card-bg);
+}
+
+.paginator>*:active {
+    background-color: var(--card-border);
+}
+
+.paginator .current:hover {
+    background-color: transparent;
+}

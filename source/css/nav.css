@@ -111,6 +111,8 @@ nav .nav-item-codepen {
     nav .title {
         pointer-events: none;
         display: inline-block;
+        transition: all 0.2s;
+        transition-delay: 0.6s;
     }
     nav .nav-arrow {
         display: inline-block;
@@ -154,6 +156,11 @@ nav .nav-item-codepen {
     nav .nav-item-icon {
         float: left;
         display: inline-block;
+    }
+    nav.open .title {
+        transform: translate(0, 8px);
+        opacity: 0;
+        transition-delay: 0s;
     }
     nav.open .nav-arrow::before, nav.open .nav-arrow::after {
         top: 16px;
