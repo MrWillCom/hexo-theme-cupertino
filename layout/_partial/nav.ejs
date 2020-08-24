@@ -1,7 +1,9 @@
-<nav>
+<nav id="theme-nav">
     <div class="inner">
         <a class="title" href="/"><%= theme.nav.title %></a>
+        <div class="nav-arrow"></div>
         <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/"><%= __('home') %></a>
             <% for (const i in theme.nav.items) { %>
             <% if (i == 'GitHub' || i == 'github' || i == 'gh') { %>
             <a class="nav-item nav-item-github nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank">&nbsp;</a>

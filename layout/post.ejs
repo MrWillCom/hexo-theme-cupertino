@@ -1,5 +1,6 @@
 <article class="post">
     <div class="meta">
+        <% if (!page.no_date) { %>
         <div class="date" id="date">
             <% if (page.date.month() == 0) { %>
             <span>January</span>
@@ -40,6 +41,7 @@
             <span><%- page.date.date() %>,</span>
             <span><%- page.date.year() %></span>
         </div>
+        <% } %>
 
         <h2 class="title"><%= page.title %></h2>
     </div>
@@ -52,6 +54,7 @@
 
     <div class="about">
         <h1><%= __('about_this_post') %></h1>
-        <p><%= __('this_post_is_written_by') %> <%- config.author %>, <%= __('licensed_under') %> <a href="<%- theme.license_link %>"><%- theme.license %></a>.</p>
+        <p><%= __('this_post_is_written_by') %> <%- config.author %>, <%= __('licensed_under') %> <a
+                href="<%- theme.license_link %>"><%- theme.license %></a>.</p>
     </div>
 </article>

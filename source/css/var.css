@@ -22,6 +22,8 @@
     --card-bg: #fff;
     --card-border: #d2d2d7;
     --date-txt: #6e6e73;
+
+    --nav-arrow: #1d1d1f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,5 +49,7 @@
         --card-bg: #181818;
         --card-border: #1c1c1d;
         --date-txt: #6e6e73;
+
+        --nav-arrow: #e5e5ee;
     }
 }

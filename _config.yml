@@ -11,12 +11,13 @@ nav:
   items:
     # these items will display as a link
     Archives: /archives
+    Friends: /friends
     Projects: /projects
     About: /about
     # these will be automatically be an icon
     GitHub: https://github.com/MrWillCom
-    Patreon: https://www.patreon.com/MrWillCom
     CodePen: https://codepen.io/mrwillcom
+    Patreon: https://www.patreon.com/MrWillCom
 
 # footer items
 footer:
@@ -25,6 +26,7 @@ footer:
     # the items after the title, display as links
     Blog: /
     Archives: /archives
+    Friends: /friends
     Projects: /projects
     About: /about
     RSS: /atom.xml
@@ -39,8 +41,8 @@ footer:
   Me:
     # items
     GitHub: https://github.com/MrWillCom
-    Patreon: https://www.patreon.com/MrWillCom
     CodePen: https://codepen.io/mrwillcom
+    Patreon: https://www.patreon.com/MrWillCom
     Email: mailto:mr.will.com@outlook.com
 
 # the license your posts under
