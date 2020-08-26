@@ -21,7 +21,7 @@
     title = __('tag') + ': ' + page.tag;
   }
   %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
   <% if (theme.favicon){ %>
     <%- favicon_tag(theme.favicon) %>
   <% } %>
