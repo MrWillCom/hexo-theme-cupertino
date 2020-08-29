@@ -107,3 +107,8 @@
     padding: 6px 12px;
     border-radius: 32px;
 }
+
+.block-large {
+    max-width: 1000px;
+    margin: auto;
+}

@@ -16,11 +16,20 @@ body {
     margin-top: 16px;
 }
 
-.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .date, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .about {
+.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .date, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .content table, .about {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 16px;
+}
+
+.content .highlight {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.content table {
+    display: block;
 }
 
 .content blockquote {
