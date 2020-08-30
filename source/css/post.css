@@ -32,6 +32,11 @@ body {
     display: block;
 }
 
+.content video {
+    max-width: 100%;
+    padding: 0;
+}
+
 .content blockquote {
     max-width: calc(800px - 16px * 2);
     padding: 0 8px;
