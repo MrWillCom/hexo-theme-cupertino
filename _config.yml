@@ -3,6 +3,9 @@
 # the path to your blog's icon:
 favicon: /favicon.png
 
+# the path to manifest.json
+manifest: /manifest.json
+
 # navigation config
 nav:
   # the title displays in the upper left corner which won't change

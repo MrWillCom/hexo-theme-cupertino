@@ -25,6 +25,9 @@
   <% if (theme.favicon){ %>
     <%- favicon_tag(theme.favicon) %>
   <% } %>
+  <% if (theme.manifest) { %>
+    <link rel='manifest' href='<%= theme.manifest %>'>
+  <% } %>
 
   <%- css('css/var') %>
   <%- css('css/main') %>
