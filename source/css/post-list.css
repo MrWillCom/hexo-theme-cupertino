@@ -30,6 +30,13 @@
     margin-left: 8px;
 }
 
+@media screen and (max-width: 600px) {
+    .post-list-item:nth-child(n) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 .post-list-item .cover-img, .post-list-item .cover-img img {
     width: 100%;
 }
