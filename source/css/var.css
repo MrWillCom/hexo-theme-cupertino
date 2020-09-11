@@ -17,9 +17,10 @@
     --blue: #0071e3;
     --white-txt-on-blue-bg: #fff;
 
-    --body-bg: #f5f5f7;
+    --body-bg: #fbfbfd;
     --card-bg: #fff;
-    --card-border: #d2d2d7;
+    --card-title: #1d1d1f;
+    --card-time: #6e6e73;
     --date-txt: #6e6e73;
 
     --nav-arrow: #1d1d1f;
@@ -46,7 +47,8 @@
 
         --body-bg: #101010;
         --card-bg: #181818;
-        --card-border: #1c1c1d;
+        --card-title: #cfcfda;
+        --card-time: #6e6e73;
         --date-txt: #6e6e73;
 
         --nav-arrow: #e5e5ee;

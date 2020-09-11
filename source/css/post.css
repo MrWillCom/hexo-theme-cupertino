@@ -43,6 +43,7 @@ body {
 }
 
 .about {
+    border-radius: 7px;
     background-color: var(--body-bg);
     padding: 16px;
     margin: 64px auto;

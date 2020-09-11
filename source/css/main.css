@@ -20,9 +20,18 @@ a:visited {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 980px;
     margin: auto;
     padding: 0 16px;
+}
+
+.section-title {
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 700;
+    letter-spacing: .004em;
+    margin-bottom: 24px;
+    color: var(--card-title);
 }
 
 .theme-command {

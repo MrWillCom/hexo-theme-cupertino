@@ -6,6 +6,9 @@ favicon: /favicon.png
 # the path to manifest.json
 manifest: /manifest.json
 
+# show excerpt on post list
+show_excerpt: false
+
 # navigation config
 nav:
   # the title displays in the upper left corner which won't change
