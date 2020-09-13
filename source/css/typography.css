@@ -12,6 +12,25 @@ img {
     width: 100%;
 }
 
+::marker {
+    color: var(--black-4);
+}
+
 blockquote {
-    border-left: 4px solid var(--white-1);
+    border-left: 4px solid var(--white-2);
+}
+
+pre, code {
+    font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+}
+
+pre {
+    font-size: 12px;
+}
+
+code {
+    font-size: 12px;
+    background-color: var(--white-1);
+    padding: 2px 4px;
+    border-radius: 4px;
 }

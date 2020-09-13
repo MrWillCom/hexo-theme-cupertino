@@ -7,16 +7,18 @@
         </div>
     </div>
 
-    <h2 class="section-title">Latest Posts</h2>
+    <h2 class="section-title"><%= __('latest_posts') %></h2>
     <% } %>
 
     <div class="post-list">
         <% page.posts.each(function (post) { %>
         <article class="post-list-item">
             <a href="<%- url_for(post.path) %>">
+                <% if (post.cover_image) { %>
                 <div class="cover-img">
                     <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
                 </div>
+                <% } %>
                 <div class="content">
                     <div class="title">
                         <%= post.title %>

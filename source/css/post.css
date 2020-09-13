@@ -16,7 +16,7 @@ body {
     margin-top: 16px;
 }
 
-.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .date, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .content table, .content video, .about {
+.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .date, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .content table, .content video, .content ul, .content ol, .about {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -26,6 +26,19 @@ body {
 .content .highlight {
     overflow-x: auto;
     overflow-y: hidden;
+    background-color: var(--body-bg);
+    border-radius: 4px;
+    max-width: calc(800px - 16px * 2);
+}
+
+@media screen and (max-width: 800px) {
+    .content .highlight {
+        border-radius: 0;
+    }
+}
+
+.content .highlight .gutter {
+    padding-right: 16px;
 }
 
 .content table, .content video {
@@ -34,6 +47,16 @@ body {
 
 .content video {
     max-width: 100%;
+    padding: 0;
+}
+
+.content ul, .content ol {
+    padding: 0 16px;
+    padding-left: 32px;
+    max-width: calc(800px - 16px * 2);
+}
+
+.content ul *, .content ol * {
     padding: 0;
 }
 
