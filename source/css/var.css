@@ -13,6 +13,8 @@
 
     --border-color: #eee;
 
+    --link: #06c;
+
     --blur: blur(32px);
 
     --blue: #0071e3;
@@ -40,6 +42,8 @@
         --black-4: rgb(153, 153, 153);
 
         --border-color: #222;
+
+        --link: #5fafff;
 
         --blur: blur(32px);
 

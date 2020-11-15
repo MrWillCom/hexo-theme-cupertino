@@ -7,16 +7,21 @@ body {
 }
 
 a:link {
-    color: #778292;
+    color: var(--link);
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 a:active {
-    color: #333942;
+    text-decoration: none;
 }
 
 a:visited {
-    color: #96a8c3;
+    color: var(--link);
+    text-decoration: none;
 }
 
 .container {

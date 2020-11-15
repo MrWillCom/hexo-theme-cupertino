@@ -68,7 +68,7 @@
     padding: 32px;
 }
 
-.post-list-item .title a, .post-list-item .title a:hover, .post-list-item .title a:focus, .post-list-item .title a:active, .post-list-item .title a:link, .post-list-item .title a:visited {
+.post-list-item a, .post-list-item a:hover, .post-list-item a:focus, .post-list-item a:active, .post-list-item a:link, .post-list-item a:visited {
     font-weight: bold;
     font-size: 24px;
     color: var(--black);
