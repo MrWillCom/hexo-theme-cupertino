@@ -12,7 +12,7 @@ This theme is based on Cupertino Design with light border and translucent and ac
 
 If you don't have a [Hexo](https://hexo.io/) blog, just [create one](https://hexo.io/docs/).
 
-To install it, just clone this as a Git submodule in your `themes/` directory and edit your `_config.yml`. After that, you should remember to edit `themes/cupertino/_config.yml`.
+To install it, just clone this as a Git submodule to your `themes/cupertino/` directory and edit your `_config.yml`. After that, you should remember to edit `themes/cupertino/_config.yml`.
 
 `_config.yml`:
 ```yaml
