@@ -43,4 +43,8 @@
   <% if (page.path != "index.html" && page.path != "archives/index.html") { %>
   <%- css('css/post') %>
   <% } %>
+
+  <% if (config.waline) { %>
+    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+  <% } %>
 </head>
