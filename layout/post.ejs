@@ -58,17 +58,19 @@
                 href="<%- theme.license_link %>"><%- theme.license %></a>.</p>
     </div>
 
-    <% if (config.waline) { %>
-    <div class="container">
-        <div id="waline"></div>
-        <script>
-            new Waline({
-                el: "#waline",
-                <% for (const i in config.waline) { %>
-                <%- i %>: <%- config.waline[i] %>,
-                <% } %>
-            });
-        </script>
-    </div>
+    <% if (!page.no_comments) { %>
+        <% if (config.waline) { %>
+        <div class="container">
+            <div id="waline"></div>
+            <script>
+                new Waline({
+                    el: "#waline",
+                    <% for (const i in config.waline) { %>
+                    <%- i %>: <%- config.waline[i] %>,
+                    <% } %>
+                });
+            </script>
+        </div>
+        <% } %>
     <% } %>
 </article>
