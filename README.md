@@ -21,5 +21,6 @@ theme: cupertino
 ...
 ```
 
-- [How to edit `_config.yml`?](https://hexo.io/docs/configuration)
-- [How to edit `themes/cupertino/_config.yml`?](./configuration.md)
+## Configuration
+
+See [docs/configuration.md](./docs/configuration.md)
