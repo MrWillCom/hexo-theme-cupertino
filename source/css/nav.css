@@ -52,7 +52,11 @@ nav .nav-item {
     height: 48px;
     line-height: 48px;
     padding: 0 16px;
-    transition: padding 0.2s;
+    transition: padding 0.2s, color 0.5s;
+}
+
+nav .nav-item:hover, nav .nav-item:focus {
+    color: var(--black-2);
 }
 
 @media screen and (max-width: 600px) {
