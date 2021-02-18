@@ -1,0 +1,54 @@
+#waline .v .vpanel .vwrap {
+    border: none;
+    background-color: var(--body-bg);
+    border-radius: 7px;
+}
+
+#waline .v .vlogin-btn {
+    background-color: var(--white);
+    border: none;
+}
+
+#waline .v a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+#waline .v a:hover {
+    text-decoration: underline;
+}
+
+#waline .v a:active {
+    text-decoration: none;
+}
+
+#waline .v a:visited {
+    color: var(--link);
+    text-decoration: none;
+}
+
+#waline .v .vheader {
+    display: flex;
+}
+
+#waline .v .vwrap .vheader .vinput {
+    width: auto;
+    flex: 1;
+    margin: 0 4px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--white);
+}
+
+#waline .v .vbtn {
+    background-color: var(--blue);
+    color: var(--white-txt-on-blue-bg);
+    padding: 6px 12px;
+    border-radius: 32px;
+    text-decoration: none;
+    border: none;
+}
+
+#waline .v .vbtn:hover {
+    background-color: var(--link);
+}

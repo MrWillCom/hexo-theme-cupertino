@@ -105,10 +105,18 @@
 }
 
 .card .actions {
-    float: bottom;
     padding: 16px;
     padding-top: 0;
-    text-align: right;
+    display: flex;
+}
+
+.card .actions .left {
+    justify-content: flex-start;
+}
+
+.card .actions .right {
+    margin-left: auto;
+    justify-content: flex-end;
 }
 
 .actions .action-button-primary {
@@ -116,9 +124,41 @@
     color: var(--white-txt-on-blue-bg);
     padding: 6px 12px;
     border-radius: 32px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.actions .action-button-primary:hover {
+    background-color: var(--link);
 }
 
 .block-large {
     max-width: 1000px;
     margin: auto;
+}
+
+.badge {
+    --color: var(--link);
+    font-size: 16px;
+    border: 2px solid var(--color);
+    color: var(--color);
+    padding: 0 8px;
+    margin: 0 6px;
+    border-radius: 24px;
+}
+
+.badge.warning {
+    --color: #fdc008;
+}
+
+.badge.secondary {
+    --color: #6c7781;
+}
+
+.badge.success {
+    --color: #31b14e;
+}
+
+.no-select {
+    user-select: none;
 }
