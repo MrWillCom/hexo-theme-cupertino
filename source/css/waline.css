@@ -40,6 +40,16 @@
     background-color: var(--white);
 }
 
+@media (max-width: 600px) {
+    #waline .v .vheader {
+        display: block;
+    }
+    #waline .v .vwrap .vheader .vinput {
+        width: 100%;
+        margin: 4px;
+    }
+}
+
 #waline .v .vbtn {
     background-color: var(--blue);
     color: var(--white-txt-on-blue-bg);
