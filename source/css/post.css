@@ -16,6 +16,13 @@ body {
     margin-top: 16px;
 }
 
+.content {
+    font-size: 19px;
+    line-height: 1.4211;
+    font-weight: 400;
+    letter-spacing: .012em;
+}
+
 .content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .date, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .content table, .content video, .content ul, .content ol, .about {
     max-width: 800px;
     margin-left: auto;
