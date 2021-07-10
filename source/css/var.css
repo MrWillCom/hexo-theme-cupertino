@@ -20,6 +20,8 @@
     --blue: #0071e3;
     --white-txt-on-blue-bg: #fff;
 
+    --footer-link-grey: #515154;
+
     --body-bg: #fbfbfd;
     --card-bg: #fff;
     --card-title: #1d1d1f;
@@ -49,6 +51,8 @@
 
         --blue: #00376f;
         --white-txt-on-blue-bg: #c0dfff;
+
+        --footer-link-grey: #a1a1a6;
 
         --body-bg: #101010;
         --card-bg: #181818;

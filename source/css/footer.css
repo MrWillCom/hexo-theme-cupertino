@@ -39,5 +39,6 @@ footer .title {
 }
 
 footer .item {
+    color: var(--footer-link-grey);
     display: block;
 }
