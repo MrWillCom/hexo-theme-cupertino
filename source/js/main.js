@@ -32,7 +32,9 @@
         var themeColorSchemeToggleEl = document.getElementById('theme-color-scheme-toggle')
         var options = themeColorSchemeToggleEl.getElementsByTagName('input')
 
-        bodyEl.setAttribute('data-color-scheme', Cookies.get('color-scheme'))
+        if (Cookies.get('color-scheme')) {
+            bodyEl.setAttribute('data-color-scheme', Cookies.get('color-scheme'))
+        }
 
         for (const option of options) {
             if (option.value == bodyEl.getAttribute('data-color-scheme')) {
