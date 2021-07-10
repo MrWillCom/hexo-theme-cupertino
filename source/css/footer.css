@@ -42,3 +42,41 @@ footer .item {
     color: var(--footer-link-grey);
     display: block;
 }
+
+footer .color-scheme-toggle {
+    display: inline-block;
+    border-radius: 16px;
+    border: 1px solid var(--blue);
+    padding-bottom: 1px;
+    margin-top: 16px;
+}
+
+footer .color-scheme-toggle label {
+    margin: 1px;
+}
+
+footer .color-scheme-toggle label input {
+    position: absolute;
+    appearance: none;
+    width: 0px;
+    height: 0px;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(0 0 99.9% 99.9%);
+    clip-path: inset(0 0 99.9% 99.9%);
+}
+
+footer .color-scheme-toggle label span {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 2px 4px;
+    border-radius: 12px;
+    color: var(--link);
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+footer .color-scheme-toggle label input:checked+span {
+    color: var(--white-txt-on-blue-bg);
+    background-color: var(--blue);
+}

@@ -1,5 +1,5 @@
 (() => {
-    var navEl = document.getElementById("theme-nav");
+    var navEl = document.getElementById('theme-nav');
     navEl.addEventListener('click', (e) => {
         if (window.innerWidth <= 600) {
             if (navEl.classList.contains('open')) {
@@ -26,4 +26,28 @@
             }
         }
     })
+
+    if (document.getElementById('theme-color-scheme-toggle')) {
+        var bodyEl = document.body
+        var themeColorSchemeToggleEl = document.getElementById('theme-color-scheme-toggle')
+        var options = themeColorSchemeToggleEl.getElementsByTagName('input')
+
+        bodyEl.setAttribute('data-color-scheme', Cookies.get('color-scheme'))
+
+        for (const option of options) {
+            if (option.value == bodyEl.getAttribute('data-color-scheme')) {
+                option.checked = true
+            }
+            option.addEventListener('change', (ev) => {
+                var value = ev.target.value
+                bodyEl.setAttribute('data-color-scheme', value)
+                Cookies.set('color-scheme', value)
+                for (const o of options) {
+                    if (o.value != value) {
+                        o.checked = false
+                    }
+                }
+            })
+        }
+    }
 })()

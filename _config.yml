@@ -1,4 +1,4 @@
-# REMEMBER TO EDIT THIS BEFORE DEPLOY!!!
+# REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!
 
 # the path to your blog's icon:
 favicon: /favicon.png
@@ -8,6 +8,12 @@ manifest: /manifest.json
 
 # show excerpt on post list
 show_excerpt: false
+
+# light/dark/auto color scheme
+color_scheme: auto
+
+# show floating color theme toggle
+show_color_scheme_toggle: true
 
 # navigation config
 nav:

@@ -1,4 +1,4 @@
-:root {
+body[data-color-scheme="auto"], body[data-color-scheme="light"] {
     --white-opacity-8: rgba(255, 255, 255, .8);
     --white-1-opacity-8: rgba(229.5, 229.5, 229.5, .8);
     --white: #fff;
@@ -32,7 +32,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    body[data-color-scheme="auto"] {
         --white-opacity-8: rgba(0, 0, 0, .8);
         --white-1-opacity-8: rgba(25.5, 25.5, 25.5, .8);
         --white: #000;
@@ -62,4 +62,35 @@
 
         --nav-arrow: #e5e5ee;
     }
+}
+
+body[data-color-scheme="dark"] {
+    --white-opacity-8: rgba(0, 0, 0, .8);
+    --white-1-opacity-8: rgba(25.5, 25.5, 25.5, .8);
+    --white: #000;
+    --white-1: rgb(25.5, 25.5, 25.5);
+    --white-2: rgb(51, 51, 51);
+
+    --black: #fff;
+    --black-2: rgb(204, 204, 204);
+    --black-4: rgb(153, 153, 153);
+
+    --border-color: #8884;
+
+    --link: #5fafff;
+
+    --blur: blur(32px);
+
+    --blue: #00376f;
+    --white-txt-on-blue-bg: #c0dfff;
+
+    --footer-link-grey: #a1a1a6;
+
+    --body-bg: #101010;
+    --card-bg: #181818;
+    --card-title: #cfcfda;
+    --card-time: #6e6e73;
+    --date-txt: #6e6e73;
+
+    --nav-arrow: #e5e5ee;
 }
