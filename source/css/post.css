@@ -30,11 +30,15 @@ body {
     padding: 0 16px;
 }
 
+.content p img, .content .block-large img {
+    border-radius: 10px;
+}
+
 .content .highlight {
     overflow-x: auto;
     overflow-y: hidden;
     background-color: var(--body-bg);
-    border-radius: 4px;
+    border-radius: 15px;
     max-width: calc(800px - 16px * 2);
 }
 
