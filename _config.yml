@@ -30,6 +30,7 @@ nav:
     GitHub: https://github.com/MrWillCom
     CodePen: https://codepen.io/mrwillcom
     Patreon: https://www.patreon.com/MrWillCom
+    Mastodon: https://noc.social/@MrWillCom
 
 # footer items
 footer:
@@ -46,16 +47,17 @@ footer:
   # also the title
   Projects:
     # the items
-    Transmister: https://github.com/transmister
-    CSS&JS Windows UWP XAML Controls: https://github.com/MrWillCom/css-and-js-windows-uwp-xaml-controls
-    Theme Cupertino: https://github.com/MrWillCom/hexo-theme-cupertino
-    GitHub Dark Mode: https://github.com/MrWillCom/github-dark-mode
+    RSA CLI: https://github.com/MrWillCom/rsa-cli
+    Hexo Theme Cupertino: https://github.com/MrWillCom/hexo-theme-cupertino
+    A Calendar: https://github.com/MrWillCom/a-calendar
+    Auto Mirroring Bucket: https://github.com/MrWillCom/auto-mirroring-bucket
   # the title
   Me:
     # items
     GitHub: https://github.com/MrWillCom
     CodePen: https://codepen.io/mrwillcom
     Patreon: https://www.patreon.com/MrWillCom
+    Mastodon: https://noc.social/@MrWillCom
     Email: mailto:mr.will.com@outlook.com
 
 # the license your posts under

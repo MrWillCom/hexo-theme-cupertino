@@ -96,6 +96,10 @@ nav .nav-item-codepen {
     background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png);
 }
 
+nav .nav-item-mastodon {
+    background-image: url(/theme-img/mastodon-logo-black.svg);
+}
+
 @media (prefers-color-scheme: dark) {
     nav .nav-item-github {
         background-image: url(/theme-img/github-mark-light.png);
@@ -105,6 +109,9 @@ nav .nav-item-codepen {
     }
     nav .nav-item-codepen {
         background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png);
+    }
+    nav .nav-item-mastodon {
+        background-image: url(/theme-img/mastodon-logo-white.svg);
     }
 }
 
