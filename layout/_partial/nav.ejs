@@ -13,6 +13,8 @@
             <a class="nav-item nav-item-codepen nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank">&nbsp;</a>
             <% } else if (i == 'Mastodon' || i == 'mastodon'){ %>
             <a class="nav-item nav-item-mastodon nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank">&nbsp;</a>
+            <% } else if (i == 'Discord' || i == 'discord'){ %>
+            <a class="nav-item nav-item-discord nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank">&nbsp;</a>
             <% } else { %>
             <a class="nav-item" href="<%- url_for(theme.nav.items[i]) %>"><%= i %></a>
             <% } %>
