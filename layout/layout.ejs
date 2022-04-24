@@ -10,5 +10,8 @@
         <% if (config.tidio) { %> 
         <%- js(config.tidio) %> 
         <% } %>
+        <% if (config.ackee) { %>
+        <%- config.ackee %>
+        <% } %>
     </body>
 </html>
