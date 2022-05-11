@@ -10,7 +10,7 @@
             </div>
             <% } %>
         </div>
-        <span>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br ><%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a></span>
+        <span>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br ><%- __('powered_by', '<a href="http://hexo.io/" target="_blank">Hexo</a>') %> </span>
         <% if (theme.show_color_scheme_toggle) { %>
             <br>
             <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
