@@ -29,42 +29,7 @@
                     </div>
                     <% } %>
                     <div class="time">
-                        <% if (post.date.month() == 0) { %>
-                        <span>January</span>
-                        <% } %>
-                        <% if (post.date.month() == 1) { %>
-                        <span>February</span>
-                        <% } %>
-                        <% if (post.date.month() == 2) { %>
-                        <span>March</span>
-                        <% } %>
-                        <% if (post.date.month() == 3) { %>
-                        <span>April</span>
-                        <% } %>
-                        <% if (post.date.month() == 4) { %>
-                        <span>May</span>
-                        <% } %>
-                        <% if (post.date.month() == 5) { %>
-                        <span>June</span>
-                        <% } %>
-                        <% if (post.date.month() == 6) { %>
-                        <span>July</span>
-                        <% } %>
-                        <% if (post.date.month() == 7) { %>
-                        <span>August</span>
-                        <% } %>
-                        <% if (post.date.month() == 8) { %>
-                        <span>September</span>
-                        <% } %>
-                        <% if (post.date.month() == 9) { %>
-                        <span>October</span>
-                        <% } %>
-                        <% if (post.date.month() == 10) { %>
-                        <span>November</span>
-                        <% } %>
-                        <% if (post.date.month() == 11) { %>
-                        <span>December</span>
-                        <% } %>
+                        <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][post.date.month()] %></span>
                         <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
                         <span><%- post.date.year() %></span>
                     </div>

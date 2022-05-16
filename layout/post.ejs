@@ -2,42 +2,7 @@
     <div class="meta">
         <% if (!page.no_date) { %>
         <div class="date" id="date">
-            <% if (page.date.month() == 0) { %>
-            <span>January</span>
-            <% } %>
-            <% if (page.date.month() == 1) { %>
-            <span>February</span>
-            <% } %>
-            <% if (page.date.month() == 2) { %>
-            <span>March</span>
-            <% } %>
-            <% if (page.date.month() == 3) { %>
-            <span>April</span>
-            <% } %>
-            <% if (page.date.month() == 4) { %>
-            <span>May</span>
-            <% } %>
-            <% if (page.date.month() == 5) { %>
-            <span>June</span>
-            <% } %>
-            <% if (page.date.month() == 6) { %>
-            <span>July</span>
-            <% } %>
-            <% if (page.date.month() == 7) { %>
-            <span>August</span>
-            <% } %>
-            <% if (page.date.month() == 8) { %>
-            <span>September</span>
-            <% } %>
-            <% if (page.date.month() == 9) { %>
-            <span>October</span>
-            <% } %>
-            <% if (page.date.month() == 10) { %>
-            <span>November</span>
-            <% } %>
-            <% if (page.date.month() == 11) { %>
-            <span>December</span>
-            <% } %>
+            <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][page.date.month()] %></span>
             <span><%- page.date.date() %>,</span>
             <span><%- page.date.year() %></span>
         </div>
