@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="post-list archives">
+        <% page.posts.each(function (post) { %>
+        <article class="post-list-item">
+            <a href="<%- url_for(post.path) %>">
+                <% if (post.cover_image) { %>
+                <div class="cover-img">
+                    <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
+                </div>
+                <% } %>
+                <div class="content">
+                    <div class="title">
+                        <%= post.title %>
+                    </div>
+                    <% if (theme.show_excerpt) { %>
+                    <div class="excerpt">
+                        <%- post.excerpt %>
+                    </div>
+                    <% } %>
+                    <div class="time">
+                        <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][post.date.month()] %></span>
+                        <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
+                        <span><%- post.date.year() %></span>
+                    </div>
+                </div>
+            </a>
+        </article>
+        <% }) %>
+    </div>
+
+    <%- partial('_partial/paginator') %>
+</div>
