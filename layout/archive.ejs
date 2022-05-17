@@ -1,7 +1,7 @@
 <div class="container">
     <div class="meta">
         <div class="type">
-            <%= is_category() ? 'Category' : '' %>
+            <%= is_category() ? __('category') : '' %>
         </div>
 
         <h2 class="title"><%= is_category() ? page.category : '' %><%= is_archive() ? __('archives') : '' %></h2>
