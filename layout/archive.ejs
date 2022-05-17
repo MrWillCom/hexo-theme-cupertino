@@ -1,4 +1,14 @@
 <div class="container">
+    <div class="meta">
+        <div class="type">
+            <%= is_category() ? 'Category' : '' %>
+        </div>
+
+        <h2 class="title"><%= is_category() ? page.category : '' %><%= is_archive() ? __('archives') : '' %></h2>
+    </div>
+
+    <div class="divider"></div>
+
     <div class="post-list archives">
         <% page.posts.each(function (post) { %>
         <article class="post-list-item">
@@ -9,6 +19,13 @@
                 </div>
                 <% } %>
                 <div class="content">
+                    <% if (post.categories && post.categories.length && is_archive()) { %>
+                    <div class="categories<%= theme.uppercase_categories ? ' uppercase' : '' %>">
+                    <% post.categories.forEach((category) => { %>
+                        <span><%= category.name %></span>
+                    <% }) %>
+                    </div>
+                    <% } %>
                     <div class="title">
                         <%= post.title %>
                     </div>

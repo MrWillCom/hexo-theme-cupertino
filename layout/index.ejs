@@ -20,6 +20,13 @@
                 </div>
                 <% } %>
                 <div class="content">
+                    <% if (post.categories && post.categories.length) { %>
+                    <div class="categories<%= theme.uppercase_categories ? ' uppercase' : '' %>">
+                    <% post.categories.forEach((category) => { %>
+                        <span><%= category.name %></span>
+                    <% }) %>
+                    </div>
+                    <% } %>
                     <div class="title">
                         <%= post.title %>
                     </div>

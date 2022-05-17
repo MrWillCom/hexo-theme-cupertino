@@ -9,7 +9,7 @@
   var title = page.title;
 
   if (is_archive()){
-    title = __('archive');
+    title = __('archives');
 
     if (is_month()){
       title += ': ' + page.year + '/' + page.month;
@@ -44,8 +44,11 @@
   <% if (page.path == "index.html") { %>
   <%- css('css/index') %>
   <% } %>
-  <% if (page.path != "index.html" && page.path != "archives/index.html") { %>
+  <% if (page.path != "index.html") { %>
   <%- css('css/post') %>
+  <% } %>
+  <% if (is_archive() || is_category() || is_tag()) { %>
+  <%- css('css/archive') %>
   <% } %>
 
   <% if (theme.show_color_scheme_toggle) { %>

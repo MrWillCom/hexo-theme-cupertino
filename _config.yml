@@ -15,6 +15,9 @@ color_scheme: auto
 # show floating color theme toggle
 show_color_scheme_toggle: true
 
+# uppercase categories
+uppercase_categories: true
+
 # navigation config
 nav:
   # the title displays in the upper left corner which won't change

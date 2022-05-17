@@ -1,5 +1,13 @@
 <article class="post">
     <div class="meta">
+        <% if (page.categories && page.categories.length) { %>
+        <div class="categories<%= theme.uppercase_categories ? ' uppercase' : '' %>">
+        <% page.categories.forEach((category) => { %>
+            <a href="<%= config.root + category.path %>"><%= category.name %></a>
+        <% }) %>
+        </div>
+        <% } %>
+
         <% if (!page.no_date) { %>
         <div class="date" id="date">
             <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][page.date.month()] %></span>

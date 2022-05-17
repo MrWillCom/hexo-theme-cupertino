@@ -82,6 +82,22 @@
   text-decoration: none;
 }
 
+.post-list-item .categories {
+  color: var(--link);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.post-list-item .categories span {
+  font-size: 11px;
+  margin-right: 6px;
+  text-decoration: none;
+}
+
+.post-list-item .categories.uppercase span {
+  text-transform: uppercase;
+}
+
 .post-list-item .excerpt {
   font-size: 17px;
   color: var(--black-1);
