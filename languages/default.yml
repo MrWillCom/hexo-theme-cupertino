@@ -9,3 +9,5 @@ this_post_is_written_by: This post is written by %s
 licensed_under: licensed under %s
 home: Home
 category: Category
+tag: Tag
+tagged_with: Tagged with %s

@@ -21,7 +21,7 @@
                 <% } %>
                 <div class="content">
                     <% if (post.categories && post.categories.length) { %>
-                    <div class="categories<%= theme.uppercase_categories ? ' uppercase' : '' %>">
+                    <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
                     <% post.categories.forEach((category) => { %>
                         <span><%= category.name %></span>
                     <% }) %>

@@ -18,10 +18,6 @@ body {
     text-decoration: none;
 }
 
-.meta .categories.uppercase a {
-    text-transform: uppercase;
-}
-
 .meta .date {
     color: var(--grey);
     font-weight: 600;
@@ -92,6 +88,11 @@ body {
     padding: 0 8px;
 }
 
+.tags .tag {
+    display: inline-block;
+    margin-right: 4px;
+}
+
 .about {
     border-radius: 7px;
     background-color: var(--body-bg);
@@ -101,4 +102,12 @@ body {
 
 .about h1 {
     margin: 0;
+}
+
+.about .details {
+    margin: 16px 0;
+}
+
+.about .details p {
+    margin: 6px 0;
 }

@@ -18,6 +18,12 @@ show_color_scheme_toggle: true
 # uppercase categories
 uppercase_categories: true
 
+# capitalize tag names on tags page
+capitalize_tags: false
+
+# add hashtag prefix before tags
+hashtag_prefix_before_tags: true
+
 # navigation config
 nav:
   # the title displays in the upper left corner which won't change

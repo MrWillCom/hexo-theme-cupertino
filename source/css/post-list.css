@@ -94,10 +94,6 @@
   text-decoration: none;
 }
 
-.post-list-item .categories.uppercase span {
-  text-transform: uppercase;
-}
-
 .post-list-item .excerpt {
   font-size: 17px;
   color: var(--black-1);

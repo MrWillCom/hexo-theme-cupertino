@@ -2,9 +2,10 @@
     <div class="meta">
         <div class="type">
             <%= is_category() ? __('category') : '' %>
+            <%= is_tag() ? __('tag') : '' %>
         </div>
 
-        <h2 class="title"><%= is_category() ? page.category : '' %><%= is_archive() ? __('archives') : '' %></h2>
+        <h2 class="title<%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>"><%= is_category() ? page.category : '' %><%= is_tag() ? (theme.hashtag_prefix_before_tags ? '#' : '') + page.tag : '' %><%= is_archive() ? __('archives') : '' %></h2>
     </div>
 
     <div class="divider"></div>
@@ -19,8 +20,8 @@
                 </div>
                 <% } %>
                 <div class="content">
-                    <% if (post.categories && post.categories.length && is_archive()) { %>
-                    <div class="categories<%= theme.uppercase_categories ? ' uppercase' : '' %>">
+                    <% if (post.categories && post.categories.length && !is_category()) { %>
+                    <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
                     <% post.categories.forEach((category) => { %>
                         <span><%= category.name %></span>
                     <% }) %>

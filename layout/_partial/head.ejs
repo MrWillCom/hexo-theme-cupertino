@@ -19,7 +19,11 @@
   } else if (is_category()){
     title = __('category') + ': ' + page.category;
   } else if (is_tag()){
-    title = __('tag') + ': ' + page.tag;
+    if (theme.hashtag_prefix_before_tags) {
+      title = '#' + page.tag;
+    } else {
+      title = __('tag') + ': ' + page.tag;
+    }
   }
   %>
   <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
