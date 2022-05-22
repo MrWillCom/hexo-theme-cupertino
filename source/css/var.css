@@ -56,7 +56,7 @@ body[data-color-scheme="auto"], body[data-color-scheme="light"] {
 
         --body-bg: #101010;
         --card-bg: #181818;
-        --card-title: #cfcfda;
+        --card-title: #cfcfd5;
         --card-time: #6e6e73;
         --date-txt: #6e6e73;
 
@@ -88,7 +88,7 @@ body[data-color-scheme="dark"] {
 
     --body-bg: #101010;
     --card-bg: #181818;
-    --card-title: #cfcfda;
+    --card-title: #cfcfd5;
     --card-time: #6e6e73;
     --date-txt: #6e6e73;
 
