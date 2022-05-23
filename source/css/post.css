@@ -1,113 +1,145 @@
 body {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
 .post {
-    margin: 128px 0;
+  margin: 128px 0;
 }
 
 .meta .categories {
-    color: var(--link);
-    margin-bottom: 6px;
-    font-weight: 600;
+  color: var(--link);
+  margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .meta .categories a {
-    font-size: 13px;
-    margin-right: 6px;
-    text-decoration: none;
+  font-size: 13px;
+  margin-right: 6px;
+  text-decoration: none;
 }
 
 .meta .date {
-    color: var(--grey);
-    font-weight: 600;
+  color: var(--grey);
+  font-weight: 600;
 }
 
 .meta .title {
-    font-size: 48px;
-    margin-top: 16px;
+  font-size: 48px;
+  margin-top: 16px;
 }
 
 .content {
-    font-size: 19px;
-    line-height: 1.4211;
-    font-weight: 400;
-    letter-spacing: .012em;
+  font-size: 19px;
+  line-height: 1.4211;
+  font-weight: 400;
+  letter-spacing: 0.012em;
 }
 
-.content p, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .meta .categories, .meta .date, .content figure, .divider, .container, hr, .meta .title, .content blockquote, .content table, .content video, .content ul, .content ol, .about {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 16px;
+.content p,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.meta .categories,
+.meta .date,
+.content figure,
+.divider,
+.container,
+hr,
+.meta .title,
+.content blockquote,
+.content table,
+.content video,
+.content ul,
+.content ol,
+.content > mjx-container,
+.content > .katex,
+.about {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
 }
 
-.content p img, .content .block-large img {
-    border-radius: 10px;
+.content p img,
+.content .block-large img {
+  border-radius: 10px;
 }
 
 .content .highlight {
-    overflow-x: auto;
-    overflow-y: hidden;
-    background-color: var(--body-bg);
-    border-radius: 15px;
-    max-width: calc(800px - 16px * 2);
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: var(--body-bg);
+  border-radius: 15px;
+  max-width: calc(800px - 16px * 2);
 }
 
 @media screen and (max-width: 800px) {
-    .content .highlight {
-        border-radius: 0;
-    }
+  .content .highlight {
+    border-radius: 0;
+  }
 }
 
 .content .highlight .gutter {
-    padding-right: 16px;
+  padding-right: 16px;
 }
 
-.content table, .content video {
-    display: block;
+.content table,
+.content video {
+  display: block;
 }
 
 .content video {
-    max-width: 100%;
-    padding: 0;
+  max-width: 100%;
+  padding: 0;
 }
 
-.content ul, .content ol {
-    padding: 0 16px;
-    padding-left: 32px;
-    max-width: calc(800px - 16px * 2);
+.content ul,
+.content ol {
+  padding: 0 16px;
+  padding-left: 32px;
+  max-width: calc(800px - 16px * 2);
 }
 
-.content ul *, .content ol * {
-    padding: 0;
+.content ul *,
+.content ol * {
+  padding: 0;
 }
 
 .content blockquote {
-    max-width: calc(800px - 16px * 2);
-    padding: 0 8px;
+  max-width: calc(800px - 16px * 2);
+  padding: 0 8px;
+}
+
+/* for [hexo-math](https://github.com/hexojs/hexo-math): */
+.content > mjx-container,
+.content > .katex {
+  display: block;
+  text-align: center;
 }
 
 .tags .tag {
-    display: inline-block;
-    margin-right: 4px;
+  display: inline-block;
+  margin-right: 4px;
 }
 
 .about {
-    border-radius: 7px;
-    background-color: var(--body-bg);
-    padding: 16px;
-    margin: 64px auto;
+  border-radius: 7px;
+  background-color: var(--body-bg);
+  padding: 16px;
+  margin: 64px auto;
 }
 
 .about h1 {
-    margin: 0;
+  margin: 0;
 }
 
 .about .details {
-    margin: 16px 0;
+  margin: 16px 0;
 }
 
 .about .details p {
-    margin: 6px 0;
+  margin: 6px 0;
 }
