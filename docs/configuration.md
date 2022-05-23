@@ -8,3 +8,4 @@ You can integrate these services to your blog:
 
 - [Tidio](./integrations/tidio.md)
 - [Waline](./integrations/waline.md)
+- [giscus](./integrations/giscus.md)
