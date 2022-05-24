@@ -7,4 +7,4 @@ You don't need to change any theme config exactly, and you can choose the render
 
 Just follow their documentation to install them, no further configuration required.
 
-> Plot $(x^2 + y^2 -1)^3 -x^2 y^3 = 0$. 💖 from [@aeilot's PR](https://github.com/MrWillCom/hexo-theme-cupertino/pull/9) who created this doc.
+> Plot $(x^2 + y^2 -1)^3 -x^2 y^3 = 0$. 💖 from [@aeilot's PR](https://github.com/MrWillCom/hexo-theme-cupertino/pull/9) 
