@@ -27,6 +27,16 @@
         }
     })
 
+    // a simple solution for managing cookies
+    const Cookies = new class {
+        get(key) {
+            return document.cookie.split('; ').find(row => row.startsWith(key + '=')).split('=')[1];
+        }
+        set(key, value) {
+            document.cookie = key + '=' + value
+        }
+    }
+
     if (document.getElementById('theme-color-scheme-toggle')) {
         var bodyEl = document.body
         var themeColorSchemeToggleEl = document.getElementById('theme-color-scheme-toggle')
