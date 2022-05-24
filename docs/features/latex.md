@@ -7,4 +7,4 @@ You don't need to change any theme config exactly, and you can choose the render
 
 Just follow their documentation to install them, no further configuration required.
 
-$(x^2 + y^2 -1)^3 -x^2 y^3 = 0$
+Plot $(x^2 + y^2 -1)^3 -x^2 y^3 = 0$ with 💖 from [@aeilot](https://github.com/aeilot)
