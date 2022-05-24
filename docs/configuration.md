@@ -6,7 +6,7 @@ To know how to edit `themes/cupertino/_config.yml`, just read the comments in it
 
 Some features are not enabled by default, and you need to enable it on your own.
 
-- [$LaTeX$](./features/latex.md)
+- [LaTeX](./features/latex.md)
 
 ## Integrations
 
