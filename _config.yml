@@ -24,6 +24,20 @@ capitalize_tags: false
 # add hashtag prefix before tags
 hashtag_prefix_before_tags: true
 
+# rainbow!
+rainbow_banner: true
+rainbow_banner_colors:
+  - '#e50000'
+  - '#ff8d00'
+  - '#ffee00'
+  - '#008121'
+  - '#004cff'
+  - '#760188'
+# choose from [auto, always]
+rainbow_banner_shown: auto
+# Pride Month by default
+rainbow_banner_month: 6
+
 # navigation config
 nav:
   # the title displays in the upper left corner which won't change
@@ -76,4 +90,4 @@ license: CC BY-NC 4.0
 # the link of your license
 license_link: https://creativecommons.org/licenses/by-nc/4.0
 
-# REMEMBER TO EDIT THIS BEFORE DEPLOY!!!
+# REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!

@@ -20,6 +20,8 @@ body[data-color-scheme="auto"], body[data-color-scheme="light"] {
     --blue: #0071e3;
     --white-txt-on-blue-bg: #fff;
 
+    --nav-bg: var(--white-opacity-8);
+
     --footer-link-grey: #515154;
 
     --body-bg: #fbfbfd;
@@ -52,6 +54,8 @@ body[data-color-scheme="auto"], body[data-color-scheme="light"] {
         --blue: #00376f;
         --white-txt-on-blue-bg: #c0dfff;
 
+        --nav-bg: rgba(0, 0, 0, .5);
+
         --footer-link-grey: #a1a1a6;
 
         --body-bg: #101010;
@@ -83,6 +87,8 @@ body[data-color-scheme="dark"] {
 
     --blue: #00376f;
     --white-txt-on-blue-bg: #c0dfff;
+
+    --nav-bg: rgba(0, 0, 0, .5);
 
     --footer-link-grey: #a1a1a6;
 

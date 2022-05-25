@@ -1,5 +1,5 @@
 nav {
-    background-color: var(--white-opacity-8);
+    background-color: var(--nav-bg);
     border-bottom: 1px solid var(--border-color);
     user-select: none;
     position: fixed;
