@@ -21,6 +21,6 @@ theme: cupertino
 ...
 ```
 
-## Configuration
+## Further Configuration
 
-See [docs/configuration.md](./docs/configuration.md)
+See [docs/README.md](./docs/README.md)
