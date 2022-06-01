@@ -29,11 +29,14 @@
 
     // a simple solution for managing cookies
     const Cookies = new class {
+        constructor() {
+            if (!this.get('path')) { this.set('path', document.body.getAttribute('data-config-root')) }
+        }
         get(key, fallback) {
             const temp = document.cookie.split('; ').find(row => row.startsWith(key + '='))
-            if(temp ){
+            if (temp) {
                 return temp.split('=')[1];
-            }else {
+            } else {
                 return fallback
             }
         }
