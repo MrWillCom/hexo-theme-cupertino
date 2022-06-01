@@ -15,7 +15,7 @@
 
 .post-list-item {
   overflow: hidden;
-  border-radius: 7px;
+  border-radius: 16px;
   background-color: var(--card-bg);
   margin-bottom: 21px;
   transition: all 200ms ease;
@@ -166,5 +166,5 @@
   height: initial;
   min-width: 180px;
   width: 20vw;
-  border-radius: 7px;
+  border-radius: 16px;
 }
