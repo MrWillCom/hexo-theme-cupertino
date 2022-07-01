@@ -1,5 +1,5 @@
 body {
-  background-color: var(--white);
+  background-color: var(--body-bg);
 }
 
 .post {
@@ -127,7 +127,7 @@ hr,
 
 .about {
   border-radius: 7px;
-  background-color: var(--body-bg);
+  background-color: var(--card-bg);
   padding: 16px;
   margin: 64px auto;
 }
