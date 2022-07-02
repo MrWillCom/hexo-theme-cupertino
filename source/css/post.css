@@ -143,3 +143,49 @@ hr,
 .about .details p {
   margin: 6px 0;
 }
+
+.content > h1,.content > h2,.content > h3,.content > h4,.content > h5,.content > h6 {
+  font-size: 32px;
+}
+
+.content > h1::before {
+  font-size: 20px;
+  content: "H₁ ";
+  font-family: 'Font Awesome 6 Free';
+  color: var(--link);
+}
+
+.content > h2::before {
+  font-size: 20px;
+  content: "H₂ ";
+  font-family: 'Font Awesome 6 Free';
+  color: var(--link);
+}
+
+.content > h3::before {
+  font-size: 20px;
+  content: "H₃ ";
+  font-family: 'Font Awesome 6 Free';
+  color: var(--link);
+}
+
+.content > h4::before {
+  font-size: 20px;
+  content: "H₄ ";
+  font-family: 'Font Awesome 6 Free';
+  color: var(--link);
+}
+
+.content > h5::before {
+  font-size: 20px;
+  content: "H₅ ";
+  font-family: 'Font Awesome 6 Free';
+  color: var(--link);
+}
+
+.content > h6::before {
+  font-size: 20px;
+  content: "H₆ ";
+  font-family: 'Font Awesome 6 Free';
+  color: var(--link);
+}
