@@ -1,5 +1,5 @@
 body {
-  background-color: var(--white);
+  background-color: var(--body-bg);
 }
 
 .post {
@@ -71,7 +71,7 @@ hr,
 .content .highlight {
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: var(--body-bg);
+  background-color: var(--card-bg);
   border-radius: 15px;
   max-width: calc(800px - 16px * 2);
 }
@@ -127,7 +127,7 @@ hr,
 
 .about {
   border-radius: 7px;
-  background-color: var(--body-bg);
+  background-color: var(--card-bg);
   padding: 16px;
   margin: 64px auto;
 }
@@ -142,4 +142,62 @@ hr,
 
 .about .details p {
   margin: 6px 0;
+}
+
+.content h1 > .headerlink,
+.content h2 > .headerlink,
+.content h3 > .headerlink,
+.content h4 > .headerlink,
+.content h5 > .headerlink,
+.content h6 > .headerlink {
+  opacity: 0;
+  color: var(--grey);
+  font-weight: normal;
+  position: absolute;
+  padding-right: 6px;
+  transform: translateX(-100%);
+  transition: opacity 0.2s;
+}
+
+.content h1:hover > .headerlink,
+.content h2:hover > .headerlink,
+.content h3:hover > .headerlink,
+.content h4:hover > .headerlink,
+.content h5:hover > .headerlink,
+.content h6:hover > .headerlink {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.content h1 > .headerlink::before,
+.content h2 > .headerlink::before,
+.content h3 > .headerlink::before,
+.content h4 > .headerlink::before,
+.content h5 > .headerlink::before,
+.content h6 > .headerlink::before {
+  content: "#";
+}
+
+.content > h1 {
+  font-size: 36px;
+}
+
+.content > h2 {
+  font-size: 30px;
+}
+
+.content > h3 {
+  font-size: 26px;
+}
+
+.content > h4 {
+  font-size: 20px;
+}
+
+.content > h5 {
+  font-size: 16px;
+}
+
+.content > h6 {
+  font-size: 14px;
 }
