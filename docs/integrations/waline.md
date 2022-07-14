@@ -9,6 +9,7 @@ waline:
 # Don't set `el` here.
   path: location.pathname
   serverURL: "'https://example.com'"
+  requiredMeta: "['nick', ...]"
 ```
 
 All the sub-properties are the same as the script in [HTML References - Quick Start | Waline](https://waline.js.org/en/quick-start.html#html-references) except `el`.
