@@ -71,7 +71,7 @@ hr,
 .content .highlight {
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: var(--body-bg);
+  background-color: var(--card-bg);
   border-radius: 15px;
   max-width: calc(800px - 16px * 2);
 }
@@ -144,48 +144,60 @@ hr,
   margin: 6px 0;
 }
 
-.content > h1,.content > h2,.content > h3,.content > h4,.content > h5,.content > h6 {
-  font-size: 32px;
+.content h1 > .headerlink,
+.content h2 > .headerlink,
+.content h3 > .headerlink,
+.content h4 > .headerlink,
+.content h5 > .headerlink,
+.content h6 > .headerlink {
+  opacity: 0;
+  color: var(--grey);
+  font-weight: normal;
+  position: absolute;
+  padding-right: 6px;
+  transform: translateX(-100%);
+  transition: opacity 0.2s;
 }
 
-.content > h1::before {
-  font-size: 20px;
-  content: "H₁ ";
-  font-family: 'Font Awesome 6 Free';
-  color: var(--link);
+.content h1:hover > .headerlink,
+.content h2:hover > .headerlink,
+.content h3:hover > .headerlink,
+.content h4:hover > .headerlink,
+.content h5:hover > .headerlink,
+.content h6:hover > .headerlink {
+  opacity: 1;
+  text-decoration: none;
 }
 
-.content > h2::before {
-  font-size: 20px;
-  content: "H₂ ";
-  font-family: 'Font Awesome 6 Free';
-  color: var(--link);
+.content h1 > .headerlink::before,
+.content h2 > .headerlink::before,
+.content h3 > .headerlink::before,
+.content h4 > .headerlink::before,
+.content h5 > .headerlink::before,
+.content h6 > .headerlink::before {
+  content: "#";
 }
 
-.content > h3::before {
-  font-size: 20px;
-  content: "H₃ ";
-  font-family: 'Font Awesome 6 Free';
-  color: var(--link);
+.content > h1 {
+  font-size: 36px;
 }
 
-.content > h4::before {
-  font-size: 20px;
-  content: "H₄ ";
-  font-family: 'Font Awesome 6 Free';
-  color: var(--link);
+.content > h2 {
+  font-size: 30px;
 }
 
-.content > h5::before {
-  font-size: 20px;
-  content: "H₅ ";
-  font-family: 'Font Awesome 6 Free';
-  color: var(--link);
+.content > h3 {
+  font-size: 26px;
 }
 
-.content > h6::before {
+.content > h4 {
   font-size: 20px;
-  content: "H₆ ";
-  font-family: 'Font Awesome 6 Free';
-  color: var(--link);
+}
+
+.content > h5 {
+  font-size: 16px;
+}
+
+.content > h6 {
+  font-size: 14px;
 }
