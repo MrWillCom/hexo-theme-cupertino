@@ -46,8 +46,9 @@
   <% if (theme.rainbow_banner) { %>
   <%- css('css/rainbow-banner') %>
   <% } %>
-  <%- css('css/waline') %>
-  <%- css('css/giscus') %>
+  <% if (config.giscus) { %>
+    <%- css('css/giscus') %>
+  <% } %>
   <% if (page.path == "index.html") { %>
   <%- css('css/index') %>
   <% } %>
@@ -59,6 +60,10 @@
   <% } %>
 
   <% if (config.waline) { %>
-    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+    <script src='https://unpkg.com/@waline/client@v2/dist/waline.js'></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+    />
   <% } %>
 </head>
