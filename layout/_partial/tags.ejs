@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="meta">
+        <h2 class="title"><%= __('tags') %></h2>
+    </div>
+    <div class="divider"></div>
+    <div class="tags">
+        <%
+            var tags = ''
+            site.tags.forEach((tag) => {
+                tags += `<a href="${config.root}${tag.path}" class="tag">${theme.hashtag_prefix_before_tags ? '#' : ''}${tag.name}</a>${theme.hashtag_prefix_before_tags ? '' : ','}`
+            })
+            if (!theme.hashtag_prefix_before_tags) { tags = tags.slice(0, tags.length - 1) }
+        %>
+        <%- tags %>
+    </div>
+</div>

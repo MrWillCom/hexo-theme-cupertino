@@ -24,6 +24,10 @@
     } else {
       title = __('tag') + ': ' + page.tag;
     }
+  } else if (page.type == 'tags') {
+    title = __('tags');
+  } else if (page.type == 'categories') {
+    title = __('categories');
   }
   %>
   <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
@@ -58,8 +62,14 @@
   <% if (page.path != "index.html") { %>
   <%- css('css/post') %>
   <% } %>
-  <% if (is_archive() || is_category() || is_tag()) { %>
+  <% if (is_archive() || is_category() || is_tag() || page.type == 'tags' || page.type == 'categories') { %>
   <%- css('css/archive') %>
+  <% } %>
+  <% if (page.type == 'tags') { %>
+  <%- css('css/tags') %>
+  <% } %>
+  <% if (page.type == 'categories') { %>
+  <%- css('css/categories') %>
   <% } %>
 
   <% if (config.waline) { %>
