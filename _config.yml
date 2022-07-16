@@ -38,6 +38,10 @@ rainbow_banner_shown: auto
 # Pride Month by default
 rainbow_banner_month: 6
 
+# TOC - table of contents
+toc: true
+toc_max_depth: 2
+
 # navigation config
 nav:
   # the title displays in the upper left corner which won't change

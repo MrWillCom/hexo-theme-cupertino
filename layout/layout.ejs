@@ -10,6 +10,10 @@
         data-rainbow-banner-colors="<%= theme.rainbow_banner_colors %>"
         <% } %>
         data-config-root="<%- config.root %>"
+        <% if (theme.toc == true) { %>
+        data-toc="<%= theme.toc %>"
+        data-toc-max-depth="<%= theme.toc_max_depth %>"
+        <% } %>
     >
         <%- partial('_partial/nav') %>
         <%- body %>
