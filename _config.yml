@@ -94,4 +94,9 @@ license: CC BY-NC 4.0
 # the link of your license
 license_link: https://creativecommons.org/licenses/by-nc/4.0
 
+# search
+# based on [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
+search: true
+search_path: search.json
+
 # REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!
