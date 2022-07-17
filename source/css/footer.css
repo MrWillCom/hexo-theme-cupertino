@@ -43,6 +43,14 @@ footer .item {
     display: block;
 }
 
+footer .footer-extra-description {
+    color: var(--footer-link-grey);
+    font-size: 14px;
+    display: block;
+    margin-top: 12px;
+    margin-bottom: -12px;
+}
+
 footer .color-scheme-toggle {
     display: inline-block;
     border-radius: 16px;
