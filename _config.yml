@@ -93,6 +93,9 @@ footer:
     Discord: https://discord.gg/UKuFDjcfY8
     Email: mailto:mr.will.com@outlook.com
 
+# footer extra description
+# footer_extra_description: something will be shown at the bottom of the footer
+
 # the license your posts under
 license: CC BY-NC 4.0
 # the link of your license
