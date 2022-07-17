@@ -11,3 +11,5 @@ home: Home
 category: Category
 tag: Tag
 tagged_with: Tagged with %s
+search: Search
+type_to_search: Type to search...

@@ -24,6 +24,8 @@
     } else {
       title = __('tag') + ': ' + page.tag;
     }
+  } else if (theme.search == true && page.type == 'search') {
+    title = __('search')
   }
   %>
   <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
@@ -58,8 +60,11 @@
   <% if (page.path != "index.html") { %>
   <%- css('css/post') %>
   <% } %>
-  <% if (is_archive() || is_category() || is_tag()) { %>
+  <% if (is_archive() || is_category() || is_tag() || (theme.search == true && page.type == 'search')) { %>
   <%- css('css/archive') %>
+  <% } %>
+  <% if (theme.search == true && page.type == 'search') { %>
+  <%- css('css/search') %>
   <% } %>
 
   <% if (config.waline) { %>

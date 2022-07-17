@@ -1,3 +1,6 @@
+<% if (theme.search == true && page.type == 'search') { %>
+    <%- partial('_partial/search') %>
+<% } else { %>
 <article class="post">
     <div class="meta">
         <% if (page.categories && page.categories.length) { %>
@@ -64,3 +67,4 @@
         <% } %>
     <% } %>
 </article>
+<% } %>
