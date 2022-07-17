@@ -26,6 +26,10 @@
     }
   } else if (theme.search == true && page.type == 'search') {
     title = __('search')
+  } else if (page.type == 'tags') {
+    title = __('tags');
+  } else if (page.type == 'categories') {
+    title = __('categories');
   }
   %>
   <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
@@ -60,11 +64,17 @@
   <% if (page.path != "index.html") { %>
   <%- css('css/post') %>
   <% } %>
-  <% if (is_archive() || is_category() || is_tag() || (theme.search == true && page.type == 'search')) { %>
+  <% if (is_archive() || is_category() || is_tag() || (theme.search == true && page.type == 'search') || page.type == 'tags' || page.type == 'categories') { %>
   <%- css('css/archive') %>
   <% } %>
   <% if (theme.search == true && page.type == 'search') { %>
   <%- css('css/search') %>
+  <% } %>
+  <% if (page.type == 'tags') { %>
+  <%- css('css/tags') %>
+  <% } %>
+  <% if (page.type == 'categories') { %>
+  <%- css('css/categories') %>
   <% } %>
 
   <% if (config.waline) { %>

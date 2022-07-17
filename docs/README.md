@@ -6,6 +6,7 @@ To edit `themes/cupertino/_config.yml`, just read the comments in it.
 
 Some features are optional and requires further configuration, so check out the following docs.
 
+- [Tags and Categories](./features/tags-and-categories.md)
 - [LaTeX](./features/latex.md)
 - [Rainbow Banner](./features/rainbow-banner.md)
 
