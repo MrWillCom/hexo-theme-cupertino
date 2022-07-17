@@ -59,6 +59,7 @@ nav:
     Patreon: https://www.patreon.com/MrWillCom
     Mastodon: https://noc.social/@MrWillCom
     Discord: https://discord.gg/UKuFDjcfY8
+    Search: /search
 
 # footer items
 footer:
@@ -67,6 +68,9 @@ footer:
     # the items after the title, display as links
     Blog: /
     Archives: /archives
+    Tags: /tags
+    Categories: /categories
+    Search: /search
     Friends: /friends
     Projects: /projects
     Resume: /resume

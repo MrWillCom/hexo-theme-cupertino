@@ -84,6 +84,10 @@ nav .nav-item-icon {
     padding: 0;
 }
 
+nav .nav-item-search {
+    background-size: 16px 16px;
+}
+
 body[data-color-scheme="auto"] nav .nav-item-github, body[data-color-scheme="light"] nav .nav-item-github {
     background-image: url(/theme-img/github-mark-dark.png);
 }
@@ -104,6 +108,10 @@ body[data-color-scheme="auto"] nav .nav-item-discord, body[data-color-scheme="li
     background-image: url(/theme-img/discord-mark-dark.svg);
 }
 
+body[data-color-scheme="auto"] nav .nav-item-search, body[data-color-scheme="light"] nav .nav-item-search {
+    background-image: url(/theme-img/search-dark.svg);
+}
+
 @media (prefers-color-scheme: dark) {
     body[data-color-scheme="auto"] nav .nav-item-github {
         background-image: url(/theme-img/github-mark-light.png);
@@ -119,6 +127,9 @@ body[data-color-scheme="auto"] nav .nav-item-discord, body[data-color-scheme="li
     }
     body[data-color-scheme="auto"] nav .nav-item-discord {
         background-image: url(/theme-img/discord-mark-light.svg);
+    }
+    body[data-color-scheme="auto"] nav .nav-item-search {
+        background-image: url(/theme-img/search-light.svg);
     }
 }
 
@@ -140,6 +151,10 @@ body[data-color-scheme="dark"] nav .nav-item-mastodon {
 
 body[data-color-scheme="dark"] nav .nav-item-discord {
     background-image: url(/theme-img/discord-mark-light.svg);
+}
+
+body[data-color-scheme="dark"] nav .nav-item-search {
+    background-image: url(/theme-img/search-light.svg);
 }
 
 @media screen and (max-width: 600px) {
