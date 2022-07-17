@@ -1,3 +1,8 @@
+<% if (page.type == 'tags') { %>
+    <%- partial('_partial/tags') %>
+<% } else if (page.type == 'categories') { %>
+    <%- partial('_partial/categories') %>
+<% } else { %>
 <article class="post">
     <div class="meta">
         <% if (page.categories && page.categories.length) { %>
@@ -64,3 +69,4 @@
         <% } %>
     <% } %>
 </article>
+<% } %>

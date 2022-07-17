@@ -1,0 +1,19 @@
+.tags .tag {
+  padding: 8px 16px;
+  margin: 4px;
+  font-size: 14px;
+  border-radius: 980px;
+  background-color: var(--white);
+  color: var(--black-2);
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+}
+
+.tags .tag:hover {
+  background-color: var(--white-1);
+  color: var(--black);
+}
+
+.tags {
+  margin-bottom: 128px;
+}

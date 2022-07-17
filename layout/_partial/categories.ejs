@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="meta">
+        <h2 class="title"><%= __('categories') %></h2>
+    </div>
+    <div class="divider"></div>
+    <div class="categories">
+        <%
+            var categories = ''
+            site.categories.forEach((category) => {
+                categories += `<a href="${config.root}${category.path}" class="category">${category.name}</a>`
+            })
+        %>
+        <%- categories %>
+    </div>
+</div>
