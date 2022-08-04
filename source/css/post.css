@@ -45,6 +45,8 @@ body {
 .meta .categories,
 .meta .date,
 .content figure,
+/* only `.content>pre`, do not include <pre /> in <figure /> */
+.content>pre,
 .divider,
 .container,
 hr,
