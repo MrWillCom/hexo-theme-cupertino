@@ -95,6 +95,10 @@ hr,
   padding: 6px 12px;
 }
 
+.content table th {
+  border-bottom: 1px solid var(--border-color);
+}
+
 .content table thead tr th:first-child {
   border-top-left-radius: 15px;
 }
