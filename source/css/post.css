@@ -75,6 +75,7 @@ hr,
 }
 
 .content table {
+  padding: 0;
   border-collapse: collapse;
   border-radius: 15px;
   max-width: 800px;
@@ -113,6 +114,16 @@ hr,
 
 .content table tbody tr:last-child td:last-child {
   border-bottom-right-radius: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .content table,
+  .content table thead tr th:first-child,
+  .content table thead tr th:last-child,
+  .content table tbody tr:last-child td:first-child,
+  .content table tbody tr:last-child td:last-child {
+    border-radius: 0;
+  }
 }
 
 .content video {
