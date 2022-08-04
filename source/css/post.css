@@ -122,7 +122,8 @@ hr,
   padding: 0;
 }
 
-.content .highlight {
+.content .highlight,
+.content > pre {
   overflow-x: auto;
   overflow-y: hidden;
   background-color: var(--card-bg);
@@ -131,7 +132,8 @@ hr,
 }
 
 @media screen and (max-width: 800px) {
-  .content .highlight {
+  .content .highlight,
+  .content > pre {
     border-radius: 0;
   }
 }
@@ -142,6 +144,15 @@ hr,
 
 .content .highlight .gutter {
   padding-right: 16px;
+}
+
+.content > pre {
+  max-width: calc(800px - 24px * 2);
+  padding: 20px 24px;
+}
+
+.content > pre > code {
+  background-color: transparent;
 }
 
 .content ul,
