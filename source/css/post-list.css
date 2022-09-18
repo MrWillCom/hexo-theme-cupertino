@@ -167,4 +167,5 @@
   min-width: 180px;
   width: 20vw;
   border-radius: 16px;
+  flex-shrink: 0;
 }
