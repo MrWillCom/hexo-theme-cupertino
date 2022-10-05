@@ -198,8 +198,15 @@ hr,
 .about {
   border-radius: 7px;
   background-color: var(--card-bg);
+  max-width: calc(800px - 16px * 2);
   padding: 16px;
   margin: 64px auto;
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    border-radius: 0;
+  }
 }
 
 .about h1 {

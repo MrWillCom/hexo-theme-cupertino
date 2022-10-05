@@ -32,6 +32,7 @@
         <%- page.content %>
     </div>
 
+    <% if (!page.no_about) { %>
     <div class="about">
         <h1><%= __('about_this_post') %></h1>
         <div class="details">
@@ -51,6 +52,7 @@
             <p><%- __('this_post_is_written_by', config.author) %>, <%- __('licensed_under', `<a href="${theme.license_link}">${theme.license}</a>`) %>.</p>
         </div>
     </div>
+    <% } %>
 
     <% if (!page.no_comments) { %>
         <% if (config.waline) { %>
