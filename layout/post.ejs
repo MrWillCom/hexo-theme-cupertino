@@ -36,21 +36,21 @@
     <div class="about">
         <h1><%= __('about_this_post') %></h1>
         <div class="details">
-            <% if (page.tags && page.tags.length) { %>
-            <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
-                <%
-                    var tags = ''
-                    page.tags.forEach((tag) => {
-                        tags += `<a href="${config.root}${tag.path}" class="tag">${theme.hashtag_prefix_before_tags ? '#' : ''}${tag.name}</a>${theme.hashtag_prefix_before_tags ? '' : ','}`
-                    })
-                    if (!theme.hashtag_prefix_before_tags) { tags = tags.slice(0, tags.length - 1) }
-                %>
-                <%- __('tagged_with', tags) %>
-                .
-            </p>
-            <% } %>
             <p><%- __('this_post_is_written_by', config.author) %>, <%- __('licensed_under', `<a href="${theme.license_link}">${theme.license}</a>`) %>.</p>
         </div>
+        <% if (page.tags && page.tags.length) { %>
+        <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
+            <%
+                var tags = ''
+                page.tags.forEach((tag) => {
+                    tags += `<a href="${config.root}${tag.path}" class="tag">${theme.hashtag_prefix_before_tags ? '#' : ''}${tag.name}</a>${theme.hashtag_prefix_before_tags ? '' : ','}`
+                })
+                if (!theme.hashtag_prefix_before_tags) { tags = tags.slice(0, tags.length - 1) }
+            %>
+            <i class="icon"></i>
+            <%- tags %>
+        </p>
+        <% } %>
     </div>
     <% } %>
 
