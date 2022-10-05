@@ -192,6 +192,7 @@ hr,
 
 .tags {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tags .icon {
