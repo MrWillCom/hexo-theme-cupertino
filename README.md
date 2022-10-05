@@ -23,4 +23,10 @@ theme: cupertino
 
 ## Further Configuration
 
-See [docs/README.md](./docs/README.md)
+See docs site [cupertino.mrwillcom.com](https://cupertino.mrwillcom.com/) .
+
+## Contributing
+
+All friendly contributions are welcome! Start contributing by following the existing issues or little fixes.
+
+Not familiar with code? It's okay, feel free to report bugs or suggest something.
