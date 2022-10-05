@@ -190,8 +190,39 @@ hr,
   text-align: center;
 }
 
+.tags {
+  display: flex;
+}
+
+.tags .icon {
+  --size: 14px;
+  background-position: center;
+  background-size: var(--size) var(--size);
+  background-repeat: no-repeat;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 6px;
+}
+
+body[data-color-scheme="auto"] .tags .icon {
+  background-image: url(/theme-img/tags-dark.svg);
+}
+
+@media (prefers-color-scheme: dark) {
+  body[data-color-scheme="auto"] .tags .icon {
+    background-image: url(/theme-img/tags-light.svg);
+  }
+}
+
+body[data-color-scheme="dark"] .tags .icon {
+  background-image: url(/theme-img/tags-light.svg);
+}
+
 .tags .tag {
-  display: inline-block;
+  font-size: 14px;
+  display: block;
+  height: 14px;
   margin-right: 4px;
 }
 
