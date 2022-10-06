@@ -6,6 +6,10 @@ favicon: /favicon.png
 # the path to manifest.json
 manifest: /manifest.json
 
+# [Open Graph Protocol](https://ogp.me/)
+og_enabled: true
+og_image: /favicon.png
+
 # show excerpt on post list
 show_excerpt: false
 

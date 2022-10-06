@@ -1,4 +1,4 @@
-<head>
+<head<% if (theme.og_enabled) { %> prefix="og: https://ogp.me/ns#"<% } %>>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <meta name="color-scheme" content="light dark">
@@ -35,6 +35,13 @@
   <% } %>
   <% if (theme.manifest) { %>
     <link rel='manifest' href='<%= theme.manifest %>'>
+  <% } %>
+
+  <% if (theme.og_enabled) { %>
+  <meta property="og:title" content="<% if (title) { %><%= title %> - <% } %><%= config.title %>" />
+  <meta property="og:type" content="<% if (is_post()) { %>article<% } else { %>website<% } %>" />
+  <meta property="og:url" content="<%= url %>" />
+  <meta property="og:image" content="<%= theme.og_image %>" />
   <% } %>
 
   <%- css('css/var') %>
