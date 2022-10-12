@@ -39,22 +39,27 @@
 
   <% if (theme.og_enabled) { %>
   <%
-  var og;
+  var og = {};
+
+  og['title'] = (title ? title + ' - ' : '') + config.title;
+  og['type'] = is_post() ? 'article' : 'website';
+  og['url'] = url;
+  og['image'] = page.cover_image ? page.cover_image : theme.og_image;
+
+  if (theme['og']) {
+    for (const i in theme.og) {
+      og[i] = theme.og[i];
+    }
+  }
 
   if (page['og']) {
-    og = page.og;
-  } else {
-    og = {};
+    for (const i in page.og) {
+      og[i] = page.og[i];
+    }
   }
   %>
-  <meta property="og:title" content="<% if (og.title) { %><%= og.title %> - <% } else if (title) { %><%= title %> - <% } %><%= config.title %>" />
-  <meta property="og:type" content="<% if (og.type) { %><%= og.type %><% } else if (is_post()) { %>article<% } else { %>website<% } %>" />
-  <meta property="og:url" content="<% if (og.url) { %><%= og.url %><% } else { %><%= url %><% } %>" />
-  <meta property="og:image" content="<% if (og.image) { %><%= og.image %><% } else if (page.cover_image) { %><%= page.cover_image %><% } else { %><%= theme.og_image %><% } %>" />
   <% for (const i in og) { %>
-    <% if (!['title', 'type', 'url', 'image'].find((d) => { return d == i })) { %>
-      <meta property="og:<%= i %>" content="<%= og[i] %>" />
-    <% } %>
+  <meta property="og:<%= i %>" content="<%= og[i] %>" />
   <% } %>
   <% } %>
 

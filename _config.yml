@@ -9,6 +9,8 @@ manifest: /manifest.json
 # [Open Graph Protocol](https://ogp.me/)
 og_enabled: true
 og_image: /favicon.png
+og:
+  # customize og properties here which will replace the defaults
 
 # show excerpt on post list
 show_excerpt: false
