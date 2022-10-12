@@ -45,6 +45,10 @@
   og['type'] = is_post() ? 'article' : 'website';
   og['url'] = url;
   og['image'] = page.cover_image ? page.cover_image : theme.og_image;
+  if (is_post()) {
+    og['article:published_time'] = page.date.toISOString();
+    og['article:author'] = config.author;
+  }
 
   if (theme['og']) {
     for (const i in theme.og) {
