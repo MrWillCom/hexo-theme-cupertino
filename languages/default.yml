@@ -15,3 +15,5 @@ search: Search
 type_to_search: Type to search...
 categories: Categories
 tags: Tags
+next_post: Next
+prev_post: Previous

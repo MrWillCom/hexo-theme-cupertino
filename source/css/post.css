@@ -310,3 +310,45 @@ body[data-color-scheme="dark"] .tags .icon {
 .content > h6 {
   font-size: 14px;
 }
+
+.post-prev-next {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-prev-next > a {
+  width: 50%;
+  color: var(--black-4);
+  text-decoration: none;
+}
+
+.post-prev-next > a:hover {
+  color: var(--black-2);
+}
+
+.post-prev-next > a > div {
+  display: flex;
+}
+
+.post-prev-next .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-prev-next .prev > div {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.post-prev-next .prev .text {
+  align-items: flex-end;
+}
+
+.post-prev-next .text * {
+  margin: 0;
+}
+
+.post-prev-next .text .label {
+  margin-bottom: 4px;
+  color: var(--grey);
+}

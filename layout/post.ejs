@@ -54,6 +54,29 @@
     </div>
     <% } %>
 
+    <div class="container post-prev-next">
+        <% if (page.prev) { %>
+        <a href="<%= url_for(page.prev.path) %>" class="next">
+            <div>
+                <div class="text">
+                    <p class="label"><%= __('next_post') %></p>
+                    <h3 class="title"><%= page.prev.title %></h3>
+                </div>
+            </div>
+        </a>
+        <% } else { %><a class="next"></a><% } %>
+        <% if (page.next) { %>
+        <a href="<%= url_for(page.next.path) %>" class="prev">
+            <div>
+                <div class="text">
+                    <p class="label"><%= __('prev_post') %></p>
+                    <h3 class="title"><%= page.next.title %></>
+                </div>
+            </div>
+        </a>
+        <% } else { %><a class="prev"></a><% } %>
+    </div>
+
     <% if (!page.no_comments) { %>
         <% if (config.waline) { %>
         <div class="container">
