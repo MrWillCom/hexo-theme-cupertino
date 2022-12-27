@@ -3,7 +3,7 @@
         <div class="links">
             <% for (const i in theme.footer) { %>
             <div class="group">
-                <h4 class="title"><%= i %></h4>
+                <h2 class="title"><%= i %></h2>
                 <% for (const n in theme.footer[i]) { %>
                 <a href="<%- theme.footer[i][n] %>" class="item"><%= n %></a>
                 <% } %>
