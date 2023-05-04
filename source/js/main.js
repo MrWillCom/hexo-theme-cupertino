@@ -132,7 +132,8 @@
         headings.forEach((heading) => {
             source.push({
                 html: heading.innerHTML,
-                href: heading.getElementsByClassName('headerlink')[0].attributes['href'].value
+                href: heading.getElementsByClassName('headerlink')[0].attributes['href'].value,
+                level: heading.tagName
             })
         })
 
@@ -144,6 +145,7 @@
             link.href = source[i].href
             link.innerHTML = source[i].html
             link.removeChild(link.getElementsByClassName('headerlink')[0])
+            item.className = 'pageHeaderTocHeadingContainerP' + source[i].level.toLowerCase()
             item.appendChild(link)
             toc.appendChild(item)
         }
