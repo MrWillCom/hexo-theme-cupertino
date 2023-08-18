@@ -53,35 +53,33 @@ footer .footer-extra-description {
 }
 
 footer .color-scheme-toggle {
-    display: inline-block;
+    display: flex;
+    padding: 1px;
+    gap: 1px;
     border-radius: 16px;
     border: 1px solid var(--blue);
-    padding-bottom: 1px;
     margin-top: 16px;
+    width: max-content;
 }
 
 footer .color-scheme-toggle label {
-    margin: 1px;
+    display: flex;
 }
 
 footer .color-scheme-toggle label input {
     position: absolute;
-    appearance: none;
     width: 0px;
     height: 0px;
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(0 0 99.9% 99.9%);
-    clip-path: inset(0 0 99.9% 99.9%);
+    margin: 0;
 }
 
 footer .color-scheme-toggle label span {
-    font-size: 14px;
-    line-height: 14px;
-    padding: 2px 4px;
+    font-size: 12px;
+    padding: 4px 2px;
     border-radius: 12px;
     color: var(--link);
     width: 40px;
-    display: inline-block;
+    display: block;
     text-align: center;
 }
 
