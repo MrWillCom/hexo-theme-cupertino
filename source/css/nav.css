@@ -30,7 +30,7 @@ nav a, nav a:hover, nav a:focus, nav a:active, nav a:link, nav a:visited {
 nav .title {
     margin: 0;
     font-size: 20px;
-    font-weight: normal;
+    font-weight: 500;
     line-height: 48px;
     color: var(--black-2)!important;
 }
