@@ -63,11 +63,11 @@ nav:
     Projects: /projects
     About: /about
     # these will be automatically be an icon
-    GitHub: https://github.com/MrWillCom
-    CodePen: https://codepen.io/mrwillcom
-    Patreon: https://www.patreon.com/MrWillCom
-    Mastodon: https://noc.social/@MrWillCom
-    Discord: https://discord.gg/UKuFDjcfY8
+    GitHub: https://github.com/Sullivansome
+    # CodePen: https://codepen.io/mrwillcom
+    #Patreon: https://www.patreon.com/MrWillCom
+    #Mastodon: https://noc.social/@MrWillCom
+    #Discord: https://discord.gg/UKuFDjcfY8
     Search: /search
 
 # footer items
@@ -88,19 +88,19 @@ footer:
   # also the title
   Projects:
     # the items
-    RSA CLI: https://github.com/MrWillCom/rsa-cli
-    Hexo Theme Cupertino: https://github.com/MrWillCom/hexo-theme-cupertino
-    A Calendar: https://github.com/MrWillCom/a-calendar
-    Auto Mirroring Bucket: https://github.com/MrWillCom/auto-mirroring-bucket
+    #RSA CLI: https://github.com/MrWillCom/rsa-cli
+    #Hexo Theme Cupertino: https://github.com/MrWillCom/hexo-theme-cupertino
+    #A Calendar: https://github.com/MrWillCom/a-calendar
+    #Auto Mirroring Bucket: https://github.com/MrWillCom/auto-mirroring-bucket
   # the title
   Me:
     # items
-    GitHub: https://github.com/MrWillCom
-    CodePen: https://codepen.io/mrwillcom
-    Patreon: https://www.patreon.com/MrWillCom
-    Mastodon: https://noc.social/@MrWillCom
-    Discord: https://discord.gg/UKuFDjcfY8
-    Email: mailto:mr.will.com@outlook.com
+    GitHub: https://github.com/Sullivansome
+    #CodePen: https://codepen.io/mrwillcom
+    #Patreon: https://www.patreon.com/MrWillCom
+    #Mastodon: https://noc.social/@MrWillCom
+    #Discord: https://discord.gg/UKuFDjcfY8
+    #Email: mailto:mr.will.com@outlook.com
 
 # footer extra description
 # footer_extra_description: something will be shown at the bottom of the footer
