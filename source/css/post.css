@@ -170,12 +170,9 @@ hr,
 .content ol {
   padding: 0 16px;
   padding-left: 32px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
   max-width: calc(800px - 16px * 2);
-}
-
-.content ul *,
-.content ol * {
-  padding: 0;
 }
 
 .content blockquote {
