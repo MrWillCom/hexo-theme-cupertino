@@ -7,6 +7,8 @@
             <% for (const i in theme.nav.items) { %>
             <% if (i == 'GitHub' || i == 'github' || i == 'gh') { %>
             <a class="nav-item nav-item-github nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank" aria-label="GitHub">&nbsp;</a>
+            <% } else if (i == 'LinkedIn' || i == 'linkedin') { %>
+            <a class="nav-item nav-item-linkedin nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank" aria-label="Patreon">&nbsp;</a>
             <% } else if (i == 'Patreon' || i == 'patreon') { %>
             <a class="nav-item nav-item-patreon nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank" aria-label="Patreon">&nbsp;</a>
             <% } else if (i == 'CodePen' || i == 'codepen') { %>
