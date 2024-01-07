@@ -92,6 +92,10 @@ body[data-color-scheme="auto"] nav .nav-item-github, body[data-color-scheme="lig
     background-image: url(/theme-img/github-mark-dark.png);
 }
 
+body[data-color-scheme="auto"] nav .nav-item-linkedin, body[data-color-scheme="light"] nav .nav-item-linkedin {
+    background-image: url(/theme-img/linkedin-mark-dark.svg);
+}
+
 body[data-color-scheme="auto"] nav .nav-item-patreon, body[data-color-scheme="light"] nav .nav-item-patreon {
     background-image: url(/theme-img/patreon-logo-black.png);
 }
@@ -116,6 +120,9 @@ body[data-color-scheme="auto"] nav .nav-item-search, body[data-color-scheme="lig
     body[data-color-scheme="auto"] nav .nav-item-github {
         background-image: url(/theme-img/github-mark-light.png);
     }
+    body[data-color-scheme="auto"] nav .nav-item-linkedin {
+        background-image: url(/theme-img/linkedin-mark-light.svg);
+    }
     body[data-color-scheme="auto"] nav .nav-item-patreon {
         background-image: url(/theme-img/patreon-logo-white.png);
     }
@@ -135,6 +142,10 @@ body[data-color-scheme="auto"] nav .nav-item-search, body[data-color-scheme="lig
 
 body[data-color-scheme="dark"] nav .nav-item-github {
     background-image: url(/theme-img/github-mark-light.png);
+}
+
+body[data-color-scheme="dark"] nav .nav-item-linkedin {
+    background-image: url(/theme-img/linkedin-mark-light.svg);
 }
 
 body[data-color-scheme="dark"] nav .nav-item-patreon {
