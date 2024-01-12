@@ -3,6 +3,7 @@ footer {
     width: 100%;
     border-top: 1px solid var(--border-color);
     user-select: none;
+    margin-top: auto; /* Fix Search page footer not locate at the bottom problem */
 }
 
 .inner {

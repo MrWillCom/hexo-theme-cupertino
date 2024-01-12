@@ -2,6 +2,12 @@
   margin-top: 128px;
 }
 
+/* Fix Search page footer not locate at the bottom problem */
+.container .meta {
+  margin-top: 0px;
+}
+/* End of fix */
+
 .meta .type {
   color: var(--grey);
   font-weight: 600;

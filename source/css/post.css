@@ -1,5 +1,10 @@
 body {
   background-color: var(--body-bg);
+  /* Fix Search page footer not locate at the bottom problem */
+  min-height: 100vh;
+  display: flex; 
+  flex-direction: column;
+  /* End of fix */
 }
 
 .post {
@@ -65,6 +70,18 @@ hr,
   margin-right: auto;
   padding: 0 16px;
 }
+
+/* Fix Search page footer not locate at the bottom problem */
+.container {
+  width: calc(100% - 16px * 2);
+}
+
+.container .meta .title {
+  padding: 0 16px;
+  margin-left: 0px;
+  margin-right: auto;
+}
+/* End of Fix footer */
 
 .content p img,
 .content .block-large img {
