@@ -1,3 +1,7 @@
+<% function isEmptyItem(itemValue) {
+    return !itemValue || itemValue.trim() === '';
+} %>
+
 <nav id="theme-nav">
     <div class="inner">
         <a class="title" href="<%= config.root %>"><%= theme.nav.title %></a>
@@ -5,21 +9,37 @@
         <div class="nav-items">
             <a class="nav-item nav-item-home" href="<%= config.root %>"><%= __('home') %></a>
             <% for (const i in theme.nav.items) { %>
-            <% if (i == 'GitHub' || i == 'github' || i == 'gh') { %>
-            <a class="nav-item nav-item-github nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank" aria-label="GitHub">&nbsp;</a>
-            <% } else if (i == 'Patreon' || i == 'patreon') { %>
-            <a class="nav-item nav-item-patreon nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank" aria-label="Patreon">&nbsp;</a>
-            <% } else if (i == 'CodePen' || i == 'codepen') { %>
-            <a class="nav-item nav-item-codepen nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank" aria-label="CodePen">&nbsp;</a>
-            <% } else if (i == 'Mastodon' || i == 'mastodon'){ %>
-            <a class="nav-item nav-item-mastodon nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank" aria-label="Mastodon">&nbsp;</a>
-            <% } else if (i == 'Discord' || i == 'discord'){ %>
-            <a class="nav-item nav-item-discord nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank" aria-label="Discord">&nbsp;</a>
-            <% } else if (i == 'Search' || i == 'search'){ %>
-            <a class="nav-item nav-item-search nav-item-icon" href="<%- url_for(theme.nav.items[i]) %>" target="_blank" aria-label="Search">&nbsp;</a>
-            <% } else { %>
-            <a class="nav-item" href="<%- url_for(theme.nav.items[i]) %>"><%= i %></a>
-            <% } %>
+                <% const itemValue = theme.nav.items[i]; %>
+                <% if (!isEmptyItem(itemValue)) { %>
+                    <% switch (i.toLowerCase()) { 
+                        case 'github': %>
+                            <a class="nav-item nav-item-github nav-item-icon" href="<%- url_for(itemValue) %>" target="_blank" aria-label="GitHub">&nbsp;</a>
+                            <% break; %>
+                        <% case 'patreon': %>
+                            <a class="nav-item nav-item-patreon nav-item-icon" href="<%- url_for(itemValue) %>" target="_blank" aria-label="Patreon">&nbsp;</a>
+                            <% break; %>
+                        <% case 'codepen': %>
+                            <a class="nav-item nav-item-codepen nav-item-icon" href="<%- url_for(itemValue) %>" target="_blank" aria-label="CodePen">&nbsp;</a>
+                            <% break; %>
+                        <% case 'mastodon': %>
+                            <a class="nav-item nav-item-mastodon nav-item-icon" href="<%- url_for(itemValue) %>" target="_blank" aria-label="Mastodon">&nbsp;</a>
+                            <% break; %>
+                        <% case 'discord': %>
+                            <a class="nav-item nav-item-discord nav-item-icon" href="<%- url_for(itemValue) %>" target="_blank" aria-label="Discord">&nbsp;</a>
+                            <% break; %>
+                        <% case 'weibo': %>
+                            <a class="nav-item nav-item-weibo nav-item-icon" href="<%- url_for(itemValue) %>" target="_blank" aria-label="Weibo">&nbsp;</a>
+                            <% break; %>
+                        <% case 'linkedin': %>
+                            <a class="nav-item nav-item-linkedin nav-item-icon" href="<%- url_for(itemValue) %>" target="_blank" aria-label="LinkedIn">&nbsp;</a>
+                            <% break; %>        
+                        <% case 'search': %>
+                            <a class="nav-item nav-item-search nav-item-icon" href="<%- url_for(itemValue) %>" target="_blank" aria-label="Search">&nbsp;</a>
+                            <% break; %>
+                        <% default: %>
+                            <a class="nav-item" href="<%- url_for(itemValue) %>"><%= i %></a>
+                    <% } %>
+                <% } %>
             <% } %>
         </div>
     </div>
