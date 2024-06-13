@@ -58,17 +58,27 @@ nav:
   # the items displays in the upper right corner
   items:
     # these items will display as a link
-    Archives: /archives
-    Friends: /friends
-    Projects: /projects
-    About: /about
+    - name: Archives
+      url: /archives
+    - name: Friends
+      url: /friends
+    - name: Projects
+      url: /projects
+    - name: About
+      url: /about
     # these will be automatically be an icon
-    GitHub: https://github.com/MrWillCom
-    CodePen: https://codepen.io/mrwillcom
-    Patreon: https://www.patreon.com/MrWillCom
-    Mastodon: https://noc.social/@MrWillCom
-    Discord: https://discord.gg/UKuFDjcfY8
-    Search: /search
+    - name: GitHub
+      url: https://github.com/MrWillCom
+    - name: CodePen
+      url: https://codepen.io/mrwillcom
+    - name: Patreon
+      url: https://www.patreon.com/MrWillCom
+    - name: Mastodon
+      url: https://noc.social/@MrWillCom
+    - name: Discord
+      url: https://discord.gg/UKuFDjcfY8
+    - name: Search
+      url: /search
 
 # footer items
 footer:
