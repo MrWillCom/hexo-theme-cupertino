@@ -1,26 +1,27 @@
 <nav id="theme-nav">
-    <div class="inner">
-        <a class="title" href="<%= config.root %>"><%= theme.nav.title %></a>
-        <div class="nav-arrow"></div>
-        <div class="nav-items">
-            <a class="nav-item nav-item-home" href="<%= config.root %>"><%- __('home') %></a>
-            <% for (const item of theme.nav.items) { %>
-            <%   if (item.name === 'GitHub' || item.name === 'github' || item.name === 'gh') { %>
-            <a class="nav-item nav-item-github nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="GitHub">&nbsp;</a>
-            <%   } else if (item.name === 'Patreon' || item.name === 'patreon') { %>
-            <a class="nav-item nav-item-patreon nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="Patreon">&nbsp;</a>
-            <%   } else if (item.name === 'CodePen' || item.name === 'codepen') { %>
-            <a class="nav-item nav-item-codepen nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="CodePen">&nbsp;</a>
-            <%   } else if (item.name === 'Mastodon' || item.name === 'mastodon'){ %>
-            <a class="nav-item nav-item-mastodon nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="Mastodon">&nbsp;</a>
-            <%   } else if (item.name === 'Discord' || item.name === 'discord'){ %>
-            <a class="nav-item nav-item-discord nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="Discord">&nbsp;</a>
-            <%   } else if (item.name === 'Search' || item.name === 'search'){ %>
-            <a class="nav-item nav-item-search nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="Search">&nbsp;</a>
-            <%   } else { %>
-            <a class="nav-item" href="<%= url_for(item.url) %>"><%- item.name %></a>
-            <%   } %>
-            <% } %>
-        </div>
+  <div class="inner">
+    <a class="title" href="<%= config.root %>"><%= theme.nav.title %></a>
+    <div class="nav-arrow"></div>
+    <div class="nav-items">
+      <a class="nav-item nav-item-home" href="<%= config.root %>"><%- __('home') %></a>
+
+      <% for (const item of theme.nav.items) { %>
+      <%   if (item.name === 'GitHub' || item.name === 'github' || item.name === 'gh') { %>
+      <a class="nav-item nav-item-github nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="GitHub">&nbsp;</a>
+      <%   } else if (item.name === 'Patreon' || item.name === 'patreon') { %>
+      <a class="nav-item nav-item-patreon nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="Patreon">&nbsp;</a>
+      <%   } else if (item.name === 'CodePen' || item.name === 'codepen') { %>
+      <a class="nav-item nav-item-codepen nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="CodePen">&nbsp;</a>
+      <%   } else if (item.name === 'Mastodon' || item.name === 'mastodon'){ %>
+      <a class="nav-item nav-item-mastodon nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="Mastodon">&nbsp;</a>
+      <%   } else if (item.name === 'Discord' || item.name === 'discord'){ %>
+      <a class="nav-item nav-item-discord nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="Discord">&nbsp;</a>
+      <%   } else if (item.name === 'Search' || item.name === 'search'){ %>
+      <a class="nav-item nav-item-search nav-item-icon" href="<%= url_for(item.url) %>" target="_blank" aria-label="Search">&nbsp;</a>
+      <%   } else { %>
+      <a class="nav-item" href="<%= url_for(item.url) %>"><%- item.name %></a>
+      <%   } %>
+      <% } %>
     </div>
+  </div>
 </nav>

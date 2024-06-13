@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>">
-    <%- partial('_partial/head') %>
-    <body
-        data-color-scheme="<%= theme.color_scheme %>"
-        data-uppercase-categories="<%= theme.uppercase_categories %>"
-        <% if (theme.rainbow_banner == true) { %>
-        data-rainbow-banner="<%= theme.rainbow_banner %>"
-        data-rainbow-banner-shown="<%= theme.rainbow_banner_shown %>"
-        data-rainbow-banner-month="<%= theme.rainbow_banner_month %>"
-        data-rainbow-banner-colors="<%= theme.rainbow_banner_colors %>"
-        <% } %>
-        data-config-root="<%- config.root %>"
-        <% if (theme.toc == true) { %>
-        data-toc="<%= theme.toc %>"
-        data-toc-max-depth="<%= theme.toc_max_depth %>"
-        <% } %>
-        <% if (theme.search == true && page.type == 'search') { %>
-        data-search-path="<%= theme.search_path %>"
-        <% } %>
-    >
-        <%- partial('_partial/nav') %>
-        <%- body %>
-        <%- partial('_partial/footer') %>
+  <%- partial('_partial/head') %>
+  <body
+    data-color-scheme="<%= theme.color_scheme %>"
+    data-uppercase-categories="<%= theme.uppercase_categories %>"
+    <% if (theme.rainbow_banner == true) { %>
+    data-rainbow-banner="<%= theme.rainbow_banner %>"
+    data-rainbow-banner-shown="<%= theme.rainbow_banner_shown %>"
+    data-rainbow-banner-month="<%= theme.rainbow_banner_month %>"
+    data-rainbow-banner-colors="<%= theme.rainbow_banner_colors %>"
+    <% } %>
+    data-config-root="<%- config.root %>"
+    <% if (theme.toc == true) { %>
+    data-toc="<%= theme.toc %>"
+    data-toc-max-depth="<%= theme.toc_max_depth %>"
+    <% } %>
+    <% if (theme.search == true && page.type == 'search') { %>
+    data-search-path="<%= theme.search_path %>"
+    <% } %>
+  >
+    <%- partial('_partial/nav') %>
+    <%- body %>
+    <%- partial('_partial/footer') %>
 
-        <%- js('js/main.js') %>
-        <% if (theme.search == true && page.type == 'search') { %>
-        <%- js('js/search.js') %>
-        <% } %>
-        <% if (config.tidio) { %> 
-        <%- js(config.tidio) %> 
-        <%- js('js/tidio.js') %>
-        <% } %>
-        <% if (config.ackee) { %>
-        <%- config.ackee %>
-        <% } %>
+    <%- js('js/main.js') %>
 
-        <% if (theme.scroll_reveal) { %>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script>
-            window.addEventListener('load', () => {
-                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
-                ScrollReveal().reveal('.post-list-item .cover-img img')
-                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
-            })
-        </script>
-        <% } %>
-    </body>
+    <% if (theme.search == true && page.type == 'search') { %>
+    <%- js('js/search.js') %>
+    <% } %>
+
+    <% if (config.tidio) { %> 
+    <%- js(config.tidio) %> 
+    <%- js('js/tidio.js') %>
+    <% } %>
+
+    <% if (config.ackee) { %>
+    <%- config.ackee %>
+    <% } %>
+
+    <% if (theme.scroll_reveal) { %>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      window.addEventListener('load', () => {
+        ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
+        ScrollReveal().reveal('.post-list-item .cover-img img')
+        ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
+      })
+    </script>
+    <% } %>
+  </body>
 </html>

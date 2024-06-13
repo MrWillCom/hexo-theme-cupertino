@@ -1,16 +1,16 @@
 <div class="container">
-    <% if (page.path == "index.html") { %>
-    <div class="hero">
-        <div class="group">
-            <h2 class="sub"><%- config.subtitle %></h2>
-            <h2 class="large"><%- config.description %></h2>
-        </div>
+  <% if (page.path == "index.html") { %>
+  <div class="hero">
+    <div class="group">
+      <h2 class="sub"><%- config.subtitle %></h2>
+      <h2 class="large"><%- config.description %></h2>
     </div>
+  </div>
 
-    <h2 class="section-title"><%- __('latest_posts') %></h2>
-    <% } %>
+  <h2 class="section-title"><%- __('latest_posts') %></h2>
+  <% } %>
 
-    <%- partial('_partial/post-list', { posts: page.posts }) %>
+  <%- partial('_partial/post-list', { posts: page.posts }) %>
 
-    <%- partial('_partial/paginator') %>
+  <%- partial('_partial/paginator') %>
 </div>

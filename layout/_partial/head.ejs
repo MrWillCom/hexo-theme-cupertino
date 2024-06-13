@@ -34,7 +34,7 @@
     <%- favicon_tag(theme.favicon) %>
   <% } %>
   <% if (theme.manifest) { %>
-    <link rel='manifest' href='<%= theme.manifest %>'>
+  <link rel='manifest' href='<%= theme.manifest %>'>
   <% } %>
 
   <% if (theme.og_enabled) { %>
@@ -105,10 +105,10 @@
   <% } %>
 
   <% if (config.waline) { %>
-    <script src='https://unpkg.com/@waline/client@v2/dist/waline.js'></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@waline/client@v2/dist/waline.css"
-    />
+  <script src='https://unpkg.com/@waline/client@v2/dist/waline.js'></script>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
   <% } %>
 </head>

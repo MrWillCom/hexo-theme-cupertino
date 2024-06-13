@@ -1,16 +1,20 @@
 <div class="container">
-    <div class="meta">
-        <div class="type">
-            <%= is_category() ? __('category') : '' %>
-            <%= is_tag() ? __('tag') : '' %>
-        </div>
-
-        <h2 class="title<%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>"><%= is_category() ? page.category : '' %><%= is_tag() ? (theme.hashtag_prefix_before_tags ? '#' : '') + page.tag : '' %><%= is_archive() ? __('archives') : '' %></h2>
+  <div class="meta">
+    <div class="type">
+      <%= is_category() ? __('category') : '' %>
+      <%= is_tag() ? __('tag') : '' %>
     </div>
 
-    <div class="divider"></div>
+    <h2 class="title<%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>">
+      <%= is_category() ? page.category : '' %>
+      <%= is_tag() ? (theme.hashtag_prefix_before_tags ? '#' : '') + page.tag : '' %>
+      <%= is_archive() ? __('archives') : '' %>
+    </h2>
+  </div>
 
-    <%- partial('_partial/post-list', { posts: page.posts, isArchives: true }) %>
+  <div class="divider"></div>
 
-    <%- partial('_partial/paginator') %>
+  <%- partial('_partial/post-list', { posts: page.posts, isArchives: true }) %>
+
+  <%- partial('_partial/paginator') %>
 </div>
