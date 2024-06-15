@@ -12,22 +12,13 @@ body {
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-a:link {
+a {
   color: var(--link);
   text-decoration: none;
-}
 
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  text-decoration: none;
-}
-
-a:visited {
-  color: var(--link);
-  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .container {
@@ -43,8 +34,4 @@ a:visited {
   letter-spacing: 0.004em;
   margin-bottom: 24px;
   color: var(--card-title);
-}
-
-.theme-command {
-  display: none;
 }

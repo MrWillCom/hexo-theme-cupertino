@@ -1,0 +1,33 @@
+.hero {
+  height: calc(100vh - 56px);
+  display: grid;
+  place-items: center;
+
+  .group {
+    width: 100%;
+  }
+
+  .sub {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--black-4);
+    font-weight: 100;
+    margin: 0;
+    transition: font-size 0.5s;
+
+    @media (max-width: 800px) {
+      font-size: 16px;
+    }
+  }
+
+  .large {
+    font-size: 128px;
+    color: var(--black-2);
+    margin: 0;
+    transition: font-size 0.5s;
+
+    @media (max-width: 800px) {
+      font-size: 84px;
+    }
+  }
+}

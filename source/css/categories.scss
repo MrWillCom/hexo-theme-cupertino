@@ -1,0 +1,27 @@
+.categories {
+  margin-bottom: 128px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category {
+    display: block;
+    padding: 12px 24px;
+    margin: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    background-color: var(--white);
+    color: var(--black-2);
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+
+    &:hover {
+      background-color: var(--white-1);
+      color: var(--black);
+    }
+  }
+}
