@@ -1,24 +1,22 @@
-# REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!
-
-# the path to your blog's icon:
+# path to your blog's icon
 favicon: /favicon.png
 
-# the path to manifest.json
+# path to manifest.json
 manifest: /manifest.json
 
 # [Open Graph Protocol](https://ogp.me/)
 og_enabled: true
 og_image: /favicon.png
 og:
-  # customize og properties here which will replace the defaults
+  # customized og properties, which can replace the defaults
 
 # show excerpt on post list
 show_excerpt: false
 
-# light/dark/auto color scheme
+# default light/dark/auto color scheme
 color_scheme: auto
 
-# show floating color theme toggle
+# show color theme toggle in footer
 show_color_scheme_toggle: true
 
 # uppercase categories
@@ -39,25 +37,21 @@ rainbow_banner_colors:
   - '#008121'
   - '#004cff'
   - '#760188'
-# choose from [auto, always]
+# when to show rainbow banner: auto/always
 rainbow_banner_shown: auto
 # Pride Month by default
 rainbow_banner_month: 6
 
-# TOC - table of contents
+# table of contents
 toc: true
 toc_max_depth: 2
 
-# scroll reveal (https://scrollrevealjs.org/) - animating elements as they enter/leave the viewport
+# scroll reveal (https://scrollrevealjs.org/) - animating elements as they enter the viewport
 scroll_reveal: true
 
-# navigation config
 nav:
-  # the title displays in the upper left corner which won't change
   title: Blog
-  # the items displays in the upper right corner
   items:
-    # these items will display as a link
     - name: Archives
       url: /archives
     - name: Friends
@@ -66,7 +60,6 @@ nav:
       url: /projects
     - name: About
       url: /about
-    # these will be automatically be an icon
     - name: <i class="si si-github"></i>
       is_icon: true
       url: https://github.com/MrWillCom
@@ -118,9 +111,7 @@ footer:
 # footer extra description
 # footer_extra_description: something will be shown at the bottom of the footer
 
-# the license your posts under
 license: CC BY-NC 4.0
-# the link of your license
 license_link: https://creativecommons.org/licenses/by-nc/4.0
 
 # search
