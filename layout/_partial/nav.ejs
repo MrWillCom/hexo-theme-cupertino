@@ -3,11 +3,11 @@
     <a class="title" href="<%= config.root %>"><%= theme.nav.title %></a>
     <div class="nav-arrow"></div>
     <div class="nav-items">
-      <a class="nav-item nav-item-home" href="<%= config.root %>"><%- __('home') %></a>
+      <a class="nav-item nav-item-home" href="<%= config.root %>" style="--index: 0"><%- __('home') %></a>
 
-      <% for (const item of theme.nav.items) { %>
-      <a class="nav-item<% if (item.is_icon) { %> is-icon<% } %>" href="<%= url_for(item.url) %>"><%- item.name %></a>
-      <% } %>
+      <% theme.nav.items.forEach((item, i) => { %>
+      <a class="nav-item<% if (item.is_icon) { %> is-icon<% } %>" href="<%= url_for(item.url) %>" style="--index: <%- i + 1 %>"><%- item.name %></a>
+      <% }) %>
     </div>
   </div>
 </nav>
