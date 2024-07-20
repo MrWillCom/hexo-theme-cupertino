@@ -197,38 +197,19 @@ hr,
 .tags {
   display: flex;
   flex-wrap: wrap;
+  gap: 4px;
 }
 
 .tags .icon {
-  --size: 14px;
-  background-position: center;
-  background-size: var(--size) var(--size);
-  background-repeat: no-repeat;
+  font-size: 14px;
   display: block;
-  width: var(--size);
-  height: var(--size);
-  margin-right: 6px;
-}
-
-body[data-color-scheme='auto'] .tags .icon {
-  background-image: url(/theme-img/tags-dark.svg);
-}
-
-@media (prefers-color-scheme: dark) {
-  body[data-color-scheme='auto'] .tags .icon {
-    background-image: url(/theme-img/tags-light.svg);
-  }
-}
-
-body[data-color-scheme='dark'] .tags .icon {
-  background-image: url(/theme-img/tags-light.svg);
+  margin-right: 2px;
 }
 
 .tags .tag {
   font-size: 14px;
   display: block;
   height: 14px;
-  margin-right: 4px;
 }
 
 .about {

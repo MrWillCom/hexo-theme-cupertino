@@ -40,6 +40,7 @@
     </div>
     <% if (page.tags && page.tags.length) { %>
     <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
+      <i class="bi bi-tags icon"></i>
       <%
         var tags = ''
         page.tags.forEach((tag) => {
@@ -47,7 +48,6 @@
         })
         if (!theme.hashtag_prefix_before_tags) { tags = tags.slice(0, tags.length - 1) }
       %>
-      <i class="icon"></i>
       <%- tags %>
     </p>
     <% } %>
