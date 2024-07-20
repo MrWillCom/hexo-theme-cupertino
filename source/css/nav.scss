@@ -70,99 +70,25 @@ nav {
     @media (max-width: 400px) {
       padding: 0 4px;
     }
+
+    &.is-icon {
+      font-size: 24px;
+      padding: 0 4px;
+
+      @media (max-width: 600px) {
+        display: inline-block;
+        float: inline-start;
+      }
+    }
   }
 
   .nav-item-home {
     display: none;
   }
 
-  .nav-item-icon {
-    width: 32px;
-    height: 48px;
-    background-position: center;
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    padding: 0;
-  }
-
   .nav-item-search {
     background-size: 16px 16px;
   }
-}
-
-body[data-color-scheme='auto'] nav .nav-item-github,
-body[data-color-scheme='light'] nav .nav-item-github {
-  background-image: url(/theme-img/github-mark-dark.png);
-}
-
-body[data-color-scheme='auto'] nav .nav-item-patreon,
-body[data-color-scheme='light'] nav .nav-item-patreon {
-  background-image: url(/theme-img/patreon-logo-black.png);
-}
-
-body[data-color-scheme='auto'] nav .nav-item-codepen,
-body[data-color-scheme='light'] nav .nav-item-codepen {
-  background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png);
-}
-
-body[data-color-scheme='auto'] nav .nav-item-mastodon,
-body[data-color-scheme='light'] nav .nav-item-mastodon {
-  background-image: url(/theme-img/mastodon-logo-black.svg);
-}
-
-body[data-color-scheme='auto'] nav .nav-item-discord,
-body[data-color-scheme='light'] nav .nav-item-discord {
-  background-image: url(/theme-img/discord-mark-dark.svg);
-}
-
-body[data-color-scheme='auto'] nav .nav-item-search,
-body[data-color-scheme='light'] nav .nav-item-search {
-  background-image: url(/theme-img/search-dark.svg);
-}
-
-@media (prefers-color-scheme: dark) {
-  body[data-color-scheme='auto'] nav .nav-item-github {
-    background-image: url(/theme-img/github-mark-light.png);
-  }
-  body[data-color-scheme='auto'] nav .nav-item-patreon {
-    background-image: url(/theme-img/patreon-logo-white.png);
-  }
-  body[data-color-scheme='auto'] nav .nav-item-codepen {
-    background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png);
-  }
-  body[data-color-scheme='auto'] nav .nav-item-mastodon {
-    background-image: url(/theme-img/mastodon-logo-white.svg);
-  }
-  body[data-color-scheme='auto'] nav .nav-item-discord {
-    background-image: url(/theme-img/discord-mark-light.svg);
-  }
-  body[data-color-scheme='auto'] nav .nav-item-search {
-    background-image: url(/theme-img/search-light.svg);
-  }
-}
-
-body[data-color-scheme='dark'] nav .nav-item-github {
-  background-image: url(/theme-img/github-mark-light.png);
-}
-
-body[data-color-scheme='dark'] nav .nav-item-patreon {
-  background-image: url(/theme-img/patreon-logo-white.png);
-}
-
-body[data-color-scheme='dark'] nav .nav-item-codepen {
-  background-image: url(https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-White-Large.png);
-}
-
-body[data-color-scheme='dark'] nav .nav-item-mastodon {
-  background-image: url(/theme-img/mastodon-logo-white.svg);
-}
-
-body[data-color-scheme='dark'] nav .nav-item-discord {
-  background-image: url(/theme-img/discord-mark-light.svg);
-}
-
-body[data-color-scheme='dark'] nav .nav-item-search {
-  background-image: url(/theme-img/search-light.svg);
 }
 
 @media (max-width: 600px) {
@@ -217,10 +143,6 @@ body[data-color-scheme='dark'] nav .nav-item-search {
     pointer-events: none;
     display: block;
     text-align: left;
-  }
-  nav .nav-item-icon {
-    float: left;
-    display: inline-block;
   }
   nav.open .title {
     transform: translate(0, 8px);

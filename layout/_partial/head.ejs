@@ -111,4 +111,11 @@
     href="https://unpkg.com/@waline/client@v2/dist/waline.css"
   />
   <% } %>
+
+  <% if (theme.simple_icons) { %>
+  <%- css('https://unpkg.com/simple-icons-font@v13/font/simple-icons.min.css') %>
+  <% } %>
+  <% if (theme.bootstrap_icons) { %>
+  <%- css('https://unpkg.com/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css') %>
+  <% } %>
 </head>

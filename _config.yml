@@ -67,17 +67,20 @@ nav:
     - name: About
       url: /about
     # these will be automatically be an icon
-    - name: GitHub
+    - name: <i class="si si-github"></i>
+      is_icon: true
       url: https://github.com/MrWillCom
-    - name: CodePen
+    - name: <i class="si si-codepen"></i>
+      is_icon: true
       url: https://codepen.io/mrwillcom
-    - name: Patreon
+    - name: <i class="si si-patreon"></i>
+      is_icon: true
       url: https://www.patreon.com/MrWillCom
-    - name: Mastodon
+    - name: <i class="si si-mastodon"></i>
+      is_icon: true
       url: https://noc.social/@MrWillCom
-    - name: Discord
-      url: https://discord.gg/UKuFDjcfY8
-    - name: Search
+    - name: <i class="bi bi-search"></i>
+      is_icon: true
       url: /search
 
 # footer items
@@ -124,4 +127,8 @@ license_link: https://creativecommons.org/licenses/by-nc/4.0
 # based on [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
 search: true
 search_path: search.json
+
+# icons
+simple_icons: true
+bootstrap_icons: true
 # REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!
