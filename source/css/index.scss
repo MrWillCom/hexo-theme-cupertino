@@ -1,11 +1,8 @@
 .hero {
   height: calc(100vh - 56px);
-  display: grid;
-  place-items: center;
-
-  .group {
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .sub {
     text-transform: uppercase;
