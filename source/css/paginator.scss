@@ -4,23 +4,47 @@
   padding: 16px;
   margin: 8px;
 
-  & > * {
-    border-radius: 32px;
-    padding: 6px 12px;
-    margin: 0 2px;
+  & > a,
+  & > span {
+    height: 32px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
     user-select: none;
-    transition: all 0.2s;
+    color: var(--black-2);
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: var(--card-bg);
+      color: var(--black);
+      text-decoration: none;
     }
-
+    
     &:active {
-      background-color: var(--card-border);
+      color: var(--black-4);
     }
-  }
 
-  .current:hover {
-    background-color: transparent;
+    &.prev {
+      padding-left: 14px;
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
+    }
+
+    &.next {
+      padding-right: 14px;
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+
+    &.current {
+      color: var(--black-4);
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
   }
 }
