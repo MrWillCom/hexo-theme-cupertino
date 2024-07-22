@@ -290,18 +290,16 @@ hr,
 .post-prev-next {
   display: flex;
   justify-content: space-between;
+  display: flex;
 
   & > a {
     width: 50%;
     color: var(--black-4);
     text-decoration: none;
+    display: flex;
 
     &:hover {
       color: var(--black-2);
-    }
-
-    & > div {
-      display: flex;
     }
   }
 
@@ -310,16 +308,11 @@ hr,
     flex-direction: column;
   }
 
-  .prev {
-    & > div {
-      justify-content: flex-end;
-      text-align: right;
-    }
-
+  .prev,
+  .next {
     .text {
-      align-items: flex-end;
-
-      * {
+      .title,
+      .label {
         margin: 0;
       }
 
@@ -327,6 +320,24 @@ hr,
         margin-bottom: 4px;
         color: var(--grey);
       }
+    }
+  }
+
+  .prev {
+    justify-content: flex-end;
+    text-align: right;
+
+    .text {
+      align-items: flex-end;
+    }
+  }
+
+  .next {
+    justify-content: flex-start;
+    text-align: left;
+
+    .text {
+      align-items: flex-start;
     }
   }
 }

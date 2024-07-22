@@ -57,21 +57,17 @@
   <div class="container post-prev-next">
     <% if (page.prev) { %>
     <a href="<%= url_for(page.prev.path) %>" class="next">
-      <div>
-        <div class="text">
-          <p class="label"><%= __('next_post') %></p>
-          <h3 class="title"><%= page.prev.title %></h3>
-        </div>
+      <div class="text">
+        <p class="label"><%= __('next_post') %></p>
+        <h3 class="title"><%= page.prev.title %></h3>
       </div>
     </a>
     <% } else { %><a class="next"></a><% } %>
     <% if (page.next) { %>
     <a href="<%= url_for(page.next.path) %>" class="prev">
-      <div>
-        <div class="text">
-          <p class="label"><%= __('prev_post') %></p>
-          <h3 class="title"><%= page.next.title %></>
-        </div>
+      <div class="text">
+        <p class="label"><%= __('prev_post') %></p>
+        <h3 class="title"><%= page.next.title %></>
       </div>
     </a>
     <% } else { %><a class="prev"></a><% } %>
