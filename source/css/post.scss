@@ -297,6 +297,7 @@ hr,
     color: var(--black-4);
     text-decoration: none;
     display: flex;
+    transition: color 0.2s;
 
     &:hover {
       color: var(--black-2);
