@@ -1,16 +1,16 @@
 <footer>
   <div class="inner">
     <div class="links">
-      <% for (const i in theme.footer) { %>
+      <% for (const group of theme.footer) { %>
       <div class="group">
-        <h2 class="title"><%= i %></h2>
-        <% for (const n in theme.footer[i]) { %>
-        <a href="<%- theme.footer[i][n] %>" class="item"><%= n %></a>
+        <h2 class="title"><%- group.group_name %></h2>
+        <% for (const item of group.items) { %>
+        <a href="<%- url_for(item.url) %>" class="item"><%- item.name %></a>
         <% } %>
       </div>
       <% } %>
     </div>
-    <span>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br><%- __('powered_by', '<a href="http://hexo.io/" target="_blank">Hexo</a>') %> </span>
+    <span>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br><%- __('powered_by', '<a href="http://hexo.io/" target="_blank">Hexo</a>') %></span>
     <% if (theme.footer_extra_description) { %>
     <br>
     <span class="footer-extra-description"><%- theme.footer_extra_description %></span>

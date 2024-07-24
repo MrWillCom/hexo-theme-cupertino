@@ -76,37 +76,47 @@ nav:
       is_icon: true
       url: /search
 
-# footer items
 footer:
-  # the title
-  Blog:
-    # the items after the title, display as links
-    Blog: /
-    Archives: /archives
-    Tags: /tags
-    Categories: /categories
-    Search: /search
-    Friends: /friends
-    Projects: /projects
-    Resume: /resume
-    About: /about
-    RSS: /atom.xml
-  # also the title
-  Projects:
-    # the items
-    RSA CLI: https://github.com/MrWillCom/rsa-cli
-    Hexo Theme Cupertino: https://github.com/MrWillCom/hexo-theme-cupertino
-    A Calendar: https://github.com/MrWillCom/a-calendar
-    Auto Mirroring Bucket: https://github.com/MrWillCom/auto-mirroring-bucket
-  # the title
-  Me:
-    # items
-    GitHub: https://github.com/MrWillCom
-    CodePen: https://codepen.io/mrwillcom
-    Patreon: https://www.patreon.com/MrWillCom
-    Mastodon: https://noc.social/@MrWillCom
-    Discord: https://discord.gg/UKuFDjcfY8
-    Email: mailto:mr.will.com@outlook.com
+  - group_name: Blog
+    items:
+      - name: Home
+        url: /
+      - name: Archives
+        url: /archives
+      - name: Tags
+        url: /tags
+      - name: Categories
+        url: /categories
+      - name: Search
+        url: /search
+      - name: Friends
+        url: /friends
+      - name: Projects
+        url: /projects
+      - name: Resume
+        url: /resume
+      - name: About
+        url: /about
+      - name: RSS
+        url: /atom.xml
+  - group_name: Projects
+    items:
+      - name: Hexo Theme Cupertino
+        url: https://github.com/MrWillCom/hexo-theme-cupertino
+      - name: Next Mastodon Gallery
+        url: https://github.com/MrWillCom/next-mastodon-gallery
+  - group_name: Me
+    items:
+      - name: GitHub
+        url: https://github.com/MrWillCom
+      - name: CodePen
+        url: https://codepen.io/mrwillcom
+      - name: Patreon
+        url: https://www.patreon.com/MrWillCom
+      - name: Mastodon
+        url: https://noc.social/@MrWillCom
+      - name: Email
+        url: mailto:mr.will.com@outlook.com
 
 # footer extra description
 # footer_extra_description: something will be shown at the bottom of the footer
