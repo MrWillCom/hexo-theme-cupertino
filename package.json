@@ -19,5 +19,8 @@
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-sass": "^0.5.0"
   },
-  "homepage": "https://cupertino.mrwillcom.com/"
+  "homepage": "https://cupertino.mrwillcom.com/",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7"
+  }
 }
