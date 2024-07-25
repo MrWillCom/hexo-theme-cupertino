@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-cupertino",
-  "version": "1.0.0",
+  "version": "2.0.0-beta.0",
   "description": "The Hexo Blog Theme Cupertino.",
   "license": "MIT",
   "repository": "MrWillCom/hexo-theme-cupertino",
@@ -22,5 +22,8 @@
   "homepage": "https://cupertino.mrwillcom.com/",
   "devDependencies": {
     "@changesets/cli": "^2.27.7"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

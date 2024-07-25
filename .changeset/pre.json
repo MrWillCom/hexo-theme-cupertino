@@ -1,0 +1,20 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "hexo-theme-cupertino": "1.0.0"
+  },
+  "changesets": [
+    "cuddly-wombats-do",
+    "famous-jobs-buy",
+    "gorgeous-pumas-count",
+    "long-humans-join",
+    "loud-lamps-cover",
+    "old-masks-complain",
+    "quick-zoos-notice",
+    "twenty-dolphins-chew",
+    "unlucky-suns-smile",
+    "wild-buses-join",
+    "wise-shirts-cry"
+  ]
+}
