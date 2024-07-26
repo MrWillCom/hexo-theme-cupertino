@@ -22,8 +22,5 @@
   "homepage": "https://cupertino.mrwillcom.com/",
   "devDependencies": {
     "@changesets/cli": "^2.27.7"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
