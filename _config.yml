@@ -46,8 +46,9 @@ rainbow_banner_month: 6
 toc: true
 toc_max_depth: 2
 
-# scroll reveal (https://scrollrevealjs.org/) - animating elements as they enter the viewport
 scroll_reveal: true
+scroll_reveal_query: .scroll-reveal, .post-list-item, .card, .content p img, .content .block-large img
+scroll_reveal_disappear: false
 
 nav:
   title: Blog

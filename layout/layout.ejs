@@ -29,6 +29,10 @@
     <%- js('js/search.js') %>
     <% } %>
 
+    <% if (theme.scroll_reveal) { %>
+    <%- js('js/scroll-reveal.js') %>
+    <% } %>
+
     <% if (config.tidio) { %> 
     <%- js(config.tidio) %> 
     <%- js('js/tidio.js') %>
@@ -36,17 +40,6 @@
 
     <% if (config.ackee) { %>
     <%- config.ackee %>
-    <% } %>
-
-    <% if (theme.scroll_reveal) { %>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-      window.addEventListener('load', () => {
-        ScrollReveal({ delay: 250, easing: 'cubic-bezier(0, 0, 0, 1)' })
-        ScrollReveal().reveal('.post-list-item .cover-img img')
-        ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
-      })
-    </script>
     <% } %>
   </body>
 </html>
