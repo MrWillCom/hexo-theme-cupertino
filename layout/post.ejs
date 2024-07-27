@@ -36,7 +36,7 @@
   <div class="about">
     <h1><%= __('about_this_post') %></h1>
     <div class="details">
-      <p><%- __('this_post_is_written_by', config.author) %>, <%- __('licensed_under', `<a href="${theme.license_link}">${theme.license}</a>`) %>.</p>
+      <p><%- __('this_post_is_written_by_licensed_under', { author: config.author, license: `<a href="${theme.license_link}">${theme.license}</a>` }) %></p>
     </div>
     <% if (page.tags && page.tags.length) { %>
     <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
