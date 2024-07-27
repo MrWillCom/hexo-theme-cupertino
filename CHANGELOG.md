@@ -1,5 +1,16 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.2
+
+### Minor Changes
+
+- acef781: Add view transition.
+
+### Patch Changes
+
+- 83268b5: Update i18n strings.
+- bd6bfa6: Fix post list items and cards reappearing.
+
 ## 2.0.0-beta.1
 
 ### Minor Changes
