@@ -5,33 +5,32 @@
 @keyframes view-transition-fade-out {
   0% {
     opacity: 1;
-    transform: translateX(0);
   }
 
   100% {
     opacity: 0;
-    transform: translateX(-20px);
   }
 }
 
 @keyframes view-transition-fade-in {
   0% {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateY(12px);
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
 ::view-transition-old(root) {
-  animation: 0.2s cubic-bezier(0.2, 0.2, 0.2, 1) both view-transition-fade-out;
+  animation: 0.2s ease-in forwards view-transition-fade-out;
 }
 
 ::view-transition-new(root) {
-  animation: 0.2s cubic-bezier(0.2, 0.2, 0.2, 1) both view-transition-fade-in;
+  animation: 0.35s cubic-bezier(0.2, 0.2, 0.2, 1) 0.25s both
+    view-transition-fade-in;
 }
 
 nav {
