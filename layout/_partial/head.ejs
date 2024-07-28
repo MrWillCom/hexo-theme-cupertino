@@ -113,6 +113,9 @@
   </script>
   <%- css('css/scroll-reveal') %>
   <% } %>
+  <% if (theme.view_transition) { %>
+  <%- css('css/view-transition') %>
+  <% } %>
 
   <% if (config.waline) { %>
   <script src='https://unpkg.com/@waline/client@v2/dist/waline.js'></script>

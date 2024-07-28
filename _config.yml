@@ -134,4 +134,5 @@ search_path: search.json
 simple_icons: true
 # Theme Cupertino requires Bootstrap Icons to display some icons of the UI, don't turn it off unless you know what exactly you're doing.
 bootstrap_icons: true
-# REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!
+
+view_transition: true

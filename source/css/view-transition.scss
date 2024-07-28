@@ -1,0 +1,39 @@
+@view-transition {
+  navigation: auto;
+}
+
+@keyframes view-transition-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes view-transition-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+::view-transition-old(root) {
+  animation: 0.2s cubic-bezier(0.2, 0.2, 0.2, 1) both view-transition-fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.2s cubic-bezier(0.2, 0.2, 0.2, 1) both view-transition-fade-in;
+}
+
+nav {
+  view-transition-name: nav;
+}
