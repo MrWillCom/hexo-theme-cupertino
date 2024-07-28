@@ -157,6 +157,8 @@ nav {
     }
 
     &.open {
+      height: var(--open-height);
+
       .title {
         transform: translate(0, 8px);
         opacity: 0;
