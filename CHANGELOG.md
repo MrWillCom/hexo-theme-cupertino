@@ -1,5 +1,12 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.3
+
+### Minor Changes
+
+- 3d48ff1: Move expanded height of nav to `--open-height`.
+- 1716eef: Update the animation of view transition and split nav transition from the whole page.
+
 ## 2.0.0-beta.2
 
 ### Minor Changes
