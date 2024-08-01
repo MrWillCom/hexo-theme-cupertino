@@ -17,9 +17,7 @@
 
     <% if (!page.no_date) { %>
     <div class="date" id="date">
-      <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][page.date.month()] %></span>
-      <span><%- page.date.date() %>,</span>
-      <span><%- page.date.year() %></span>
+      <%- moment(page.date).format(theme.date_display_format) %>
     </div>
     <% } %>
 

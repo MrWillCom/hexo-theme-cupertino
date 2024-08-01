@@ -136,3 +136,7 @@ simple_icons: true
 bootstrap_icons: true
 
 view_transition: true
+
+# date display format
+# refer to https://momentjs.com/docs/#/displaying/format/
+date_display_format: MMMM D, YYYY

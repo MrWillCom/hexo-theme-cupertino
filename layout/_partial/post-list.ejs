@@ -25,9 +25,7 @@
         <% } %>
         <% if (!post.no_date) { %>
         <div class="time">
-          <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][post.date.month()] %></span>
-          <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
-          <span><%- post.date.year() %></span>
+          <%- moment(post.date).format(theme.date_display_format) %>
         </div>
         <% } %>
       </div>
