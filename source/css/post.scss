@@ -69,7 +69,8 @@ hr,
 }
 
 .content p img,
-.content .block-large img {
+.content .block-large img,
+.content figure img {
   border-radius: 10px;
 }
 
@@ -185,6 +186,12 @@ hr,
 .content blockquote {
   max-width: calc(800px - 16px * 2);
   padding: 0 8px;
+}
+
+.content figure figcaption {
+  text-align: center;
+  font-size: 16px;
+  color: var(--grey);
 }
 
 /* for [hexo-math](https://github.com/hexojs/hexo-math): */
