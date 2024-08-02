@@ -93,8 +93,15 @@
   }
 
   .excerpt {
-    font-size: 17px;
-    color: var(--black-1);
+    margin-top: 12px;
+    font-weight: normal;
+    font-size: 15px;
+    color: var(--grey);
+
+    & > * {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
   }
 
   @media (max-width: 800px) {
