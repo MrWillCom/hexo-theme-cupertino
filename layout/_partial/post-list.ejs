@@ -24,9 +24,9 @@
         </div>
         <% } %>
         <% if (!post.no_date) { %>
-        <div class="time">
+        <time class="time" datetime="<%- moment(page.date).format() %>">
           <%- moment(post.date).format(theme.date_display_format) %>
-        </div>
+        </time>
         <% } %>
       </div>
     </a>

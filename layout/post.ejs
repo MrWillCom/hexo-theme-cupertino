@@ -16,9 +16,9 @@
     <% } %>
 
     <% if (!page.no_date) { %>
-    <div class="date" id="date">
+    <time class="date" datetime="<%- moment(page.date).format() %>">
       <%- moment(page.date).format(theme.date_display_format) %>
-    </div>
+    </time>
     <% } %>
 
     <h1 class="title"><%= page.title %></h1>
