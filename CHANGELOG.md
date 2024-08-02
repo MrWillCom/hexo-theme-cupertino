@@ -1,5 +1,17 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.4
+
+### Minor Changes
+
+- 5ff6d1e: Update date display format to make it configurable in theme config `date_display_format`.
+- 78c635e: Add styles for `<figcaption>` in `<figure>`.
+
+### Patch Changes
+
+- c0ceb00: Use `<time />` to display dates to make it more readable for browsers.
+- 0a1ac4a: Update styles of the excerpt in post list.
+
 ## 2.0.0-beta.3
 
 ### Minor Changes
