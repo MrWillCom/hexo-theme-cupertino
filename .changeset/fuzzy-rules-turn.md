@@ -2,4 +2,4 @@
 'hexo-theme-cupertino': minor
 ---
 
-Add CDN configurations.
+Add CDN configuration to allow custom CDNs.
