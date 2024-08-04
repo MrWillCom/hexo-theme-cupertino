@@ -19,8 +19,11 @@
     data-search-path="<%= theme.search_path %>"
     <% } %>
   >
+    <a href="#main-content" id="skip-to-content"><%- __('skip_to_content') %></a>
     <%- partial('_partial/nav') %>
-    <%- body %>
+    <main id="main-content">
+      <%- body %>
+    </main>
     <%- partial('_partial/footer') %>
 
     <%- js('js/main.js') %>
