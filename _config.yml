@@ -140,3 +140,11 @@ view_transition: true
 # date display format
 # refer to https://momentjs.com/docs/#/displaying/format/
 date_display_format: MMMM D, YYYY
+
+# CDN
+cdn:
+  template: https://unpkg.com/:package@:version/:file
+  replacements:
+    package: :package
+    version: :version
+    file: :file
