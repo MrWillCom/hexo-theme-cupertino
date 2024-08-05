@@ -12,19 +12,20 @@
     align-items: center;
     padding: 0 12px;
     user-select: none;
-    color: var(--black-2);
+    color: var(--color-text-primary);
     transition-property: background-color, color;
     transition-duration: 0.2s;
 
     &:hover,
     &:focus-visible {
-      background-color: var(--card-bg);
-      color: var(--black);
+      background-color: var(--color-background-primary-hover);
+      color: var(--color-text-primary-hover);
       text-decoration: none;
     }
-    
+
     &:active {
-      color: var(--black-4);
+      background-color: var(--color-background-primary-active);
+      color: var(--color-text-primary-active);
     }
 
     &.prev {
@@ -40,7 +41,7 @@
     }
 
     &.current {
-      color: var(--black-4);
+      color: var(--color-text-secondary);
 
       &:hover {
         background-color: transparent;

@@ -1,7 +1,7 @@
 .divider,
 hr {
   border: none;
-  border-top: 1px solid var(--white-1);
+  border-top: 1px solid var(--color-border-secondary);
   margin: 32px auto;
 }
 
@@ -14,11 +14,11 @@ img {
 }
 
 ::marker {
-  color: var(--black-4);
+  color: var(--color-text-secondary);
 }
 
 blockquote {
-  border-left: 4px solid var(--white-2);
+  border-left: 4px solid var(--color-border-primary);
 }
 
 pre,
@@ -32,7 +32,7 @@ pre {
 
 code {
   font-size: 12px;
-  background-color: var(--white-1);
+  background-color: var(--color-background-secondary);
   padding: 2px 4px;
   border-radius: 4px;
 }

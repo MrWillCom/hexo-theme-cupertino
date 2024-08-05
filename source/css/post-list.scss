@@ -14,7 +14,7 @@
 .post-list-item {
   overflow: hidden;
   border-radius: 16px;
-  background-color: var(--card-bg);
+  background-color: var(--color-background-secondary);
   margin-bottom: 21px;
 
   &:nth-child(2n-1) {
@@ -58,7 +58,6 @@
     font-weight: 700;
     letter-spacing: 0.009em;
     max-height: 7em;
-    color: var(--card-title);
     overflow: hidden;
   }
 
@@ -67,21 +66,14 @@
   }
 
   a {
-    &,
-    &:hover,
-    &:focus,
-    &:active,
-    &:link,
-    &:visited {
-      font-weight: bold;
-      font-size: 24px;
-      color: var(--black);
-      text-decoration: none;
-    }
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--color-text-primary);
+    text-decoration: none;
   }
 
   .categories {
-    color: var(--link);
+    color: var(--color-text-accent);
     margin-bottom: 6px;
     font-weight: 600;
 
@@ -96,11 +88,13 @@
     margin-top: 12px;
     font-weight: normal;
     font-size: 15px;
-    color: var(--grey);
+    color: var(--color-text-tertiary);
 
     & > * {
       margin-top: 8px;
       margin-bottom: 8px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -117,22 +111,7 @@
     letter-spacing: -0.016em;
     display: block;
     margin-top: 12px;
-    color: var(--card-time);
-  }
-
-  .read-more {
-    text-align: right;
-
-    button {
-      font-size: 12px;
-      outline: none;
-      border: none;
-      background-color: var(--blue);
-      color: var(--white-txt-on-blue-bg);
-      padding: 6px 12px;
-      border-radius: 32px;
-      cursor: pointer;
-    }
+    color: var(--color-text-secondary);
   }
 }
 
@@ -148,7 +127,7 @@
     background-color: initial;
     padding: 21px 0;
     margin: 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--color-border-primary);
 
     &:nth-child(n) {
       margin-left: 0;

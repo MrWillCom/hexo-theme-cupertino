@@ -5,15 +5,14 @@
 }
 
 nav {
-  background-color: var(--nav-bg);
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--color-background-secondary-translucent);
   user-select: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  backdrop-filter: var(--blur);
+  backdrop-filter: var(--filter-blur);
   transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 
   .inner {
@@ -23,14 +22,9 @@ nav {
     display: flex;
     justify-content: space-between;
 
-    a,
-    a:hover,
-    a:focus,
-    a:active,
-    a:link,
-    a:visited {
+    a {
       text-decoration: none;
-      color: var(--black-4);
+      color: var(--color-text-secondary);
     }
 
     .title {
@@ -40,7 +34,7 @@ nav {
       margin: 0;
       font-size: 20px;
       font-weight: 500;
-      color: var(--black-2) !important;
+      color: var(--color-text-primary);
     }
 
     .nav-arrow {
@@ -58,8 +52,8 @@ nav {
         transition: color 0.35s;
 
         &:hover,
-        &:focus {
-          color: var(--black-2);
+        &:focus-visible {
+          color: var(--color-text-secondary-hover);
         }
 
         @media (max-width: 600px) {
@@ -102,7 +96,7 @@ nav {
         &::before,
         &::after {
           content: '';
-          background-color: var(--nav-arrow);
+          background-color: var(--color-text-secondary);
           display: block;
           position: absolute;
           top: 28px;

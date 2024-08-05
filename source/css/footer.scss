@@ -1,7 +1,6 @@
 footer {
-  background-color: var(--white);
-  width: 100%;
-  border-top: 1px solid var(--border-color);
+  background-color: var(--color-background-underlying);
+  border-top: 1px solid var(--color-border-primary);
   user-select: none;
 
   & > .inner {
@@ -35,12 +34,12 @@ footer {
   }
 
   .item {
-    color: var(--footer-link-grey);
+    color: var(--color-text-secondary);
     display: block;
   }
 
   .footer-extra-description {
-    color: var(--footer-link-grey);
+    color: var(--color-text-secondary);
     font-size: 14px;
     display: block;
     margin-top: 12px;
@@ -52,7 +51,7 @@ footer {
     padding: 1px;
     gap: 1px;
     border-radius: 16px;
-    border: 1px solid var(--blue);
+    border: 1px solid var(--color-background-accent);
     margin-top: 16px;
     width: max-content;
 
@@ -66,8 +65,8 @@ footer {
         margin: 0;
 
         &:checked + span {
-          color: var(--white-txt-on-blue-bg);
-          background-color: var(--blue);
+          color: var(--color-background-accent-contrast);
+          background-color: var(--color-background-accent);
         }
       }
 
@@ -75,7 +74,7 @@ footer {
         font-size: 12px;
         padding: 4px 2px;
         border-radius: 12px;
-        color: var(--link);
+        color: var(--color-background-accent);
         width: 40px;
         display: block;
         text-align: center;
