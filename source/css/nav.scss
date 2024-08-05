@@ -13,7 +13,6 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  -webkit-backdrop-filter: var(--blur);
   backdrop-filter: var(--blur);
   transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 
