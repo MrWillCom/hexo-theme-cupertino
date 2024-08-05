@@ -23,8 +23,8 @@ a {
 
 #skip-to-content {
   left: 50%;
-  position: absolute;
-  transform: translateX(-50%) translateY(calc(-100% - 56px));
+  position: fixed;
+  top: 0;
   z-index: 1100;
   background-color: var(--nav-bg);
   color: var(--link);
@@ -32,14 +32,18 @@ a {
   backdrop-filter: var(--blur);
   padding: 10px 20px;
   border-radius: 100px;
-  transition-property: transform, box-shadow;
+  transform: translateX(-50%) translateY(-100%) scale(0.9);
+  opacity: 0;
+  transition-property: transform, box-shadow, opacity;
   transition-duration: 0.2s;
+  transition-timing-function: ease-out;
 
   &:focus {
-    transform: translateX(-50%) translateY(calc(-100% + 12px));
-    outline: none;
     text-decoration: underline;
     box-shadow: 0px 8px 24px #0002;
+    transform: translateX(-50%) translateY(calc(-50% + 48px));
+    outline: none;
+    opacity: 1;
   }
 }
 
