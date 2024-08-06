@@ -29,7 +29,7 @@ a {
   top: 0;
   z-index: 1100;
   background-color: var(--color-background-secondary-translucent);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--color-border-primary);
   backdrop-filter: var(--filter-blur);
   padding: 10px 20px;
   border-radius: 100px;
@@ -60,5 +60,5 @@ a {
   font-weight: 700;
   letter-spacing: 0.004em;
   margin-bottom: 24px;
-  color: var(--card-title);
+  color: var(--color-text-primary);
 }
