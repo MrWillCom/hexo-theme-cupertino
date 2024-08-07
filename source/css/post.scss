@@ -75,6 +75,12 @@ hr,
   border-radius: 10px;
 }
 
+.content .block-large img {
+  @media (max-width: 1000px) {
+    border-radius: 0;
+  }
+}
+
 .content table,
 .content video {
   display: block;
