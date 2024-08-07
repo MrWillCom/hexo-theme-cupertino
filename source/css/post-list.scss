@@ -13,7 +13,7 @@
 
 .post-list-item {
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: var(--radius-large);
   background-color: var(--color-background-secondary);
   margin-bottom: 21px;
 
@@ -146,7 +146,7 @@
       height: initial;
       min-width: 180px;
       width: 20vw;
-      border-radius: 16px;
+      border-radius: var(--radius-medium);
       flex-shrink: 0;
     }
   }

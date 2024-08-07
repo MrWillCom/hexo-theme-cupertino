@@ -1,5 +1,11 @@
 @mixin global {
   --filter-blur: blur(32px);
+
+  --radius-tiny: 4px;
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-full: 999px;
 }
 
 @mixin light-colors {

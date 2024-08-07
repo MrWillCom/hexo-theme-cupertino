@@ -5,7 +5,7 @@
     padding: 8px 16px;
     margin: 4px;
     font-size: 14px;
-    border-radius: 980px;
+    border-radius: var(--radius-full);
     background-color: var(--color-background-secondary);
     color: var(--color-text-primary);
     text-decoration: none;

@@ -21,7 +21,7 @@
 
 .card {
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: var(--radius-large);
   background-color: var(--color-background-secondary);
   margin-bottom: 21px;
 
@@ -112,7 +112,7 @@
       background-color: var(--color-background-accent);
       color: var(--color-background-accent-contrast);
       padding: 6px 12px;
-      border-radius: 32px;
+      border-radius: var(--radius-full);
       text-decoration: none;
       transition: 0.2s;
 
@@ -136,7 +136,7 @@
   color: var(--color);
   padding: 0 8px;
   margin: 0 6px;
-  border-radius: 24px;
+  border-radius: var(--radius-full);
 
   &.warning {
     --color: #fdc008;

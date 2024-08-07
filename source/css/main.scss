@@ -32,7 +32,7 @@ a {
   border: 1px solid var(--color-border-primary);
   backdrop-filter: var(--filter-blur);
   padding: 10px 20px;
-  border-radius: 100px;
+  border-radius: var(--radius-full);
   transform: translateX(-50%) translateY(-100%) scale(0.9);
   opacity: 0;
   transition-property: transform, box-shadow, opacity;

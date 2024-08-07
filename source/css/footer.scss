@@ -50,7 +50,7 @@ footer {
     display: flex;
     padding: 1px;
     gap: 1px;
-    border-radius: 16px;
+    border-radius: var(--radius-full);
     border: 1px solid var(--color-background-accent);
     margin-top: 16px;
     width: max-content;
@@ -73,7 +73,7 @@ footer {
       span {
         font-size: 12px;
         padding: 4px 2px;
-        border-radius: 12px;
+        border-radius: var(--radius-full);
         color: var(--color-background-accent);
         width: 40px;
         display: block;
