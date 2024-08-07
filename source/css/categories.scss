@@ -13,15 +13,18 @@
     margin: 6px;
     font-size: 20px;
     font-weight: bold;
-    border-radius: 12px;
-    background-color: var(--white);
-    color: var(--black-2);
+    border-radius: var(--radius-medium);
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
     text-decoration: none;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-border-primary);
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
 
-    &:hover {
-      background-color: var(--white-1);
-      color: var(--black);
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-background-secondary-hover);
+      color: var(--color-text-primary-hover);
     }
   }
 }

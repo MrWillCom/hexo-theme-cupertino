@@ -1,14 +1,10 @@
-body {
-  background-color: var(--body-bg);
-}
-
 .post {
   margin: 128px 0;
 }
 
 .meta {
   .categories {
-    color: var(--link);
+    color: var(--color-text-accent);
     margin-bottom: 6px;
     font-weight: 600;
 
@@ -21,7 +17,7 @@ body {
 
   .date {
     display: block;
-    color: var(--grey);
+    color: var(--color-text-secondary);
     font-weight: 600;
   }
 
@@ -72,7 +68,7 @@ hr,
 .content p img,
 .content .block-large img,
 .content figure img {
-  border-radius: 10px;
+  border-radius: var(--radius-medium);
 }
 
 .content .block-large img {
@@ -89,12 +85,12 @@ hr,
 .content table {
   padding: 0;
   border-collapse: collapse;
-  border-radius: 15px;
+  border-radius: var(--radius-medium);
   max-width: 800px;
   overflow-x: auto;
 
   tr {
-    background-color: var(--card-bg);
+    background-color: var(--color-background-secondary);
 
     &:nth-child(even) {
       background-color: transparent;
@@ -108,27 +104,27 @@ hr,
   }
 
   th {
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--color-border-primary);
   }
 }
 
 .content table thead tr th {
   &:first-child {
-    border-top-left-radius: 15px;
+    border-top-left-radius: var(--radius-medium);
   }
 
   &:last-child {
-    border-top-right-radius: 15px;
+    border-top-right-radius: var(--radius-medium);
   }
 }
 
 .content table tbody tr:last-child td {
   &:first-child {
-    border-bottom-left-radius: 15px;
+    border-bottom-left-radius: var(--radius-medium);
   }
 
   &:last-child {
-    border-bottom-right-radius: 15px;
+    border-bottom-right-radius: var(--radius-medium);
   }
 }
 
@@ -153,8 +149,8 @@ hr,
 .content > pre {
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: var(--card-bg);
-  border-radius: 15px;
+  background-color: var(--color-background-secondary);
+  border-radius: var(--radius-medium);
   max-width: calc(800px - 16px * 2);
 
   @media (max-width: 800px) {
@@ -198,7 +194,7 @@ hr,
 .content figure figcaption {
   text-align: center;
   font-size: 16px;
-  color: var(--grey);
+  color: var(--color-text-secondary);
 }
 
 /* for [hexo-math](https://github.com/hexojs/hexo-math): */
@@ -227,8 +223,8 @@ hr,
 }
 
 .about {
-  border-radius: 7px;
-  background-color: var(--card-bg);
+  border-radius: var(--radius-medium);
+  background-color: var(--color-background-secondary);
   max-width: calc(800px - 16px * 2);
   padding: 16px;
   margin: 64px auto;
@@ -258,11 +254,12 @@ hr,
   h6 {
     & > .headerlink {
       opacity: 0;
-      color: var(--grey);
+      color: var(--color-text-tertiary);
       font-weight: normal;
       position: absolute;
       padding-right: 6px;
       transform: translateX(-100%);
+      text-decoration: none;
       transition: opacity 0.2s;
 
       &::before {
@@ -270,9 +267,10 @@ hr,
       }
     }
 
-    &:hover > .headerlink {
+    &:hover > .headerlink,
+    .headerlink:hover,
+    .headerlink:focus-visible {
       opacity: 1;
-      text-decoration: none;
     }
   }
 
@@ -308,13 +306,14 @@ hr,
 
   & > a {
     width: 50%;
-    color: var(--black-4);
+    color: var(--color-text-secondary);
     text-decoration: none;
     display: flex;
     transition: color 0.2s;
 
-    &:hover {
-      color: var(--black-2);
+    &:hover,
+    &:focus-visible {
+      color: var(--color-text-secondary-hover);
     }
   }
 
@@ -333,7 +332,7 @@ hr,
 
       .label {
         margin-bottom: 4px;
-        color: var(--grey);
+        color: var(--color-text-secondary);
       }
     }
   }

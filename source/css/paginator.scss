@@ -7,40 +7,41 @@
   & > a,
   & > span {
     height: 32px;
-    border-radius: 6px;
+    border-radius: var(--radius-small);
     display: inline-flex;
     align-items: center;
     padding: 0 12px;
     user-select: none;
-    color: var(--black-2);
+    color: var(--color-text-primary);
     transition-property: background-color, color;
     transition-duration: 0.2s;
 
     &:hover,
     &:focus-visible {
-      background-color: var(--card-bg);
-      color: var(--black);
+      background-color: var(--color-background-primary-hover);
+      color: var(--color-text-primary-hover);
       text-decoration: none;
     }
-    
+
     &:active {
-      color: var(--black-4);
+      background-color: var(--color-background-primary-active);
+      color: var(--color-text-primary-active);
     }
 
     &.prev {
       padding-left: 14px;
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
+      border-top-left-radius: var(--radius-full);
+      border-bottom-left-radius: var(--radius-full);
     }
 
     &.next {
       padding-right: 14px;
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
+      border-top-right-radius: var(--radius-full);
+      border-bottom-right-radius: var(--radius-full);
     }
 
     &.current {
-      color: var(--black-4);
+      color: var(--color-text-secondary);
 
       &:hover {
         background-color: transparent;

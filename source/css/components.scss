@@ -21,8 +21,8 @@
 
 .card {
   overflow: hidden;
-  border-radius: 16px;
-  background-color: var(--card-bg);
+  border-radius: var(--radius-large);
+  background-color: var(--color-background-secondary);
   margin-bottom: 21px;
 
   &:nth-child(3n-2) {
@@ -84,14 +84,14 @@
   .title {
     font-weight: bold;
     font-size: 24px;
-    color: var(--black);
+    color: var(--color-text-primary);
     text-decoration: none;
     padding: 0;
   }
 
   .description {
     font-size: 17px;
-    color: var(--black-1);
+    color: var(--color-text-secondary);
     padding: 0;
   }
 
@@ -109,15 +109,16 @@
     }
 
     .action-button-primary {
-      background-color: var(--blue);
-      color: var(--white-txt-on-blue-bg);
+      background-color: var(--color-background-accent);
+      color: var(--color-background-accent-contrast);
       padding: 6px 12px;
-      border-radius: 32px;
+      border-radius: var(--radius-full);
       text-decoration: none;
-      transition: 0.5s;
+      transition: 0.2s;
 
-      &:hover {
-        background-color: var(--link);
+      &:hover,
+      &:focus-visible {
+        background-color: var(--color-background-accent-hover);
       }
     }
   }
@@ -129,13 +130,13 @@
 }
 
 .badge {
-  --color: var(--link);
+  --color: var(--color-text-accent);
   font-size: 16px;
   border: 2px solid var(--color);
   color: var(--color);
   padding: 0 8px;
   margin: 0 6px;
-  border-radius: 24px;
+  border-radius: var(--radius-full);
 
   &.warning {
     --color: #fdc008;
