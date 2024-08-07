@@ -1,10 +1,14 @@
-# Hexo Theme Cupertino
+<p align="center">
+  <img src="./assets/logo-v2.svg" width="128">
+</p>
 
-The Hexo Blog Theme Cupertino
+<h1 align="center">Hexo Theme Cupertino</h1>
 
-![A screenshot](https://mrwillcom.github.io/img/000001.png)
+<p align="center">The Hexo Blog Theme Cupertino.<p>
 
-Visit [blog.mrwillcom.com](https://blog.mrwillcom.com/) to preview it.
+<p align="center"><a href="https://blog.mrwillcom.com/" target="_blank"><strong>Preview</strong></a> / <a href="https://cupertino.mrwillcom.com/" target="_blank">Docs</a></p>
+
+![A screenshot](https://blog.mrwillcom.com/img/000001.png)
 
 This theme is based on Cupertino Design with light border and translucent and acrylic background on navigation bar, supports dark appearance and powerful footer.
 
