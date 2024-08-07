@@ -39,14 +39,9 @@
     <% if (page.tags && page.tags.length) { %>
     <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
       <i class="bi bi-tags icon"></i>
-      <%
-        var tags = ''
-        page.tags.forEach((tag) => {
-          tags += `<a href="${config.root}${tag.path}" class="tag">${theme.hashtag_prefix_before_tags ? '#' : ''}${tag.name}</a>${theme.hashtag_prefix_before_tags ? '' : ','}`
-        })
-        if (!theme.hashtag_prefix_before_tags) { tags = tags.slice(0, tags.length - 1) }
-      %>
-      <%- tags %>
+      <% page.tags.forEach(tag => { %>
+      <a href="<%- url_for(tag.path) %>" class="tag"><% if (theme.hashtag_prefix_before_tags) { %>#<% } %><%- tag.name %></a>
+      <% }) %>
     </p>
     <% } %>
   </div>
