@@ -5,7 +5,7 @@
   <div class="divider"></div>
   <div class="tags">
     <% site.tags.forEach(tag => { %>
-    <a href="<%- url_for(tag.path) %>" class="tag"><% if (theme.hashtag_prefix_before_tags) { %>#<% } %><%- tag.name %></a>
+    <a href="<%- url_for(tag.path) %>" class="tag"><% if (theme.hashtag_prefix_before_tags) { %>#<% } %><%- tag.name %><% if (theme.tags_post_count) { %><span class="count"><%- tag.length %></span><% } %></a>
     <% }) %>
   </div>
 </div>

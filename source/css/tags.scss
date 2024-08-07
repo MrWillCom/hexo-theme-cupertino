@@ -5,6 +5,7 @@
     padding: 8px 16px;
     margin: 4px;
     font-size: 14px;
+    line-height: 1;
     border-radius: var(--radius-full);
     background-color: var(--color-background-secondary);
     color: var(--color-text-primary);
@@ -17,6 +18,13 @@
     &:focus-visible {
       background-color: var(--color-background-secondary-hover);
       color: var(--color-text-primary-hover);
+    }
+
+    .count {
+      vertical-align: middle;
+      font-size: 10px;
+      margin-left: 6px;
+      color: var(--color-text-secondary);
     }
   }
 }

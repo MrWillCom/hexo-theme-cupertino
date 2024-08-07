@@ -8,10 +8,13 @@
   }
 
   .category {
-    display: block;
-    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
     margin: 6px;
     font-size: 20px;
+    line-height: 1;
     font-weight: bold;
     border-radius: var(--radius-medium);
     background-color: var(--color-background-secondary);
@@ -25,6 +28,12 @@
     &:focus-visible {
       background-color: var(--color-background-secondary-hover);
       color: var(--color-text-primary-hover);
+    }
+
+    .count {
+      font-size: 14px;
+      font-weight: normal;
+      color: var(--color-text-secondary);
     }
   }
 }

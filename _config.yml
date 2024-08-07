@@ -22,11 +22,17 @@ show_color_scheme_toggle: true
 # uppercase categories
 uppercase_categories: true
 
+# show post count on categories page
+categories_post_count: true
+
 # capitalize tag names on tags page
 capitalize_tags: false
 
 # add hashtag prefix before tags
 hashtag_prefix_before_tags: true
+
+# show post count on tags page
+tags_post_count: true
 
 # rainbow!
 rainbow_banner: true
