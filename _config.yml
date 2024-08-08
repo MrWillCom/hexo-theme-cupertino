@@ -154,3 +154,5 @@ cdn:
     package: :package
     version: :version
     file: :file
+
+hero_exit_while_scrolling: true

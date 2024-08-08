@@ -4,6 +4,28 @@
   flex-direction: column;
   justify-content: center;
 
+  &.exit-while-scroll {
+    $range: 50svh;
+
+    @keyframes hero-exit {
+      from {
+        margin-top: 56px;
+      }
+
+      to {
+        opacity: 0;
+        margin-top: calc($range + 56px);
+        margin-bottom: -$range;
+        scale: 0.9;
+        filter: var(--filter-blur);
+      }
+    }
+
+    animation: hero-exit linear both;
+    animation-timeline: scroll();
+    animation-range: 0 $range;
+  }
+
   .sub {
     text-transform: uppercase;
     font-size: 24px;

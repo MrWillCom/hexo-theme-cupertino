@@ -1,6 +1,6 @@
 <div class="container">
   <% if (page.path == "index.html") { %>
-  <div class="hero">
+  <div class="hero<% if (theme.hero_exit_while_scrolling) { %> exit-while-scroll<% } %>">
     <h2 class="sub"><%- config.subtitle %></h2>
     <h2 class="large"><%- config.description %></h2>
   </div>
