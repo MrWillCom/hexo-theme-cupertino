@@ -3,17 +3,19 @@ read_more: 继续阅读
 powered_by: 由 %s 驱动
 prev: 上一页
 next: 下一页
-archives: 存档
+archives: 归档
 about_this_post: 关于本文
-this_post_is_written_by: 由 %s 撰写
-licensed_under: 采用 %s 许可协议
+this_post_is_written_by_licensed_under: 由 %(author)s 撰写，采用 %(license)s 许可协议。
 home: 主页
 category: 分类
 tag: 标签
-tagged_with: 打上了 %s 的标签
 search: 搜索
 type_to_search: 键入以搜索...
 categories: 分类
 tags: 标签
 next_post: 下一篇
 prev_post: 上一篇
+light: 浅色
+dark: 深色
+auto: 自动
+skip_to_content: 跳至主要内容

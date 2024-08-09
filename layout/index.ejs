@@ -1,52 +1,14 @@
 <div class="container">
-    <% if (page.path == "index.html") { %>
-    <div class="hero">
-        <div class="group">
-            <h2 class="sub"><%= config.subtitle %></h2>
-            <h2 class="large"><%- config.description %></h2>
-        </div>
-    </div>
+  <% if (page.path == "index.html") { %>
+  <div class="hero<% if (theme.hero_exit_while_scrolling.enabled) { %> exit-while-scroll<% if (theme.hero_exit_while_scrolling.blur_filter) { %> with-blur<% } %><% } %>">
+    <h2 class="sub"><%- config.subtitle %></h2>
+    <h2 class="large"><%- config.description %></h2>
+  </div>
 
-    <h2 class="section-title"><%= __('latest_posts') %></h2>
-    <% } %>
+  <h2 class="section-title"><%- __('latest_posts') %></h2>
+  <% } %>
 
-    <div class="post-list">
-        <% page.posts.each(function (post) { %>
-        <article class="post-list-item">
-            <a href="<%- url_for(post.path) %>">
-                <% if (post.cover_image) { %>
-                <div class="cover-img">
-                    <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
-                </div>
-                <% } %>
-                <div class="content">
-                    <% if (post.categories && post.categories.length) { %>
-                    <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
-                    <% post.categories.forEach((category) => { %>
-                        <span><%= category.name %></span>
-                    <% }) %>
-                    </div>
-                    <% } %>
-                    <div class="title">
-                        <%= post.title %>
-                    </div>
-                    <% if (theme.show_excerpt) { %>
-                    <div class="excerpt">
-                        <%- post.excerpt %>
-                    </div>
-                    <% } %>
-                    <% if (!post.no_date) { %>
-                    <div class="time">
-                        <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][post.date.month()] %></span>
-                        <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
-                        <span><%- post.date.year() %></span>
-                    </div>
-                    <% } %>
-                </div>
-            </a>
-        </article>
-        <% }) %>
-    </div>
+  <%- partial('_partial/post-list', { posts: page.posts }) %>
 
-    <%- partial('_partial/paginator') %>
+  <%- partial('_partial/paginator') %>
 </div>

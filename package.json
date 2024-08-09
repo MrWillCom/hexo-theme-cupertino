@@ -1,0 +1,26 @@
+{
+  "name": "hexo-theme-cupertino",
+  "version": "2.0.0-beta.5",
+  "description": "The Hexo Blog Theme Cupertino.",
+  "license": "MIT",
+  "repository": "MrWillCom/hexo-theme-cupertino",
+  "keywords": [
+    "hexo",
+    "theme",
+    "hexo-theme",
+    "cupertino",
+    "cupertino-design"
+  ],
+  "author": "Mr. Will (https://github.com/MrWillCom)",
+  "bugs": {
+    "url": "https://github.com/MrWillCom/hexo-theme-cupertino/issues"
+  },
+  "dependencies": {
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-sass": "^0.5.0"
+  },
+  "homepage": "https://cupertino.mrwillcom.com/",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7"
+  }
+}
