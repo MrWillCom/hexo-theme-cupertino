@@ -1,5 +1,25 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.5
+
+### Major Changes
+
+- ee54605: Reorganize CSS variables for colors, filters and radiuses. Old variables are replaced with the new ones named in a better format.
+
+### Minor Changes
+
+- ba58d2c: Add post count for Tags and Categories page, configurable in `tags_post_count` and `categories_post_count`.
+- b82e57c: Add CDN configuration to allow custom CDNs.
+- 046d686: Add "Skip to content" button.
+- e3168a0: Add optional hero exit animation while scrolling on root page, whose blur filter is also optional.
+
+### Patch Changes
+
+- 9a08dfa: Fix `datetime` of `<time />` in post list indicates the build date instead of the post's publish date.
+- 296ab86: Reimplement tags and categories list in purer EJS.
+- 125c839: Fix corner radius of images when filling the width.
+- 837176c: Remove `-webkit-` prefix from `backdrop-filter`, Safari 17.6 and earlier are no longer supported.
+
 ## 2.0.0-beta.4
 
 ### Minor Changes
