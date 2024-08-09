@@ -155,4 +155,6 @@ cdn:
     version: :version
     file: :file
 
-hero_exit_while_scrolling: true
+hero_exit_while_scrolling:
+  enabled: true
+  blur_filter: true
