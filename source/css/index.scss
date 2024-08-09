@@ -21,6 +21,7 @@
       }
     }
 
+    will-change: filter, margin-top, margin-bottom, opacity, scale;
     animation: hero-exit linear both;
     animation-timeline: scroll();
     animation-range: 0 $range;
