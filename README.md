@@ -8,6 +8,15 @@
 
 <p align="center"><a href="https://blog.mrwillcom.com/"><strong>Preview</strong></a> / <a href="https://cupertino.mrwillcom.com/">Docs</a></p>
 
+<p align="center">
+  <a href="https://github.com/MrWillCom/hexo-theme-cupertino/releases/latest">
+    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/MrWillCom/hexo-theme-cupertino?style=for-the-badge&logo=github&logoColor=181717&labelColor=EEEEEE">
+  </a>
+  <a href="https://www.npmjs.com/package/hexo-theme-cupertino">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/hexo-theme-cupertino?style=for-the-badge&logo=npm&logoColor=CB3837&labelColor=EEEEEE&color=8A56FF">
+  </a>
+</p>
+
 ![A screenshot](https://blog.mrwillcom.com/img/000001.png)
 
 This is a modern and elegant theme for your Hexo blog, which is beautifully designed and has gorgeous details. It's based on Cupertino Design, so it looks similar to [Apple Newsroom](https://www.apple.com/newsroom/).
@@ -62,3 +71,11 @@ For more detailed guides, visit [Theme Cupertino Docs](https://cupertino.mrwillc
 All friendly contributions are welcome! Start contributing by following the existing issues or little fixes.
 
 Not familiar with code? It's okay, feel free to report bugs or suggest something.
+
+## Contributors
+
+Theme Cupertino would not be possible without the help from the contributors.
+
+<a href="https://github.com/MrWillCom/hexo-theme-cupertino/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MrWillCom/hexo-theme-cupertino">
+</a>
