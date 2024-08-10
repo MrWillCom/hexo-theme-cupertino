@@ -15,6 +15,7 @@
   <a href="https://www.npmjs.com/package/hexo-theme-cupertino">
     <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/hexo-theme-cupertino?style=for-the-badge&logo=npm&logoColor=CB3837&labelColor=EEEEEE&color=8A56FF">
   </a>
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/MrWillCom/hexo-theme-cupertino?style=for-the-badge&logo=github&logoColor=181717&labelColor=EEEEEE&color=F7D76E">
 </p>
 
 ![A screenshot](https://blog.mrwillcom.com/img/000001.png)
@@ -71,6 +72,19 @@ For more detailed guides, visit [Theme Cupertino Docs](https://cupertino.mrwillc
 All friendly contributions are welcome! Start contributing by following the existing issues or little fixes.
 
 Not familiar with code? It's okay, feel free to report bugs or suggest something.
+
+## Donating
+
+If you like Theme Cupertino, please consider donating to encourage me. Your support is greatly appreciated! Starring and sharing this repository will also help a lot.
+
+<p>
+  <a href="https://liberapay.com/MrWillCom/donate">
+    <img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg">
+  </a>
+  <a href="https://www.patreon.com/MrWillCom">
+    <img alt="Donate using Patreon" src="https://img.shields.io/badge/Patreon-F96754?style=for-the-badge&logo=patreon&logoColor=FFFFFF">
+  </a>
+</p>
 
 ## Activities
 
