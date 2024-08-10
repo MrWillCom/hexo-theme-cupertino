@@ -47,7 +47,7 @@
   }
 
   &:hover .cover-img img,
-  & > a:focus .cover-img img {
+  & > a:focus-visible .cover-img img {
     transform: scale(1.03);
     filter: brightness(0.85);
   }
