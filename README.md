@@ -12,7 +12,7 @@
 
 This is a modern and elegant theme for your Hexo blog, which is beautifully designed and has gorgeous details. It's based on Cupertino Design, so it looks similar to [Apple Newsroom](https://www.apple.com/newsroom/).
 
-With Theme Cupertino, your blogging experience will be hugely leaped, and your ideas can be shared in an effortless way.
+With Theme Cupertino, your blogging experience will be hugely elevated, and your ideas can be shared in an effortless way.
 
 ## Installation
 
