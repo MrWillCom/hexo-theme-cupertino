@@ -6,7 +6,7 @@
 
 <p align="center">The Hexo Blog Theme Cupertino.<p>
 
-<p align="center"><a href="https://blog.mrwillcom.com/" target="_blank"><strong>Preview</strong></a> / <a href="https://cupertino.mrwillcom.com/" target="_blank">Docs</a></p>
+<p align="center"><a href="https://blog.mrwillcom.com/"><strong>Preview</strong></a> / <a href="https://cupertino.mrwillcom.com/">Docs</a></p>
 
 ![A screenshot](https://blog.mrwillcom.com/img/000001.png)
 
