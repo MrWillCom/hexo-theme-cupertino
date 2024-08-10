@@ -60,7 +60,7 @@ $ cd themes/cupertino
 $ git pull
 ```
 
-## Further Configuration
+## Configuration
 
 You need a `_config.cupertino.yml` file beside `_config.yml` to contain your configuration, which will override the defaults.
 
@@ -71,6 +71,10 @@ For more detailed guides, visit [Theme Cupertino Docs](https://cupertino.mrwillc
 All friendly contributions are welcome! Start contributing by following the existing issues or little fixes.
 
 Not familiar with code? It's okay, feel free to report bugs or suggest something.
+
+## Activities
+
+![Repobeats analytics image](https://repobeats.axiom.co/api/embed/36f7fe575bf26420dc25e3c99789adb523f520d4.svg)
 
 ## Contributors
 
