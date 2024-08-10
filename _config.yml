@@ -157,4 +157,4 @@ cdn:
 
 hero_exit_while_scrolling:
   enabled: true
-  blur_filter: true
+  blur_filter: false
