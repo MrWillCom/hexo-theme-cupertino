@@ -10,24 +10,52 @@
 
 ![A screenshot](https://blog.mrwillcom.com/img/000001.png)
 
-This theme is based on Cupertino Design with light border and translucent and acrylic background on navigation bar, supports dark appearance and powerful footer.
+This is a modern and elegant theme for your Hexo blog, which is beautifully designed and has gorgeous details. It's based on Cupertino Design, so it looks similar to [Apple Newsroom](https://www.apple.com/newsroom/).
+
+With Theme Cupertino, your blogging experience will be hugely leaped, and your ideas can be shared in an effortless way.
 
 ## Installation
 
-If you don't have a [Hexo](https://hexo.io/) blog, just [create one](https://hexo.io/docs/).
+Before getting started, make sure you have already set up a [Hexo](https://hexo.io/) blog.
 
-To install it, just clone this as a Git submodule to your `themes/cupertino/` directory and edit your `_config.yml`. After that, you should remember to edit `themes/cupertino/_config.yml`.
+Since v2, you can install via npm:
 
-`_config.yml`:
+```sh
+$ npm install hexo-theme-cupertino
+```
+
+Or, you may clone Theme Cupertino to `themes/cupertino`:
+
+```sh
+$ git clone https://github.com/MrWillCom/hexo-theme-cupertino.git themes/cupertino
+```
+
+Then, go to your blog configuration `_config.yml` and set:
+
 ```yaml
-...
 theme: cupertino
-...
+```
+
+## Update
+
+If you installed Theme Cupertino via npm, run:
+
+```sh
+$ npm install hexo-theme-cupertino@latest
+```
+
+Or if you cloned it via Git, go to the theme directory and pull the latest changes:
+
+```sh
+$ cd themes/cupertino
+$ git pull
 ```
 
 ## Further Configuration
 
-See docs site [cupertino.mrwillcom.com](https://cupertino.mrwillcom.com/) .
+You need a `_config.cupertino.yml` file beside `_config.yml` to contain your configuration, which will override the defaults.
+
+For more detailed guides, visit [Theme Cupertino Docs](https://cupertino.mrwillcom.com/).
 
 ## Contributing
 
