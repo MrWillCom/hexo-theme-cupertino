@@ -2,11 +2,12 @@
   user-select: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px 16px;
   max-width: 980px;
   margin: auto;
 
   @media (max-width: 600px) {
-    display: block;
+    grid-template-columns: 1fr;
     max-width: 366px;
   }
 }
@@ -15,22 +16,6 @@
   overflow: hidden;
   border-radius: var(--radius-large);
   background-color: var(--color-background-secondary);
-  margin-bottom: 21px;
-
-  &:nth-child(2n-1) {
-    margin-right: 8px;
-  }
-
-  &:nth-child(2n) {
-    margin-left: 8px;
-  }
-
-  @media (max-width: 600px) {
-    &:nth-child(n) {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
 
   .cover-img {
     overflow: hidden;
@@ -41,7 +26,8 @@
       height: 100%;
       object-fit: cover;
       filter: brightness(1);
-      transition: transform 400ms cubic-bezier(0.4, 0, 0.25, 1),
+      transition:
+        transform 400ms cubic-bezier(0.4, 0, 0.25, 1),
         filter 400ms cubic-bezier(0.4, 0, 0.25, 1);
     }
   }
