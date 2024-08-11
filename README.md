@@ -18,7 +18,7 @@
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/MrWillCom/hexo-theme-cupertino?style=for-the-badge&logo=github&logoColor=181717&labelColor=EEEEEE&color=F7D76E">
 </p>
 
-<p align="center"><small><em>✨ Give a star if you like this! ✨</em></small></p>
+<p align="center">✨ <em>Give a star if you like this!</em> ✨</p>
 
 ![A screenshot](https://blog.mrwillcom.com/img/000001.png)
 
