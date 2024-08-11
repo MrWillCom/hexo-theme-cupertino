@@ -18,6 +18,8 @@
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/MrWillCom/hexo-theme-cupertino?style=for-the-badge&logo=github&logoColor=181717&labelColor=EEEEEE&color=F7D76E">
 </p>
 
+<p align="center"><small><em>✨ Give a star if you like this! ✨</em></small></p>
+
 ![A screenshot](https://blog.mrwillcom.com/img/000001.png)
 
 This is a modern and elegant theme for your Hexo blog, which is beautifully designed and has gorgeous details. It's based on Cupertino Design, so it looks similar to [Apple Newsroom](https://www.apple.com/newsroom/).
