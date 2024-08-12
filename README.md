@@ -40,6 +40,9 @@ Or, you may clone Theme Cupertino to `themes/cupertino`:
 
 ```sh
 $ git clone https://github.com/MrWillCom/hexo-theme-cupertino.git themes/cupertino
+# install dependencies
+$ cd themes/cupertino
+$ npm install
 ```
 
 Then, go to your blog configuration `_config.yml` and set:
@@ -61,6 +64,8 @@ Or if you cloned it via Git, go to the theme directory and pull the latest chang
 ```sh
 $ cd themes/cupertino
 $ git pull
+# install latest dependencies
+$ npm install
 ```
 
 ## Configuration
