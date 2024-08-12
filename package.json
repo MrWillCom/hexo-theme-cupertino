@@ -16,6 +16,7 @@
     "url": "https://github.com/MrWillCom/hexo-theme-cupertino/issues"
   },
   "dependencies": {
+    "hexo-autoprefixer": "^2.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-sass": "^0.5.0"
   },
