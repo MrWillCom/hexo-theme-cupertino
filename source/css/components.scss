@@ -24,6 +24,8 @@
   overflow: hidden;
   border-radius: var(--radius-large);
   background-color: var(--color-background-secondary);
+  display: flex;
+  flex-direction: column;
 
   .cover-img {
     overflow: hidden;
@@ -34,8 +36,7 @@
       height: 100%;
       object-fit: cover;
       filter: brightness(1);
-      transition:
-        transform 400ms cubic-bezier(0.4, 0, 0.25, 1),
+      transition: transform 400ms cubic-bezier(0.4, 0, 0.25, 1),
         filter 400ms cubic-bezier(0.4, 0, 0.25, 1);
     }
   }
@@ -47,39 +48,54 @@
 
   .content {
     padding: 18px;
-  }
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-  .title {
-    font-weight: bold;
-    font-size: 24px;
-    color: var(--color-text-primary);
-    text-decoration: none;
-    padding: 0;
-  }
+    .title,
+    .description {
+      margin: 0;
+    }
 
-  .description {
-    font-size: 17px;
-    color: var(--color-text-secondary);
-    padding: 0;
+    .title {
+      font-weight: bold;
+      font-size: 24px;
+      color: var(--color-text-primary);
+      text-decoration: none;
+      padding: 0;
+    }
+
+    .description {
+      font-size: 17px;
+      color: var(--color-text-secondary);
+      padding: 0;
+    }
   }
 
   .actions {
     padding: 16px;
     padding-top: 0;
     display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    margin-top: auto;
 
     .left {
-      justify-content: flex-start;
     }
+
     .right {
       margin-left: auto;
-      justify-content: flex-end;
+    }
+
+    .badge {
+      display: block;
     }
 
     .action-button-primary {
+      font-size: 16px;
       background-color: var(--color-background-accent);
       color: var(--color-background-accent-contrast);
-      padding: 6px 12px;
+      padding: 4px 12px;
       border-radius: var(--radius-full);
       text-decoration: none;
       transition: 0.2s;
@@ -102,8 +118,7 @@
   font-size: 16px;
   border: 2px solid var(--color);
   color: var(--color);
-  padding: 0 8px;
-  margin: 0 6px;
+  padding: 0 10px;
   border-radius: var(--radius-full);
 
   &.warning {
