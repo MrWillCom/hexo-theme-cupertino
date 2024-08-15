@@ -158,3 +158,9 @@ cdn:
 hero_exit_while_scrolling:
   enabled: true
   blur_filter: false
+
+builtin_components:
+  card: true
+  button: true
+  badge: true
+  utilities: true

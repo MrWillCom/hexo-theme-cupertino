@@ -80,84 +80,18 @@
     gap: 6px;
     margin-top: auto;
 
+    .left,
+    .right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+
     .left {
     }
 
     .right {
-      margin-left: auto;
-    }
-
-    .badge {
-      display: block;
-    }
-
-    .action-button-primary {
-      font-size: 16px;
-      background-color: var(--color-background-accent);
-      color: var(--color-background-accent-contrast);
-      padding: 4px 12px;
-      border-radius: var(--radius-full);
-      text-decoration: none;
-      transition: 0.2s;
-
-      &:hover,
-      &:focus-visible {
-        background-color: var(--color-background-accent-hover);
-      }
+      justify-content: flex-end;
     }
   }
-}
-
-.block-large {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.badge {
-  --color: var(--color-text-accent);
-  font-size: 16px;
-  border: 2px solid var(--color);
-  color: var(--color);
-  padding: 0 10px;
-  border-radius: var(--radius-full);
-
-  &.warning {
-    --color: #fdc008;
-  }
-
-  &.secondary {
-    --color: #6c7781;
-  }
-
-  &.success {
-    --color: #31b14e;
-  }
-}
-
-.no-select {
-  user-select: none;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.text-lowercase {
-  text-transform: lowercase;
-}
-
-.text-capitalize {
-  text-transform: capitalize;
 }

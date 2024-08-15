@@ -78,7 +78,11 @@
   <%- css('css/main') %>
   <%- css('css/typography') %>
   <%- css('css/code-highlighting') %>
-  <%- css('css/components') %>
+  <% for (const i in theme.builtin_components) { %>
+  <% if (theme.builtin_components[i]) { %>
+  <%- css('css/components/' + i) %>
+  <% } %>
+  <% } %>
   <%- css('css/nav') %>
   <%- css('css/paginator') %>
   <%- css('css/footer') %>
