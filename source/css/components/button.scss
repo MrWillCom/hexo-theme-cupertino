@@ -1,0 +1,23 @@
+.action-button-primary {
+  font-size: 16px;
+  line-height: 1;
+  vertical-align: middle;
+  background-color: var(--color-background-accent);
+  color: var(--color-background-accent-contrast);
+  padding: 6px 12px;
+  display: inline-block;
+  border: none;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-background-accent-hover);
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: var(--color-background-accent-active);
+  }
+}
