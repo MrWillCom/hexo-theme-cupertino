@@ -16,6 +16,14 @@
   "bugs": {
     "url": "https://github.com/MrWillCom/hexo-theme-cupertino/issues"
   },
+  "files": [
+    "_config.yml",
+    "layout",
+    "scripts",
+    "source",
+    "languages",
+    "assets"
+  ],
   "scripts": {
     "format": "prettier . --write"
   },
