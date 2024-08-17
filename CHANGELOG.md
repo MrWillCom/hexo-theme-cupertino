@@ -1,5 +1,21 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.6
+
+### Minor Changes
+
+- 3e5ce9e: Update the appearance of badges.
+- d8e75b1: Completely remove `docs/` from the repository.
+- 3e5ce9e: Add options for choosing built-in components, in theme configuration `builtin_components`.
+- 9f01edd: Add Autoprefixer to re-support some Safaris.
+- c862f35: Add a series of tags for building cards.
+
+### Patch Changes
+
+- af8e0ba: Reimplement post list grid and card grid with `gap` instead of `margin`.
+- dd2d788: Disable animation with scrolling on unsupported browsers.
+- 271a635: Change default configuration `hero_exit_while_scrolling.blur_filter` to `false`.
+
 ## 2.0.0-beta.5
 
 ### Major Changes
