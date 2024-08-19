@@ -24,7 +24,8 @@
     "languages"
   ],
   "scripts": {
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "changeset": "changeset"
   },
   "dependencies": {
     "hexo-autoprefixer": "^2.0.0",
