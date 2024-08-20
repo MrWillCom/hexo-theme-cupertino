@@ -21,7 +21,8 @@
     "layout",
     "scripts",
     "source",
-    "languages"
+    "languages",
+    "assets"
   ],
   "scripts": {
     "format": "prettier . --write",
