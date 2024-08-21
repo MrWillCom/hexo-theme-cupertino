@@ -6,7 +6,8 @@
 
   & > a,
   & > span {
-    height: 32px;
+    $h: 32px;
+    height: $h;
     border-radius: var(--radius-small);
     display: inline-flex;
     align-items: center;
@@ -15,6 +16,9 @@
     color: var(--color-text-primary);
     transition-property: background-color, color;
     transition-duration: 0.2s;
+
+    $hHalf: $h / 2;
+    --radius-full: #{$hHalf};
 
     &:hover,
     &:focus-visible {
