@@ -2,7 +2,6 @@
   <div class="meta">
     <h2 class="title"><%= __('tags') %></h2>
   </div>
-  <div class="divider"></div>
   <div class="tags">
     <% site.tags.forEach(tag => { %>
     <a href="<%- url_for(tag.path) %>" class="tag"><% if (theme.hashtag_prefix_before_tags) { %>#<% } %><%- tag.name %><% if (theme.tags_post_count) { %><span class="count"><%- tag.length %></span><% } %></a>

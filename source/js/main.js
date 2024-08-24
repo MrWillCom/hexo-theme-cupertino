@@ -153,17 +153,18 @@
       headingSelector += 'h' + i + ','
     }
     headingSelector = headingSelector.slice(0, -1)
-    const headings = content.querySelectorAll(headingSelector)
+    const headings = Array.from(content.querySelectorAll(headingSelector))
 
-    var source = []
-    headings.forEach(heading => {
-      source.push({
+    var source = headings
+      .map(heading => ({
         html: heading.innerHTML,
-        href: heading.getElementsByClassName('headerlink')[0].attributes['href']
-          .value,
-      })
-    })
+        href:
+          heading.getElementsByClassName('headerlink')[0]?.attributes['href']
+            .value ?? null,
+      }))
+      .filter(heading => heading.href)
 
+    const tocContainer = document.createElement('aside')
     const toc = document.createElement('div')
     toc.classList.add('toc')
     for (const i in source) {
@@ -175,15 +176,13 @@
       item.appendChild(link)
       toc.appendChild(item)
     }
+    tocContainer.appendChild(toc)
 
-    if (toc.children.length != 0) {
+    if (toc.children.length > 0) {
       document
         .getElementsByClassName('post')[0]
-        .getElementsByClassName('divider')[0]
-        .after(toc)
-      const divider = document.createElement('div')
-      divider.classList.add('divider')
-      toc.after(divider)
+        .getElementsByClassName('meta')[0]
+        .after(tocContainer)
     }
   }
 })()
