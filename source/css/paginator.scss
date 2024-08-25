@@ -17,7 +17,7 @@
     transition-property: background-color, color;
     transition-duration: 0.2s;
 
-    $hHalf: $h / 2;
+    $hHalf: math.div($h, 2);
     --radius-full: #{$hHalf};
 
     &:hover,
