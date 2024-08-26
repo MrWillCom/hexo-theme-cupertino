@@ -1,11 +1,5 @@
 #                    · Node ·                    #
 
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-#                    · Node ·                    #
-
 # Logs
 logs
 *.log
