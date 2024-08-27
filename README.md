@@ -16,7 +16,15 @@
     <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/hexo-theme-cupertino?style=for-the-badge&logo=npm&logoColor=CB3837&labelColor=EEEEEE&color=8A56FF">
   </a>
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/MrWillCom/hexo-theme-cupertino?style=for-the-badge&logo=github&logoColor=181717&labelColor=EEEEEE&color=F7D76E">
-  <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/MrWillCom/hexo-theme-cupertino/continuous-releases.yml?style=for-the-badge&logo=stackblitz&logoColor=1269D3&label=Continuous%20Releases&labelColor=EEEEEE&color=1269D3">
+</p>
+
+<p align="center">
+  <a href="https://pkg.pr.new/">
+    <img alt="Continuous Releases" src="https://img.shields.io/github/actions/workflow/status/MrWillCom/hexo-theme-cupertino/continuous-releases.yml?style=for-the-badge&logo=stackblitz&logoColor=1269D3&label=Continuous%20Releases&labelColor=EEEEEE&color=1269D3">
+  </a>
+  <a href="https://github.com/changesets/changesets">
+    <img alt="Changesets" src="https://img.shields.io/badge/🦋-Changesets-0195FE?style=for-the-badge&labelColor=EEEEEE">
+  </a>
 </p>
 
 <p align="center">✨ <em>Give a star if you like this!</em> ✨</p>
