@@ -1,0 +1,22 @@
+.toc > p {
+  margin: 0;
+
+  & > a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 0;
+    padding-left: 12px;
+    border-left: 1px solid var(--color-border-primary);
+    transition:
+      color 0.2s,
+      border-color 0.2s;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-text-secondary-hover);
+      text-decoration: none;
+      border-color: var(--color-text-secondary-hover);
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@mixin global {
+  --filter-blur: blur(32px);
+
+  --radius-tiny: 4px;
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-full: 999px;
+}
+
+@mixin light-colors {
+  --color-background-underlying: #ffffff;
+  --color-background-primary: #fbfbfd;
+  --color-background-primary-hover: #ffffff;
+  --color-background-primary-active: #fdfdfd;
+  --color-background-secondary: #ffffff;
+  --color-background-secondary-hover: #f7f7f7;
+  --color-background-secondary-translucent: #ffffffcc;
+  --color-background-accent: #0071e3;
+  --color-background-accent-contrast: #ffffff;
+  --color-background-accent-hover: #0077ed;
+  --color-background-accent-active: #006edb;
+
+  --color-text-primary: #333333;
+  --color-text-primary-hover: #000000;
+  --color-text-primary-active: #666666;
+  --color-text-secondary: #666666;
+  --color-text-secondary-hover: #333333;
+  --color-text-tertiary: #808080;
+  --color-text-accent: #0066cc;
+
+  --color-border-primary: #88888822;
+  --color-border-secondary: #e6e6e6;
+}
+
+@mixin dark-colors {
+  --color-background-underlying: #000000;
+  --color-background-primary: #101010;
+  --color-background-primary-hover: #181818;
+  --color-background-primary-active: #141414;
+  --color-background-secondary: #181818;
+  --color-background-secondary-hover: #202020;
+  --color-background-secondary-translucent: #00000080;
+  --color-background-accent: #0071e3;
+  --color-background-accent-contrast: #ffffff;
+  --color-background-accent-hover: #0077ed;
+  --color-background-accent-active: #006edb;
+
+  --color-text-primary: #dddddd;
+  --color-text-primary-hover: #ffffff;
+  --color-text-primary-active: #999999;
+  --color-text-secondary: #999999;
+  --color-text-secondary-hover: #cccccc;
+  --color-text-tertiary: #808080;
+  --color-text-accent: #69b9ff;
+
+  --color-border-primary: #88888844;
+  --color-border-secondary: #1a1a1a;
+}
+
+:root {
+  @include global;
+}
+
+body[data-color-scheme='auto'],
+body[data-color-scheme='light'] {
+  @include light-colors;
+}
+
+@media (prefers-color-scheme: dark) {
+  body[data-color-scheme='auto'] {
+    @include dark-colors;
+  }
+}
+
+body[data-color-scheme='dark'] {
+  @include dark-colors;
+}

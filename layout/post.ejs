@@ -1,99 +1,86 @@
 <% if (theme.search == true && page.type == 'search') { %>
-    <%- partial('_partial/search') %>
+  <%- partial('_partial/search') %>
 <% } else if (page.type == 'tags') { %>
-    <%- partial('_partial/tags') %>
+  <%- partial('_partial/tags') %>
 <% } else if (page.type == 'categories') { %>
-    <%- partial('_partial/categories') %>
+  <%- partial('_partial/categories') %>
 <% } else { %>
 <article class="post">
-    <div class="meta">
-        <% if (page.categories && page.categories.length) { %>
-        <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
-        <% page.categories.forEach((category) => { %>
-            <a href="<%= config.root + category.path %>"><%= category.name %></a>
-        <% }) %>
-        </div>
-        <% } %>
-
-        <% if (!page.no_date) { %>
-        <div class="date" id="date">
-            <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][page.date.month()] %></span>
-            <span><%- page.date.date() %>,</span>
-            <span><%- page.date.year() %></span>
-        </div>
-        <% } %>
-
-        <h1 class="title"><%= page.title %></h1>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="content">
-        <%- page.content %>
-    </div>
-
-    <% if (!page.no_about) { %>
-    <div class="about">
-        <h1><%= __('about_this_post') %></h1>
-        <div class="details">
-            <p><%- __('this_post_is_written_by', config.author) %>, <%- __('licensed_under', `<a href="${theme.license_link}">${theme.license}</a>`) %>.</p>
-        </div>
-        <% if (page.tags && page.tags.length) { %>
-        <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
-            <%
-                var tags = ''
-                page.tags.forEach((tag) => {
-                    tags += `<a href="${config.root}${tag.path}" class="tag">${theme.hashtag_prefix_before_tags ? '#' : ''}${tag.name}</a>${theme.hashtag_prefix_before_tags ? '' : ','}`
-                })
-                if (!theme.hashtag_prefix_before_tags) { tags = tags.slice(0, tags.length - 1) }
-            %>
-            <i class="icon"></i>
-            <%- tags %>
-        </p>
-        <% } %>
+  <div class="meta">
+    <% if (page.categories && page.categories.length) { %>
+    <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
+    <% page.categories.forEach((category) => { %>
+      <a href="<%= config.root + category.path %>"><%= category.name %></a>
+    <% }) %>
     </div>
     <% } %>
 
-    <div class="container post-prev-next">
-        <% if (page.prev) { %>
-        <a href="<%= url_for(page.prev.path) %>" class="next">
-            <div>
-                <div class="text">
-                    <p class="label"><%= __('next_post') %></p>
-                    <h3 class="title"><%= page.prev.title %></h3>
-                </div>
-            </div>
-        </a>
-        <% } else { %><a class="next"></a><% } %>
-        <% if (page.next) { %>
-        <a href="<%= url_for(page.next.path) %>" class="prev">
-            <div>
-                <div class="text">
-                    <p class="label"><%= __('prev_post') %></p>
-                    <h3 class="title"><%= page.next.title %></>
-                </div>
-            </div>
-        </a>
-        <% } else { %><a class="prev"></a><% } %>
-    </div>
-
-    <% if (!page.no_comments) { %>
-        <% if (config.waline) { %>
-        <div class="container">
-            <div id="waline"></div>
-            <script>
-                new Waline({
-                    el: "#waline",
-                    <% for (const i in config.waline) { %>
-                    <%- i %>: <%- config.waline[i] %>,
-                    <% } %>
-                });
-            </script>
-        </div>
-        <% } %>
-        <% if (config.giscus) { %>
-        <%- config.giscus %>
-        <% } %>
+    <% if (!page.no_date) { %>
+    <time class="date" datetime="<%- moment(page.date).format() %>">
+      <%- moment(page.date).format(theme.date_display_format) %>
+    </time>
     <% } %>
+
+    <h1 class="title"><%= page.title %></h1>
+  </div>
+
+  <div class="content">
+    <%- page.content %>
+  </div>
+
+  <% if (!page.no_about) { %>
+  <div class="about">
+    <h1><%= __('about_this_post') %></h1>
+    <div class="details">
+      <p><%- __('this_post_is_written_by_licensed_under', { author: config.author, license: `<a href="${theme.license_link}">${theme.license}</a>` }) %></p>
+    </div>
+    <% if (page.tags && page.tags.length) { %>
+    <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
+      <i class="bi bi-tags icon"></i>
+      <% page.tags.forEach(tag => { %>
+      <a href="<%- url_for(tag.path) %>" class="tag"><% if (theme.hashtag_prefix_before_tags) { %>#<% } %><%- tag.name %></a>
+      <% }) %>
+    </p>
+    <% } %>
+  </div>
+  <% } %>
+
+  <div class="container post-prev-next">
+    <% if (page.prev) { %>
+    <a href="<%= url_for(page.prev.path) %>" class="next">
+      <div class="text">
+        <p class="label"><%= __('next_post') %></p>
+        <h3 class="title"><%= page.prev.title %></h3>
+      </div>
+    </a>
+    <% } else { %><a class="next"></a><% } %>
+    <% if (page.next) { %>
+    <a href="<%= url_for(page.next.path) %>" class="prev">
+      <div class="text">
+        <p class="label"><%= __('prev_post') %></p>
+        <h3 class="title"><%= page.next.title %></h3>
+      </div>
+    </a>
+    <% } else { %><a class="prev"></a><% } %>
+  </div>
+
+  <% if (!page.no_comments) { %>
+    <% if (config.waline) { %>
+    <div class="container">
+      <div id="waline"></div>
+      <script>
+        new Waline({
+          el: "#waline",
+          <% for (const i in config.waline) { %>
+          <%- i %>: <%- config.waline[i] %>,
+          <% } %>
+        });
+      </script>
+    </div>
+    <% } %>
+    <% if (config.giscus) { %>
+    <%- config.giscus %>
+    <% } %>
+  <% } %>
 </article>
 <% } %>

@@ -1,0 +1,373 @@
+.post {
+  margin-bottom: 64px;
+}
+
+@mixin ctn {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+@mixin meta($primary, $secondary, $link) {
+  #main-content > * > .meta {
+    margin-top: 128px;
+
+    & > * {
+      @include ctn;
+    }
+
+    #{$link} {
+      color: var(--color-text-accent);
+      margin-bottom: 6px;
+      font-weight: 600;
+
+      a {
+        font-size: 13px;
+        margin-right: 6px;
+        text-decoration: none;
+      }
+    }
+
+    #{$secondary} {
+      display: block;
+      color: var(--color-text-secondary);
+      font-weight: 600;
+    }
+
+    #{$primary} {
+      font-size: 48px;
+      margin-top: 16px;
+    }
+  }
+}
+
+@include meta('.title', '.date', '.categories');
+
+.post {
+  $content: '& > .content';
+
+  #{$content} {
+    margin-top: 64px;
+    font-size: 19px;
+    line-height: 1.4211;
+    font-weight: 400;
+    letter-spacing: 0.012em;
+  }
+
+  /* only `#{$content} > pre`, do not include <pre /> in <figure /> */
+  #{$content} p,
+  #{$content} h1,
+  #{$content} h2,
+  #{$content} h3,
+  #{$content} h4,
+  #{$content} h5,
+  #{$content} h6,
+  #{$content} figure,
+  #{$content} > pre,
+  .divider,
+  .container,
+  hr,
+  .toc,
+  #{$content} blockquote,
+  #{$content} table,
+  #{$content} video,
+  #{$content} ul,
+  #{$content} ol,
+  #{$content} > mjx-container,
+  #{$content} > .katex,
+  .about {
+    @include ctn;
+  }
+
+  #{$content} p img,
+  #{$content} .block-large img,
+  #{$content} figure img {
+    border-radius: var(--radius-medium);
+  }
+
+  #{$content} .block-large img {
+    @media (max-width: 1000px) {
+      border-radius: 0;
+    }
+  }
+
+  #{$content} table,
+  #{$content} video {
+    display: block;
+  }
+
+  #{$content} table {
+    padding: 0;
+    border-collapse: collapse;
+    border-radius: var(--radius-medium);
+    max-width: 800px;
+    overflow-x: auto;
+
+    tr {
+      background-color: var(--color-background-secondary);
+
+      &:nth-child(even) {
+        background-color: transparent;
+      }
+    }
+
+    th,
+    td {
+      margin: 0;
+      padding: 6px 12px;
+    }
+
+    th {
+      border-bottom: 1px solid var(--color-border-primary);
+    }
+  }
+
+  #{$content} table thead tr th {
+    &:first-child {
+      border-top-left-radius: var(--radius-medium);
+    }
+
+    &:last-child {
+      border-top-right-radius: var(--radius-medium);
+    }
+  }
+
+  #{$content} table tbody tr:last-child td {
+    &:first-child {
+      border-bottom-left-radius: var(--radius-medium);
+    }
+
+    &:last-child {
+      border-bottom-right-radius: var(--radius-medium);
+    }
+  }
+
+  #{$content} table {
+    @media (max-width: 800px) {
+      &,
+      thead tr th:first-child,
+      thead tr th:last-child,
+      tbody tr:last-child td:first-child,
+      tbody tr:last-child td:last-child {
+        border-radius: 0;
+      }
+    }
+  }
+
+  #{$content} video {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  #{$content} .highlight,
+  #{$content} > pre {
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: var(--color-background-secondary);
+    border-radius: var(--radius-medium);
+    max-width: calc(800px - 16px * 2);
+
+    @media (max-width: 800px) {
+      border-radius: 0;
+    }
+  }
+
+  #{$content} .highlight {
+    * {
+      border: none;
+    }
+
+    .gutter {
+      padding-right: 16px;
+    }
+  }
+
+  #{$content} > pre {
+    max-width: calc(800px - 24px * 2);
+    padding: 20px 24px;
+
+    * > code {
+      background-color: transparent;
+    }
+  }
+
+  #{$content} ul,
+  #{$content} ol {
+    padding: 0 16px;
+    padding-left: 32px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    max-width: calc(800px - 16px * 2);
+  }
+
+  #{$content} blockquote {
+    max-width: calc(800px - 16px * 2);
+    padding: 0 8px;
+  }
+
+  #{$content} figure figcaption {
+    text-align: center;
+    font-size: 16px;
+    color: var(--color-text-secondary);
+  }
+
+  /* for [hexo-math](https://github.com/hexojs/hexo-math): */
+  #{$content} > mjx-container,
+  #{$content} > .katex {
+    display: block;
+    text-align: center;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tags .icon {
+    font-size: 14px;
+    display: block;
+    margin-right: 2px;
+  }
+
+  .tags .tag {
+    font-size: 14px;
+    display: block;
+    height: 14px;
+  }
+
+  .about {
+    border-radius: var(--radius-medium);
+    background-color: var(--color-background-secondary);
+    max-width: calc(800px - 16px * 2);
+    padding: 16px;
+    margin: 64px auto;
+
+    @media (max-width: 800px) {
+      border-radius: 0;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .details {
+      margin: 16px 0;
+      p {
+        margin: 6px 0;
+      }
+    }
+  }
+
+  #{$content} {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      & > .headerlink {
+        opacity: 0;
+        color: var(--color-text-tertiary);
+        font-weight: normal;
+        position: absolute;
+        padding-right: 6px;
+        transform: translateX(-100%);
+        text-decoration: none;
+        transition: opacity 0.2s;
+
+        &::before {
+          content: '#';
+        }
+      }
+
+      &:hover > .headerlink,
+      .headerlink:hover,
+      .headerlink:focus-visible {
+        opacity: 1;
+      }
+    }
+
+    & > h1 {
+      font-size: 36px;
+    }
+
+    & > h2 {
+      font-size: 30px;
+    }
+
+    & > h3 {
+      font-size: 26px;
+    }
+
+    & > h4 {
+      font-size: 20px;
+    }
+
+    & > h5 {
+      font-size: 16px;
+    }
+
+    & > h6 {
+      font-size: 14px;
+    }
+  }
+
+  .post-prev-next {
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+
+    & > a {
+      width: 50%;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      display: flex;
+      transition: color 0.2s;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--color-text-secondary-hover);
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .prev,
+    .next {
+      .text {
+        .title,
+        .label {
+          margin: 0;
+        }
+
+        .label {
+          margin-bottom: 4px;
+          color: var(--color-text-secondary);
+        }
+      }
+    }
+
+    .prev {
+      justify-content: flex-end;
+      text-align: right;
+
+      .text {
+        align-items: flex-end;
+      }
+    }
+
+    .next {
+      justify-content: flex-start;
+      text-align: left;
+
+      .text {
+        align-items: flex-start;
+      }
+    }
+  }
+}

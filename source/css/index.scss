@@ -1,0 +1,73 @@
+.hero {
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @supports (animation-timeline: scroll()) {
+    &.exit-while-scroll {
+      $range: 50svh;
+
+      @keyframes hero-exit-with-blur {
+        from {
+          margin-top: 56px;
+        }
+
+        to {
+          opacity: 0;
+          margin-top: calc($range + 56px);
+          margin-bottom: -$range;
+          scale: 0.9;
+          filter: var(--filter-blur);
+        }
+      }
+
+      @keyframes hero-exit {
+        from {
+          margin-top: 56px;
+        }
+
+        to {
+          opacity: 0;
+          margin-top: calc($range + 56px);
+          margin-bottom: -$range;
+          scale: 0.9;
+        }
+      }
+
+      will-change: filter, margin-top, margin-bottom, opacity, scale;
+      animation-name: hero-exit;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: scroll();
+      animation-range: 0 $range;
+
+      &.with-blur {
+        animation-name: hero-exit-with-blur;
+      }
+    }
+  }
+
+  .sub {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: var(--color-text-secondary);
+    font-weight: 100;
+    margin: 0;
+    transition: font-size 0.5s;
+
+    @media (max-width: 800px) {
+      font-size: 16px;
+    }
+  }
+
+  .large {
+    font-size: 128px;
+    margin: 0;
+    transition: font-size 0.5s;
+
+    @media (max-width: 800px) {
+      font-size: 84px;
+    }
+  }
+}

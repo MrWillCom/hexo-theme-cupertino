@@ -1,52 +1,20 @@
-<div class="container">
-    <div class="meta">
-        <div class="type">
-            <%= is_category() ? __('category') : '' %>
-            <%= is_tag() ? __('tag') : '' %>
-        </div>
-
-        <h2 class="title<%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>"><%= is_category() ? page.category : '' %><%= is_tag() ? (theme.hashtag_prefix_before_tags ? '#' : '') + page.tag : '' %><%= is_archive() ? __('archives') : '' %></h2>
+<div>
+  <div class="meta">
+    <div class="date"><% /* this is the subtitle, here to pretend to be the date, in order to make the styles work */ %>
+      <%= is_category() ? __('category') : '' %>
+      <%= is_tag() ? __('tag') : '' %>
     </div>
 
-    <div class="divider"></div>
-
-    <div class="post-list archives">
-        <% page.posts.each(function (post) { %>
-        <article class="post-list-item">
-            <a href="<%- url_for(post.path) %>">
-                <% if (post.cover_image) { %>
-                <div class="cover-img">
-                    <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
-                </div>
-                <% } %>
-                <div class="content">
-                    <% if (post.categories && post.categories.length && !is_category()) { %>
-                    <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
-                    <% post.categories.forEach((category) => { %>
-                        <span><%= category.name %></span>
-                    <% }) %>
-                    </div>
-                    <% } %>
-                    <div class="title">
-                        <%= post.title %>
-                    </div>
-                    <% if (theme.show_excerpt) { %>
-                    <div class="excerpt">
-                        <%- post.excerpt %>
-                    </div>
-                    <% } %>
-                    <% if (!post.no_date) { %>
-                    <div class="time">
-                        <span><%= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][post.date.month()] %></span>
-                        <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
-                        <span><%- post.date.year() %></span>
-                    </div>
-                    <% } %>
-                </div>
-            </a>
-        </article>
-        <% }) %>
-    </div>
-
-    <%- partial('_partial/paginator') %>
+    <h2 class="title<%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>">
+      <%= is_category() ? page.category : '' %>
+      <%= is_tag() ? (theme.hashtag_prefix_before_tags ? '#' : '') + page.tag : '' %>
+      <%= is_archive() ? __('archives') : '' %>
+    </h2>
+  </div>
 </div>
+
+<div class="container">
+  <%- partial('_partial/post-list', { posts: page.posts, isArchives: true }) %>
+</div>
+
+<%- partial('_partial/paginator') %>

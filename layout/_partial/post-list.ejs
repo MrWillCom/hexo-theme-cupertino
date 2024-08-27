@@ -1,0 +1,35 @@
+<div class="post-list<% if (typeof isArchives === 'boolean' && isArchives === true) { %> archives<% } %>">
+  <% posts.each(function (post) { %>
+  <article class="post-list-item">
+    <a href="<%- url_for(post.path) %>">
+      <% if (post.cover_image) { %>
+      <div class="cover-img">
+        <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">
+      </div>
+      <% } %>
+      <div class="content">
+        <% if (post.categories && post.categories.length) { %>
+        <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
+        <% post.categories.forEach((category) => { %>
+          <span><%= category.name %></span>
+        <% }) %>
+        </div>
+        <% } %>
+        <div class="title">
+          <%= post.title %>
+        </div>
+        <% if (theme.show_excerpt) { %>
+        <div class="excerpt">
+          <%- post.excerpt %>
+        </div>
+        <% } %>
+        <% if (!post.no_date) { %>
+        <time class="time" datetime="<%- moment(post.date).format() %>">
+          <%- moment(post.date).format(theme.date_display_format) %>
+        </time>
+        <% } %>
+      </div>
+    </a>
+  </article>
+  <% }) %>
+</div>
