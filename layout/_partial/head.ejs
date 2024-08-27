@@ -114,14 +114,7 @@
   <% if (page.type == 'categories') { %>
   <%- css('css/categories') %>
   <% } %>
-  <script>
-    ThemeCupertino = {}
-  </script>
   <% if (theme.scroll_reveal) { %>
-  <script>
-    ThemeCupertino['scrollRevealDisappear'] = <%- JSON.stringify(theme.scroll_reveal_disappear) %>
-    ThemeCupertino['scrollRevealQuery'] = <%- JSON.stringify(theme.scroll_reveal_query) %>
-  </script>
   <%- css('css/scroll-reveal') %>
   <% } %>
   <% if (theme.view_transition) { %>
@@ -147,5 +140,6 @@
   <link rel="stylesheet" href="<%- getCdnUrl('@waline/client', 'v2', 'dist/waline.css') %>" />
   <% } %>
 
+  <script>var ThemeCupertino = {}</script>
   <%- theme.insertions.head.ending %>
 </head>

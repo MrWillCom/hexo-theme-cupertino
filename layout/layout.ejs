@@ -18,6 +18,10 @@
     <% if (theme.search == true && page.type == 'search') { %>
     data-search-path="<%= theme.search_path %>"
     <% } %>
+    <% if (theme.scroll_reveal) { %>
+    data-scroll-reveal-disappear="<%= theme.scroll_reveal_disappear %>"
+    data-scroll-reveal-query="<%= theme.scroll_reveal_query %>"
+    <% } %>
   >
     <a href="#main-content" id="skip-to-content"><%- __('skip_to_content') %></a>
     <%- partial('_partial/nav') %>
