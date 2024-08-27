@@ -123,16 +123,7 @@
   <% if (theme.smooth_scroll) { %>
   <script src="<%- getCdnUrl('lenis', '1.1.9', 'dist/lenis.min.js') %>"></script>
   <%- css(getCdnUrl('lenis', '1.1.9', 'dist/lenis.css')) %>
-  <script>
-    const lenis = new Lenis()
-
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-  </script>
+  <%- js('js/smooth-scroll.js') %>
   <% } %>
 
   <% if (config.waline) { %>
