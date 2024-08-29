@@ -1,3 +1,8 @@
+> [!TIP]
+> Updates are landing on branch [`next`](https://github.com/MrWillCom/hexo-theme-cupertino/tree/next), check it out to preview the latest features and improvements that will be released in v2. ✨
+
+---
+
 # Hexo Theme Cupertino
 
 The Hexo Blog Theme Cupertino
