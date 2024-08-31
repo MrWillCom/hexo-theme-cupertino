@@ -7,7 +7,7 @@ ThemeCupertino['ScrollReveal'] = new (class {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('scroll-reveal-show')
-        } else if (document.body.dataset.scrollRevealDisappear) {
+        } else if (document.body.dataset.scrollRevealDisappear === 'true') {
           entry.target.classList.remove('scroll-reveal-show')
         }
       })
