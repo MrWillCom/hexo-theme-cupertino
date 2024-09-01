@@ -1,5 +1,19 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.7
+
+### Minor Changes
+
+- 63d82f6: Move the exported configurations in the global object called `ThemeCupertino` to the dataset of body.
+- 4def816: Add [Lenis](https://github.com/darkroomengineering/lenis) smooth scroll.
+- c6e8083: Put TOC in a `<aside>` to indicate it is a non-content part.
+- 0ded662: Add `insertions.head.ending` and `insertions.body.ending` options for custom code injections to `<head />` and `<body />`.
+- dfc06c7: Remove the divider before the TOC.
+
+### Patch Changes
+
+- 2593d9b: Fix the failed rounded corners of Prev/Next button in paginator.
+
 ## 2.0.0-beta.6
 
 ### Minor Changes
