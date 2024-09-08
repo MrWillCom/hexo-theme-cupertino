@@ -1,6 +1,8 @@
 .tags {
   margin-top: 64px;
   margin-bottom: 128px;
+  display: flex;
+  flex-wrap: wrap;
 
   .tag {
     padding: 8px 16px;
