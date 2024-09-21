@@ -1,4 +1,4 @@
-<head<% if (theme.og_enabled) { %> prefix="og: https://ogp.me/ns#"<% } %>>
+<head prefix="og: https://ogp.me/ns#">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
@@ -37,35 +37,7 @@
   <link rel='manifest' href='<%= theme.manifest %>'>
   <% } %>
 
-  <% if (theme.og_enabled) { %>
-  <%
-  var og = {};
-
-  og['title'] = (title ? title + ' - ' : '') + config.title;
-  og['type'] = is_post() ? 'article' : 'website';
-  og['url'] = url;
-  og['image'] = page.cover_image ? page.cover_image : theme.og_image;
-  if (is_post()) {
-    og['article:published_time'] = page.date.toISOString();
-    og['article:author'] = config.author;
-  }
-
-  if (theme['og']) {
-    for (const i in theme.og) {
-      og[i] = theme.og[i];
-    }
-  }
-
-  if (page['og']) {
-    for (const i in page.og) {
-      og[i] = page.og[i];
-    }
-  }
-  %>
-  <% for (const i in og) { %>
-  <meta property="og:<%= i %>" content="<%= og[i] %>" />
-  <% } %>
-  <% } %>
+  <%- open_graph() %>
 
   <% if (theme.simple_icons) { %>
   <%- css(getCdnUrl('simple-icons-font', 'v13', 'font/simple-icons.min.css')) %>
