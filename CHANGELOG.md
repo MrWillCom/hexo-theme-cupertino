@@ -1,5 +1,11 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.8
+
+### Minor Changes
+
+- 8ebca4c: Reimplement [OGP](https://ogp.me/) with Hexo's `open_graph()` helper. The configuration options `og_enabled`, `og_image` and `og` are now deprecated.
+
 ## 2.0.0-beta.7
 
 ### Minor Changes
