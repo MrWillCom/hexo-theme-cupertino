@@ -111,4 +111,9 @@
       href="https://unpkg.com/@waline/client@v2/dist/waline.css"
     />
   <% } %>
+
+  <% if (theme.search == true && page.type == 'search') { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.basic.min.js"></script>
+  <% } %>
+  
 </head>

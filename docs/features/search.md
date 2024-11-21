@@ -13,11 +13,26 @@ Search features are enabled by default, but requires a few steps to make it avai
     path: search.json
     content: false
   ```
-3. Add new search page so that Hexo will generate it.
+3. Add the search.json file to blog root directory, the following is an example:
+  ```json
+  [
+    {
+        "url": "/articles/Article-1-Title",
+        "title": "Article-1-Title",
+        "tags": ["tag1", "tag2"]
+    },
+    {
+        "url": "/articles/Article-2-Title",
+        "title": "Article-2-Title",
+        "tags": ["tag1", "tag2"]
+    },
+  ]
+  ```
+4. Add new search page so that Hexo will generate it.
   ```sh
   $ hexo new page 'search'
   ```
-4. Replace all its content with:
+1. Replace all its content with:
   ```markdown
   ---
   type: search
