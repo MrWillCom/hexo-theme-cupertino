@@ -33,44 +33,26 @@
     }
   })
 
-  // a simple solution for managing cookies
-  const Cookies = new (class {
-    get(key, fallback) {
-      const temp = document.cookie
-        .split('; ')
-        .find(row => row.startsWith(key + '='))
-      if (temp) {
-        return temp.split('=')[1]
-      } else {
-        return fallback
-      }
-    }
-    set(key, value) {
-      document.cookie =
-        key +
-        '=' +
-        value +
-        '; path=' +
-        document.body.getAttribute('data-config-root')
-    }
-  })()
-
   const ColorScheme = new (class {
     constructor() {
       window
         .matchMedia('(prefers-color-scheme: dark)')
         .addEventListener('change', () => {
-          this.updateCurrent(Cookies.get('color-scheme', 'auto'))
+          this.updateCurrent(localStorage.getItem('color-scheme') ?? 'auto')
         })
     }
     get() {
-      const stored = Cookies.get('color-scheme', 'auto')
+      const stored = localStorage.getItem('color-scheme') ?? 'auto'
       this.updateCurrent(stored)
       return stored
     }
     set(value) {
       bodyEl.setAttribute('data-color-scheme', value)
-      Cookies.set('color-scheme', value)
+      try {
+        localStorage.setItem('color-scheme', value)
+      } catch (err) {
+        console.error(err)
+      }
       this.updateCurrent(value)
       return value
     }
