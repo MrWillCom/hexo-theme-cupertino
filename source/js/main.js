@@ -2,8 +2,8 @@
   var navEl = document.getElementById('theme-nav')
   navEl.addEventListener('click', e => {
     if (window.innerWidth <= 600) {
-      if (!navEl.classList.contains('open')) {
-        navEl.style.setProperty(
+      if (!document.body.classList.contains('nav-open')) {
+        document.body.style.setProperty(
           '--open-height',
           48 +
             document.querySelector('#theme-nav .nav-items').clientHeight +
@@ -11,16 +11,16 @@
         )
       }
 
-      navEl.classList.toggle('open')
+      document.body.classList.toggle('nav-open')
     } else {
-      navEl.style.removeProperty('--open-height')
-      navEl.classList.remove('open')
+      document.body.style.removeProperty('--open-height')
+      document.body.classList.remove('nav-open')
     }
   })
 
   window.addEventListener('resize', () => {
-    if (navEl.classList.contains('open')) {
-      navEl.style.setProperty(
+    if (document.body.classList.contains('nav-open')) {
+      document.body.style.setProperty(
         '--open-height',
         48 +
           document.querySelector('#theme-nav .nav-items').clientHeight +
@@ -28,8 +28,8 @@
       )
     }
     if (window.innerWidth > 600) {
-      navEl.style.removeProperty('--open-height')
-      navEl.classList.remove('open')
+      document.body.style.removeProperty('--open-height')
+      document.body.classList.remove('nav-open')
     }
   })
 
