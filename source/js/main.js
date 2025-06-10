@@ -33,60 +33,19 @@
     }
   })
 
-  const ColorScheme = new (class {
-    constructor() {
-      window
-        .matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener('change', () => {
-          this.updateCurrent(localStorage.getItem('color-scheme') ?? 'auto')
-        })
-    }
-    get() {
-      const stored = localStorage.getItem('color-scheme') ?? 'auto'
-      this.updateCurrent(stored)
-      return stored
-    }
-    set(value) {
-      bodyEl.setAttribute('data-color-scheme', value)
-      try {
-        localStorage.setItem('color-scheme', value)
-      } catch (err) {
-        console.error(err)
-      }
-      this.updateCurrent(value)
-      return value
-    }
-    updateCurrent(value) {
-      var current = 'light'
-      if (value == 'auto') {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          current = 'dark'
-        }
-      } else {
-        current = value
-      }
-      document.body.setAttribute('data-current-color-scheme', current)
-    }
-  })()
-
   if (document.getElementById('theme-color-scheme-toggle')) {
-    var bodyEl = document.body
     var themeColorSchemeToggleEl = document.getElementById(
       'theme-color-scheme-toggle',
     )
     var options = themeColorSchemeToggleEl.getElementsByTagName('input')
 
-    if (ColorScheme.get()) {
-      bodyEl.setAttribute('data-color-scheme', ColorScheme.get())
-    }
-
     for (const option of options) {
-      if (option.value == bodyEl.getAttribute('data-color-scheme')) {
+      if (option.value == document.body.dataset.colorScheme) {
         option.checked = true
       }
       option.addEventListener('change', ev => {
         var value = ev.target.value
-        ColorScheme.set(value)
+        ThemeCupertino.ColorScheme.set(value)
         for (const o of options) {
           if (o.value != value) {
             o.checked = false

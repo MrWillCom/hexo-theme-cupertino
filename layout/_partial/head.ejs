@@ -103,6 +103,6 @@
   <link rel="stylesheet" href="<%- getCdnUrl('@waline/client', 'v2', 'dist/waline.css') %>" />
   <% } %>
 
-  <script>var ThemeCupertino = {}</script>
+  <%- js('js/head.js') %>
   <%- theme.insertions.head.ending %>
 </head>
