@@ -6,6 +6,8 @@
   align-items: center;
 }
 
+$animationCurve: cubic-bezier(0.86, 0, 0.07, 1);
+
 nav {
   user-select: none;
   position: fixed;
@@ -13,7 +15,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: height 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: height 0.4s $animationCurve;
 
   .inner {
     max-width: 980px;
@@ -103,9 +105,9 @@ nav {
           width: 12px;
           height: 1px;
           transition:
-            transform 0.6s cubic-bezier(0.86, 0, 0.07, 1),
-            transform-origin 0.6s cubic-bezier(0.86, 0, 0.07, 1),
-            top 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+            transform 0.6s $animationCurve,
+            transform-origin 0.6s $animationCurve,
+            top 0.6s $animationCurve;
         }
 
         &::before {
@@ -208,8 +210,8 @@ nav {
   pointer-events: none;
   z-index: 1000;
   transition:
-    height 0.6s cubic-bezier(0.86, 0, 0.07, 1),
-    backdrop-filter 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+    height 0.6s $animationCurve,
+    backdrop-filter 0.6s $animationCurve;
 
   .nav-open & {
     backdrop-filter: blur(36px);
