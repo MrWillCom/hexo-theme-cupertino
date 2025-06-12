@@ -162,6 +162,8 @@ builtin_components:
 # smooth scroll powered by [darkroomengineering/lenis](https://github.com/darkroomengineering/lenis)
 smooth_scroll: true
 
+nav_blur_gradient: false
+
 insertions:
   head:
     ending: ''

@@ -17,6 +17,10 @@ nav {
   z-index: 1000;
   transition: height 0.4s $animationCurve;
 
+  [data-nav-blur-gradient='false'] & {
+    background-color: var(--color-background-secondary-translucent);
+    backdrop-filter: var(--filter-blur);
+  }
   .inner {
     max-width: 980px;
     margin: auto;
@@ -198,7 +202,7 @@ nav {
   }
 }
 
-.masked > [order] {
+.nav-mask > [order] {
   position: fixed;
   top: 0;
   left: 0;
