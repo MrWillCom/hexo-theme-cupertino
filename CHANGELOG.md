@@ -1,5 +1,17 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.8
+
+### Minor Changes
+
+- 2bdcb6e: Add nav bar blur gradient effect.
+- 8ebca4c: Reimplement [OGP](https://ogp.me/) with Hexo's `open_graph()` helper. The configuration options `og_enabled`, `og_image` and `og` are now deprecated.
+
+### Patch Changes
+
+- e720eab: Fix the flicker after page load when color scheme is different from default.
+- 4e359c6: Migrate from cookies to localStorage.
+
 ## 2.0.0-beta.7
 
 ### Minor Changes
