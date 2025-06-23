@@ -10,31 +10,31 @@
 
   @supports (animation-timeline: scroll()) {
     &.exit-while-scroll {
-      $range: 50svh;
+      --range: calc(var(--current-hero-height) * 0.5px);
 
       @keyframes hero-exit-with-blur {
-        from {
+        0% {
           margin-top: 56px;
         }
 
-        to {
+        100% {
           opacity: 0;
-          margin-top: calc($range + 56px);
-          margin-bottom: -$range;
+          margin-top: calc(var(--range) + 56px);
+          margin-bottom: calc(-1 * var(--range));
           scale: 0.9;
           filter: var(--filter-blur);
         }
       }
 
       @keyframes hero-exit {
-        from {
+        0% {
           margin-top: 56px;
         }
 
-        to {
+        100% {
           opacity: 0;
-          margin-top: calc($range + 56px);
-          margin-bottom: -$range;
+          margin-top: calc(var(--range) + 56px);
+          margin-bottom: calc(-1 * var(--range));
           scale: 0.9;
         }
       }
@@ -44,7 +44,8 @@
       animation-timing-function: linear;
       animation-fill-mode: both;
       animation-timeline: scroll();
-      animation-range: 0 $range;
+      animation-range: 0 var(--range);
+      transform-origin: left -100%;
 
       &.with-blur {
         animation-name: hero-exit-with-blur;

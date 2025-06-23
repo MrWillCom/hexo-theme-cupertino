@@ -126,4 +126,14 @@
         .after(tocContainer)
     }
   }
+
+  const heroEl = document.querySelector('.hero.exit-while-scroll')
+  if (heroEl) {
+    const updateHeroHeight = () => {
+      heroEl.style.setProperty('--current-hero-height', heroEl.clientHeight)
+    }
+
+    updateHeroHeight()
+    window.addEventListener('resize', updateHeroHeight)
+  }
 })()
