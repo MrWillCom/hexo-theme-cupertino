@@ -1,6 +1,12 @@
 # path to your blog's icon
 favicon: /favicon.png
 
+# hero area content
+hero:
+  title: Welcome to Theme Cupertino
+  description: |
+    Aliquip voluptate ea velit consequat deserunt officia do aliqua est do consequat aute.
+
 # path to manifest.json
 manifest: /manifest.json
 

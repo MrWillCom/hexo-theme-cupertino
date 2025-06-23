@@ -1,8 +1,12 @@
 .hero {
-  height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 6px;
+  $paddingY: 160px;
+  padding-top: $paddingY;
+  padding-bottom: $paddingY;
+  white-space: pre-wrap;
 
   @supports (animation-timeline: scroll()) {
     &.exit-while-scroll {
@@ -48,26 +52,18 @@
     }
   }
 
-  .sub {
-    text-transform: uppercase;
-    font-size: 24px;
+  .title {
+    font-size: 22px;
     color: var(--color-text-secondary);
-    font-weight: 100;
+    font-weight: 200;
     margin: 0;
     transition: font-size 0.5s;
-
-    @media (max-width: 800px) {
-      font-size: 16px;
-    }
   }
 
-  .large {
-    font-size: 128px;
+  .description {
+    font-size: 20px;
+    font-weight: normal;
     margin: 0;
     transition: font-size 0.5s;
-
-    @media (max-width: 800px) {
-      font-size: 84px;
-    }
   }
 }
