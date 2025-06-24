@@ -6,6 +6,11 @@
   <%- partial('_partial/categories') %>
 <% } else { %>
 <article class="post">
+  <% if (page.cover_image) { %>
+  <div class="cover">
+    <img src="<%= page.cover_image %>" alt="<%= page.cover_image_alt %>" class="cover-img" data-pagefind-meta="image[src], image_alt[alt]" />
+  </div>
+  <% } %>
   <div class="meta">
     <% if (page.categories && page.categories.length) { %>
     <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
