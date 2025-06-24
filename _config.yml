@@ -132,9 +132,8 @@ license: CC BY-NC 4.0
 license_link: https://creativecommons.org/licenses/by-nc/4.0
 
 # search
-# based on [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
+# based on [Pagefind](https://pagefind.app/)
 search: true
-search_path: search.json
 
 # icons
 simple_icons: true

@@ -7,14 +7,8 @@ body {
   margin-top: 56px;
   color: var(--color-text-primary);
   background-color: var(--color-background-primary);
-  font-family: Inter, sans-serif, system-ui;
-  font-feature-settings:
-    'liga' 1,
-    'calt' 1; /* fix for Chrome */
-
-  @supports (font-variation-settings: normal) {
-    font-family: InterVariable, sans-serif, system-ui;
-  }
+  font-family: var(--font-sans-serif);
+  font-feature-settings: var(--font-sans-serif-feature-settings);
 }
 
 a {

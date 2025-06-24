@@ -27,7 +27,7 @@
     <%- js('js/body-top.js') %>
     <a href="#main-content" id="skip-to-content"><%- __('skip_to_content') %></a>
     <%- partial('_partial/nav') %>
-    <main id="main-content">
+    <main id="main-content"<% if (typeof page?.should_index === 'boolean' ? page.should_index : (is_post() || (is_page() && (page.type != 'search' && page.type != 'tags' && page.type != 'categories')))) { %> data-pagefind-body<% } %>>
       <%- body %>
     </main>
     <%- partial('_partial/footer') %>
