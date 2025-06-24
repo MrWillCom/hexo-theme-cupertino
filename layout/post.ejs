@@ -21,7 +21,7 @@
     </time>
     <% } %>
 
-    <h1 class="title"><%= page.title %></h1>
+    <h1 class="title" data-pagefind-meta="title"><%= page.title %></h1>
   </div>
 
   <div class="content">
@@ -29,7 +29,7 @@
   </div>
 
   <% if (!page.no_about) { %>
-  <div class="about">
+  <div class="about" data-pagefind-ignore>
     <h1><%= __('about_this_post') %></h1>
     <div class="details">
       <p><%- __('this_post_is_written_by_licensed_under', { author: config.author, license: `<a href="${theme.license_link}">${theme.license}</a>` }) %></p>
@@ -45,7 +45,7 @@
   </div>
   <% } %>
 
-  <div class="container post-prev-next">
+  <div class="container post-prev-next" data-pagefind-ignore>
     <% if (page.prev) { %>
     <a href="<%= url_for(page.prev.path) %>" class="next">
       <div class="text">
