@@ -60,6 +60,7 @@ body {
       height: var(--h);
       margin-bottom: calc(var(--h) * -0.6);
       object-fit: cover;
+      pointer-events: none;
 
       @supports (animation-timeline: scroll()) {
         --range: calc(var(--h) * 3);
