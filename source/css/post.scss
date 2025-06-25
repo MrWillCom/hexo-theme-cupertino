@@ -64,7 +64,7 @@ body {
 
       @supports (animation-timeline: scroll()) {
         --range: calc(var(--h) * 3);
-        --offset-coefficient: 0.4;
+        --offset-coefficient: 0.5;
 
         @keyframes cover-exit {
           0% {
