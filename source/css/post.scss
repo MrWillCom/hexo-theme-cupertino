@@ -301,6 +301,10 @@ body {
         margin: 6px 0;
       }
     }
+
+    & > .extra {
+      font-size: 15px;
+    }
   }
 
   #{$content} {
