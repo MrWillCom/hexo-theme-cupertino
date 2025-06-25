@@ -163,6 +163,7 @@ builtin_components:
   button: true
   badge: true
   utilities: true
+  carousel: true
 
 # smooth scroll powered by [darkroomengineering/lenis](https://github.com/darkroomengineering/lenis)
 smooth_scroll: true

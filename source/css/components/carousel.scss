@@ -1,0 +1,23 @@
+.carousel {
+  max-width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  gap: 12px;
+  $paddingX: max(calc((100% - 800px) / 2), 16px);
+  padding-left: $paddingX;
+  padding-right: $paddingX;
+
+  .carousel-item {
+    width: auto;
+    height: 320px;
+    max-height: 80svh;
+    margin: 0;
+    padding: 0;
+    border-radius: var(--radius-medium);
+  }
+
+  & > figure {
+    margin: 0;
+    padding: 0 !important;
+  }
+}
