@@ -1,5 +1,16 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.10
+
+### Minor Changes
+
+- 5cd71dc: Add carousel component.
+- 85a912a: Add `about_extra_description` option for posts.
+
+### Patch Changes
+
+- a9ea6db: Fix cover image overlaying on meta area.
+
 ## 2.0.0-beta.9
 
 ### Major Changes
