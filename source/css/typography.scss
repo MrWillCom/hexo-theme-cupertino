@@ -23,7 +23,9 @@ blockquote {
 
 pre,
 code {
-  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
 }
 
 pre {
@@ -31,7 +33,7 @@ pre {
 }
 
 code {
-  font-size: 12px;
+  font-size: 0.9em;
   background-color: var(--color-background-secondary);
   padding: 2px 4px;
   border-radius: var(--radius-tiny);
