@@ -1,5 +1,15 @@
 # hexo-theme-cupertino
 
+## 2.0.0-beta.11
+
+### Major Changes
+
+- 0411835: Replace hexo-renderer-sass with a custom Sass renderer. `node_sass` option is removed.
+
+### Patch Changes
+
+- 3fe3462: Change the font and its size of inline code.
+
 ## 2.0.0-beta.10
 
 ### Minor Changes
