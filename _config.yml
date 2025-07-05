@@ -1,28 +1,29 @@
-# REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!
-
-# the path to your blog's icon:
+# path to your blog's icon
 favicon: /favicon.png
 
-# the path to manifest.json
-manifest: /manifest.json
+# hero area content
+hero:
+  title: Welcome to Theme Cupertino
+  description: |
+    Aliquip voluptate ea velit consequat deserunt officia do aliqua est do consequat aute.
 
-# [Open Graph Protocol](https://ogp.me/)
-og_enabled: true
-og_image: /favicon.png
-og:
-  # customize og properties here which will replace the defaults
+# path to manifest.json
+manifest: /manifest.json
 
 # show excerpt on post list
 show_excerpt: false
 
-# light/dark/auto color scheme
+# default light/dark/auto color scheme
 color_scheme: auto
 
-# show floating color theme toggle
+# show color theme toggle in footer
 show_color_scheme_toggle: true
 
 # uppercase categories
 uppercase_categories: true
+
+# show post count on categories page
+categories_post_count: true
 
 # capitalize tag names on tags page
 capitalize_tags: false
@@ -30,8 +31,11 @@ capitalize_tags: false
 # add hashtag prefix before tags
 hashtag_prefix_before_tags: true
 
+# show post count on tags page
+tags_post_count: true
+
 # rainbow!
-rainbow_banner: true
+rainbow_banner: false
 rainbow_banner_colors:
   - '#e50000'
   - '#ff8d00'
@@ -39,80 +43,135 @@ rainbow_banner_colors:
   - '#008121'
   - '#004cff'
   - '#760188'
-# choose from [auto, always]
+# when to show rainbow banner: auto/always
 rainbow_banner_shown: auto
 # Pride Month by default
 rainbow_banner_month: 6
 
-# TOC - table of contents
+# table of contents
 toc: true
 toc_max_depth: 2
 
-# scroll reveal (https://scrollrevealjs.org/) - animating elements as they enter/leave the viewport
 scroll_reveal: true
+scroll_reveal_query: .scroll-reveal, .post-list-item, .card, .content p img, .content .block-large img
+scroll_reveal_disappear: false
 
-# navigation config
 nav:
-  # the title displays in the upper left corner which won't change
   title: Blog
-  # the items displays in the upper right corner
   items:
-    # these items will display as a link
-    Archives: /archives
-    Friends: /friends
-    Projects: /projects
-    About: /about
-    # these will be automatically be an icon
-    GitHub: https://github.com/MrWillCom
-    CodePen: https://codepen.io/mrwillcom
-    Patreon: https://www.patreon.com/MrWillCom
-    Mastodon: https://noc.social/@MrWillCom
-    Discord: https://discord.gg/UKuFDjcfY8
-    Search: /search
+    - name: Archives
+      url: /archives
+    - name: Friends
+      url: /friends
+    - name: Projects
+      url: /projects
+    - name: About
+      url: /about
+    - name: <i class="si si-github"></i>
+      is_icon: true
+      url: https://github.com/MrWillCom
+    - name: <i class="si si-codepen"></i>
+      is_icon: true
+      url: https://codepen.io/mrwillcom
+    - name: <i class="si si-patreon"></i>
+      is_icon: true
+      url: https://www.patreon.com/MrWillCom
+    - name: <i class="si si-mastodon"></i>
+      is_icon: true
+      url: https://noc.social/@MrWillCom
+    - name: <i class="bi bi-search"></i>
+      is_icon: true
+      url: /search
 
-# footer items
 footer:
-  # the title
-  Blog:
-    # the items after the title, display as links
-    Blog: /
-    Archives: /archives
-    Tags: /tags
-    Categories: /categories
-    Search: /search
-    Friends: /friends
-    Projects: /projects
-    Resume: /resume
-    About: /about
-    RSS: /atom.xml
-  # also the title
-  Projects:
-    # the items
-    RSA CLI: https://github.com/MrWillCom/rsa-cli
-    Hexo Theme Cupertino: https://github.com/MrWillCom/hexo-theme-cupertino
-    A Calendar: https://github.com/MrWillCom/a-calendar
-    Auto Mirroring Bucket: https://github.com/MrWillCom/auto-mirroring-bucket
-  # the title
-  Me:
-    # items
-    GitHub: https://github.com/MrWillCom
-    CodePen: https://codepen.io/mrwillcom
-    Patreon: https://www.patreon.com/MrWillCom
-    Mastodon: https://noc.social/@MrWillCom
-    Discord: https://discord.gg/UKuFDjcfY8
-    Email: mailto:mr.will.com@outlook.com
+  - group_name: Blog
+    items:
+      - name: Home
+        url: /
+      - name: Archives
+        url: /archives
+      - name: Tags
+        url: /tags
+      - name: Categories
+        url: /categories
+      - name: Search
+        url: /search
+      - name: Friends
+        url: /friends
+      - name: Projects
+        url: /projects
+      - name: Resume
+        url: /resume
+      - name: About
+        url: /about
+      - name: RSS
+        url: /atom.xml
+  - group_name: Projects
+    items:
+      - name: Hexo Theme Cupertino
+        url: https://github.com/MrWillCom/hexo-theme-cupertino
+      - name: Next Mastodon Gallery
+        url: https://github.com/MrWillCom/next-mastodon-gallery
+  - group_name: Me
+    items:
+      - name: GitHub
+        url: https://github.com/MrWillCom
+      - name: CodePen
+        url: https://codepen.io/mrwillcom
+      - name: Patreon
+        url: https://www.patreon.com/MrWillCom
+      - name: Mastodon
+        url: https://noc.social/@MrWillCom
+      - name: Email
+        url: mailto:mr.will.com@outlook.com
 
 # footer extra description
 # footer_extra_description: something will be shown at the bottom of the footer
 
-# the license your posts under
 license: CC BY-NC 4.0
-# the link of your license
 license_link: https://creativecommons.org/licenses/by-nc/4.0
 
 # search
-# based on [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
-search: true
-search_path: search.json
+# based on [Pagefind](https://pagefind.app/)
+search: false
 
-# REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!
+# icons
+simple_icons: true
+# Theme Cupertino requires Bootstrap Icons to display some icons of the UI, don't turn it off unless you know what exactly you're doing.
+bootstrap_icons: true
+
+view_transition: true
+
+# date display format
+# refer to https://momentjs.com/docs/#/displaying/format/
+date_display_format: MMMM D, YYYY
+
+# CDN
+cdn:
+  template: https://unpkg.com/:package@:version/:file
+  replacements:
+    package: :package
+    version: :version
+    file: :file
+
+hero_exit_while_scrolling:
+  enabled: true
+  blur_filter: false
+
+builtin_components:
+  card: true
+  button: true
+  badge: true
+  utilities: true
+  carousel: true
+
+# smooth scroll powered by [darkroomengineering/lenis](https://github.com/darkroomengineering/lenis)
+smooth_scroll: true
+
+nav_blur_gradient: false
+
+insertions:
+  head:
+    ending: ''
+  body:
+    ending: ''

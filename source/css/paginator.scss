@@ -1,0 +1,56 @@
+@use 'sass:math';
+
+.paginator {
+  display: block;
+  text-align: center;
+  margin: 32px 8px;
+
+  & > a,
+  & > span {
+    $h: 32px;
+    height: $h;
+    border-radius: var(--radius-small);
+    display: inline-flex;
+    align-items: center;
+    padding: 0 12px;
+    user-select: none;
+    color: var(--color-text-primary);
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+
+    $hHalf: math.div($h, 2);
+    --radius-full: #{$hHalf};
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-background-primary-hover);
+      color: var(--color-text-primary-hover);
+      text-decoration: none;
+    }
+
+    &:active {
+      background-color: var(--color-background-primary-active);
+      color: var(--color-text-primary-active);
+    }
+
+    &.prev {
+      padding-left: 14px;
+      border-top-left-radius: var(--radius-full);
+      border-bottom-left-radius: var(--radius-full);
+    }
+
+    &.next {
+      padding-right: 14px;
+      border-top-right-radius: var(--radius-full);
+      border-bottom-right-radius: var(--radius-full);
+    }
+
+    &.current {
+      color: var(--color-text-secondary);
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

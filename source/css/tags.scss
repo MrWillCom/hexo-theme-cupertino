@@ -1,0 +1,33 @@
+.tags {
+  margin-top: 64px;
+  margin-bottom: 128px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .tag {
+    padding: 8px 16px;
+    margin: 4px;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: var(--radius-full);
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border: 1px solid var(--color-border-primary);
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-background-secondary-hover);
+      color: var(--color-text-primary-hover);
+    }
+
+    .count {
+      vertical-align: middle;
+      font-size: 10px;
+      margin-left: 6px;
+      color: var(--color-text-secondary);
+    }
+  }
+}

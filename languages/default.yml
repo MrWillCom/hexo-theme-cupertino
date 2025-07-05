@@ -1,19 +1,21 @@
 latest_posts: Latest Posts
 read_more: Read More
 powered_by: Powered by %s
-prev: Prev
+prev: Previous
 next: Next
 archives: Archives
 about_this_post: About this Post
-this_post_is_written_by: This post is written by %s
-licensed_under: licensed under %s
+this_post_is_written_by_licensed_under: This post is written by %(author)s, licensed under %(license)s.
 home: Home
 category: Category
 tag: Tag
-tagged_with: Tagged with %s
 search: Search
 type_to_search: Type to search...
 categories: Categories
 tags: Tags
 next_post: Next
 prev_post: Previous
+light: Light
+dark: Dark
+auto: Auto
+skip_to_content: Skip to content

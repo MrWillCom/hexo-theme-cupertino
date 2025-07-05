@@ -1,0 +1,17 @@
+#search {
+  --pagefind-ui-primary: var(--color-background-accent);
+  --pagefind-ui-text: var(--color-text-primary);
+  --pagefind-ui-background: var(--color-background-secondary);
+  --pagefind-ui-border: var(--color-border-primary);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: var(--radius-medium);
+  --pagefind-ui-image-border-radius: var(--radius-small);
+  --pagefind-ui-font: var(--font-sans-serif);
+
+  margin-top: 240px;
+  margin-bottom: 240px;
+
+  .pagefind-ui {
+    font-feature-settings: var(--font-sans-serif-feature-settings);
+  }
+}

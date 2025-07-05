@@ -1,0 +1,70 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  $paddingY: 160px;
+  padding-top: $paddingY;
+  padding-bottom: $paddingY;
+  white-space: pre-wrap;
+
+  @supports (animation-timeline: scroll()) {
+    &.exit-while-scroll {
+      --range: calc(var(--current-hero-height) * 0.5px);
+
+      @keyframes hero-exit-with-blur {
+        0% {
+          margin-top: 56px;
+        }
+
+        100% {
+          opacity: 0;
+          margin-top: calc(var(--range) + 56px);
+          margin-bottom: calc(-1 * var(--range));
+          scale: 0.9;
+          filter: var(--filter-blur);
+        }
+      }
+
+      @keyframes hero-exit {
+        0% {
+          margin-top: 56px;
+        }
+
+        100% {
+          opacity: 0;
+          margin-top: calc(var(--range) + 56px);
+          margin-bottom: calc(-1 * var(--range));
+          scale: 0.9;
+        }
+      }
+
+      will-change: filter, margin-top, margin-bottom, opacity, scale;
+      animation-name: hero-exit;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+      animation-timeline: scroll();
+      animation-range: 0 var(--range);
+      transform-origin: left -100%;
+
+      &.with-blur {
+        animation-name: hero-exit-with-blur;
+      }
+    }
+  }
+
+  .title {
+    font-size: 22px;
+    color: var(--color-text-secondary);
+    font-weight: 200;
+    margin: 0;
+    transition: font-size 0.5s;
+  }
+
+  .description {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    transition: font-size 0.5s;
+  }
+}

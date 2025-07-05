@@ -1,4 +1,4 @@
-<head<% if (theme.og_enabled) { %> prefix="og: https://ogp.me/ns#"<% } %>>
+<head prefix="og: https://ogp.me/ns#">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
@@ -34,44 +34,29 @@
     <%- favicon_tag(theme.favicon) %>
   <% } %>
   <% if (theme.manifest) { %>
-    <link rel='manifest' href='<%= theme.manifest %>'>
+  <link rel='manifest' href='<%= theme.manifest %>'>
   <% } %>
 
-  <% if (theme.og_enabled) { %>
-  <%
-  var og = {};
+  <%- open_graph() %>
 
-  og['title'] = (title ? title + ' - ' : '') + config.title;
-  og['type'] = is_post() ? 'article' : 'website';
-  og['url'] = url;
-  og['image'] = page.cover_image ? page.cover_image : theme.og_image;
-  if (is_post()) {
-    og['article:published_time'] = page.date.toISOString();
-    og['article:author'] = config.author;
-  }
-
-  if (theme['og']) {
-    for (const i in theme.og) {
-      og[i] = theme.og[i];
-    }
-  }
-
-  if (page['og']) {
-    for (const i in page.og) {
-      og[i] = page.og[i];
-    }
-  }
-  %>
-  <% for (const i in og) { %>
-  <meta property="og:<%= i %>" content="<%= og[i] %>" />
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <% if (theme.simple_icons) { %>
+  <%- css(getCdnUrl('simple-icons-font', 'v13', 'font/simple-icons.min.css')) %>
   <% } %>
+  <% if (theme.bootstrap_icons) { %>
+  <%- css(getCdnUrl('bootstrap-icons', '1.11.3', 'font/bootstrap-icons.min.css')) %>
   <% } %>
 
   <%- css('css/var') %>
   <%- css('css/main') %>
   <%- css('css/typography') %>
   <%- css('css/code-highlighting') %>
-  <%- css('css/components') %>
+  <% for (const i in theme.builtin_components) { %>
+  <% if (theme.builtin_components[i]) { %>
+  <%- css('css/components/' + i) %>
+  <% } %>
+  <% } %>
   <%- css('css/nav') %>
   <%- css('css/paginator') %>
   <%- css('css/footer') %>
@@ -95,6 +80,8 @@
   <%- css('css/archive') %>
   <% } %>
   <% if (theme.search == true && page.type == 'search') { %>
+  <%- css('pagefind/pagefind-ui.css') %>
+  <%- js('pagefind/pagefind-ui.js') %>
   <%- css('css/search') %>
   <% } %>
   <% if (page.type == 'tags') { %>
@@ -103,12 +90,23 @@
   <% if (page.type == 'categories') { %>
   <%- css('css/categories') %>
   <% } %>
+  <% if (theme.scroll_reveal) { %>
+  <%- css('css/scroll-reveal') %>
+  <% } %>
+  <% if (theme.view_transition) { %>
+  <%- css('css/view-transition') %>
+  <% } %>
+  <% if (theme.smooth_scroll) { %>
+  <script src="<%- getCdnUrl('lenis', '1.1.9', 'dist/lenis.min.js') %>"></script>
+  <%- css(getCdnUrl('lenis', '1.1.9', 'dist/lenis.css')) %>
+  <%- js('js/smooth-scroll.js') %>
+  <% } %>
 
   <% if (config.waline) { %>
-    <script src='https://unpkg.com/@waline/client@v2/dist/waline.js'></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@waline/client@v2/dist/waline.css"
-    />
+  <script src="<%- getCdnUrl('@waline/client', 'v2', 'dist/waline.js') %>"></script>
+  <link rel="stylesheet" href="<%- getCdnUrl('@waline/client', 'v2', 'dist/waline.css') %>" />
   <% } %>
+
+  <%- js('js/head.js') %>
+  <%- theme.insertions.head.ending %>
 </head>

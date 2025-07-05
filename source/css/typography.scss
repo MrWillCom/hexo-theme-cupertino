@@ -1,0 +1,40 @@
+.divider,
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border-secondary);
+  margin: 32px auto;
+}
+
+.divider {
+  margin: 64px auto;
+}
+
+img {
+  width: 100%;
+}
+
+::marker {
+  color: var(--color-text-secondary);
+}
+
+blockquote {
+  border-left: 4px solid var(--color-border-primary);
+}
+
+pre,
+code {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+}
+
+pre {
+  font-size: 14px;
+}
+
+code {
+  font-size: 0.9em;
+  background-color: var(--color-background-secondary);
+  padding: 2px 4px;
+  border-radius: var(--radius-tiny);
+}
