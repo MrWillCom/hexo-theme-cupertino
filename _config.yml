@@ -133,7 +133,7 @@ license_link: https://creativecommons.org/licenses/by-nc/4.0
 
 # search
 # based on [Pagefind](https://pagefind.app/)
-search: true
+search: false
 
 # icons
 simple_icons: true
