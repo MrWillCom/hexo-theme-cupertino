@@ -42,10 +42,10 @@
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <% if (theme.simple_icons) { %>
-  <%- css(getCdnUrl('simple-icons-font', 'v13', 'font/simple-icons.min.css')) %>
+  <%- css(getCdnUrl('simple-icons-font', '15', 'font/simple-icons.min.css')) %>
   <% } %>
   <% if (theme.bootstrap_icons) { %>
-  <%- css(getCdnUrl('bootstrap-icons', '1.11.3', 'font/bootstrap-icons.min.css')) %>
+  <%- css(getCdnUrl('bootstrap-icons', '1', 'font/bootstrap-icons.min.css')) %>
   <% } %>
 
   <%- css('css/var') %>
@@ -97,14 +97,14 @@
   <%- css('css/view-transition') %>
   <% } %>
   <% if (theme.smooth_scroll) { %>
-  <script src="<%- getCdnUrl('lenis', '1.1.9', 'dist/lenis.min.js') %>"></script>
-  <%- css(getCdnUrl('lenis', '1.1.9', 'dist/lenis.css')) %>
+  <script src="<%- getCdnUrl('lenis', '1', 'dist/lenis.min.js') %>"></script>
+  <%- css(getCdnUrl('lenis', '1', 'dist/lenis.css')) %>
   <%- js('js/smooth-scroll.js') %>
   <% } %>
 
   <% if (config.waline) { %>
-  <script src="<%- getCdnUrl('@waline/client', 'v2', 'dist/waline.js') %>"></script>
-  <link rel="stylesheet" href="<%- getCdnUrl('@waline/client', 'v2', 'dist/waline.css') %>" />
+  <script src="<%- getCdnUrl('@waline/client', '2', 'dist/waline.js') %>"></script>
+  <link rel="stylesheet" href="<%- getCdnUrl('@waline/client', '2', 'dist/waline.css') %>" />
   <% } %>
 
   <%- js('js/head.js') %>
