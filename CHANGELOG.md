@@ -1,5 +1,11 @@
 # hexo-theme-cupertino
 
+## 2.1.0
+
+### Minor Changes
+
+- 08752a5: Remove some default config items.
+
 ## 2.0.0
 
 ### Major Changes
