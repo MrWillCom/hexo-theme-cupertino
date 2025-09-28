@@ -132,7 +132,7 @@ builtin_components:
   carousel: true
 
 # smooth scroll powered by [darkroomengineering/lenis](https://github.com/darkroomengineering/lenis)
-smooth_scroll: true
+smooth_scroll: false
 
 nav_blur_gradient: false
 
