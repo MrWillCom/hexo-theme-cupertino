@@ -76,7 +76,7 @@
   <% if (page.path != "index.html") { %>
   <%- css('css/post') %>
   <% } %>
-  <% if (is_archive() || is_category() || is_tag() || (theme.search == true && page.type == 'search') || page.type == 'tags' || page.type == 'categories') { %>
+  <% if (is_archive() || is_category() || is_tag()) { %>
   <%- css('css/archive') %>
   <% } %>
   <% if (theme.search == true && page.type == 'search') { %>
