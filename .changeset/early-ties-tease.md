@@ -2,10 +2,7 @@
 'hexo-theme-cupertino': patch
 ---
 
-Improve SEO by aligning with the single H1 per page best practice.
+Improve a11y and SEO by ensuring each page has only one `<h1>`.
 
-- In post.ejs: Reduce redundant H1 tags by changing "About This Post" heading from <h1> to <h2>.
-- In tags.ejs: Elevate the main "Tags" heading from <h2> to <h1> to add a clear primary heading.
-- In categories.ejs: Elevate the main "Categories" heading from <h2> to <h1> to add a clear primary heading.
-- In archive.ejs: Elevate the main "Archives" heading from <h2> to <h1> to add a clear primary heading.
-- In index.ejs: Elevate the main heading (e.g., "Home" or site title) from <h2> to <h1> to add a clear primary heading.
+- In `post.ejs`, the "About This Post" heading has been changed from `<h1>` to `<h2>` to reduce redundant H1 tags.
+- In `tags.ejs`, `categories.ejs`, `archive.ejs`, and `index.ejs`, the main headings have been elevated from `<h2>` to `<h1>` to ensure a clear primary heading on each page.
