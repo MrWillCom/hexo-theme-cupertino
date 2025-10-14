@@ -5,11 +5,11 @@
       <%= is_tag() ? __('tag') : '' %>
     </div>
 
-    <h2 class="title<%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>">
+    <h1 class="title<%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>">
       <%= is_category() ? page.category : '' %>
       <%= is_tag() ? (theme.hashtag_prefix_before_tags ? '#' : '') + page.tag : '' %>
       <%= is_archive() ? __('archives') : '' %>
-    </h2>
+    </h1>
   </div>
 </div>
 
