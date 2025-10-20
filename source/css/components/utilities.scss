@@ -1,3 +1,6 @@
+@use '../utils';
+@use '../var.scss';
+
 .block-large {
   max-width: 1000px;
   margin: auto;
@@ -20,5 +23,16 @@ $textTransforms: uppercase, lowercase, capitalize;
 @each $transform in $textTransforms {
   .text-#{$transform} {
     text-transform: $transform;
+  }
+}
+
+.squircle {
+  @include utils.squircle;
+}
+
+.no-squircle {
+  @supports (corner-shape: initial) {
+    corner-shape: initial;
+    @include var.radii;
   }
 }
