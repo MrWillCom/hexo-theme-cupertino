@@ -1,3 +1,5 @@
+@use 'components/utilities.scss';
+
 .divider,
 hr {
   border: none;
@@ -37,4 +39,5 @@ code {
   background-color: var(--color-background-secondary);
   padding: 2px 4px;
   border-radius: var(--radius-tiny);
+  @include utilities.corner-squircle;
 }

@@ -1,3 +1,5 @@
+@use 'components/utilities.scss';
+
 body {
   margin-top: 0;
 }
@@ -127,6 +129,7 @@ body {
   #{$content} .block-large img,
   #{$content} figure img {
     border-radius: var(--radius-medium);
+    @include utilities.corner-squircle;
   }
 
   #{$content} .block-large img {
@@ -144,6 +147,7 @@ body {
     padding: 0;
     border-collapse: collapse;
     border-radius: var(--radius-medium);
+    @include utilities.corner-squircle;
     max-width: 800px;
     overflow-x: auto;
 
@@ -169,20 +173,24 @@ body {
   #{$content} table thead tr th {
     &:first-child {
       border-top-left-radius: var(--radius-medium);
+      @include utilities.corner-squircle;
     }
 
     &:last-child {
       border-top-right-radius: var(--radius-medium);
+      @include utilities.corner-squircle;
     }
   }
 
   #{$content} table tbody tr:last-child td {
     &:first-child {
       border-bottom-left-radius: var(--radius-medium);
+      @include utilities.corner-squircle;
     }
 
     &:last-child {
       border-bottom-right-radius: var(--radius-medium);
+      @include utilities.corner-squircle;
     }
   }
 
@@ -209,6 +217,7 @@ body {
     overflow-y: hidden;
     background-color: var(--color-background-secondary);
     border-radius: var(--radius-medium);
+    @include utilities.corner-squircle;
     max-width: calc(800px - 16px * 2);
 
     @media (max-width: 800px) {
@@ -282,6 +291,7 @@ body {
 
   .about {
     border-radius: var(--radius-medium);
+    @include utilities.corner-squircle;
     background-color: var(--color-background-secondary);
     max-width: calc(800px - 16px * 2);
     padding: 16px;

@@ -1,3 +1,5 @@
+@use 'components/utilities.scss';
+
 .carousel {
   max-width: 100%;
   overflow-x: scroll;
@@ -14,6 +16,7 @@
     margin: 0;
     padding: 0;
     border-radius: var(--radius-medium);
+    @include utilities.corner-squircle;
   }
 
   & > figure {

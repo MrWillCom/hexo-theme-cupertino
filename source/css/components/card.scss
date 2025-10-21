@@ -1,3 +1,5 @@
+@use 'components/utilities.scss';
+
 .card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -23,6 +25,7 @@
 .card {
   overflow: hidden;
   border-radius: var(--radius-large);
+  @include utilities.corner-squircle;
   background-color: var(--color-background-secondary);
   display: flex;
   flex-direction: column;

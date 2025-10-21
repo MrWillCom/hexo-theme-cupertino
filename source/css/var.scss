@@ -1,11 +1,23 @@
+@mixin radii($squircle: false) {
+  @if ($squircle) {
+    --radius-tiny: 10px;
+    --radius-small: 20px;
+    --radius-medium: 30px;
+    --radius-large: 40px;
+    --radius-full: 999px;
+  } @else {
+    --radius-tiny: 4px;
+    --radius-small: 8px;
+    --radius-medium: 12px;
+    --radius-large: 16px;
+    --radius-full: 999px;
+  }
+}
+
 @mixin global {
   --filter-blur: blur(32px);
 
-  --radius-tiny: 4px;
-  --radius-small: 8px;
-  --radius-medium: 12px;
-  --radius-large: 16px;
-  --radius-full: 999px;
+  @include radii();
 
   --font-sans-serif: Inter, sans-serif, system-ui;
   --font-sans-serif-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */

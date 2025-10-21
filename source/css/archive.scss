@@ -1,5 +1,7 @@
 /* in archive page, use a more compact list view */
 
+@use 'components/utilities.scss';
+
 .post-list.archives {
   display: block;
   max-width: 980px;
@@ -29,6 +31,7 @@
       min-width: 180px;
       width: 20vw;
       border-radius: var(--radius-medium);
+      @include utilities.corner-squircle;
       flex-shrink: 0;
     }
   }
