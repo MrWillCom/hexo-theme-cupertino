@@ -1,8 +1,0 @@
-@use 'var.scss';
-
-@mixin squircle {
-  @supports (corner-shape: squircle) {
-    corner-shape: squircle;
-    @include var.radii-squircle;
-  }
-}

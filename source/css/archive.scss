@@ -1,7 +1,5 @@
 /* in archive page, use a more compact list view */
 
-@use 'utils';
-
 .post-list.archives {
   display: block;
   max-width: 980px;
@@ -31,7 +29,6 @@
       min-width: 180px;
       width: 20vw;
       border-radius: var(--radius-medium);
-      @include utils.squircle;
       flex-shrink: 0;
     }
   }

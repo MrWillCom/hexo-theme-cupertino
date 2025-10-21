@@ -1,5 +1,3 @@
-@use 'utils';
-
 .post-list {
   user-select: none;
   display: grid;
@@ -18,7 +16,6 @@
 .post-list-item {
   overflow: hidden;
   border-radius: var(--radius-large);
-  @include utils.squircle;
   background-color: var(--color-background-secondary);
 
   .cover-img {
