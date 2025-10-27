@@ -1,5 +1,11 @@
 # hexo-theme-cupertino
 
+## 2.2.0
+
+### Minor Changes
+
+- 94bf794: Apply squircle corners to all rounded-corner elements, add theme config option `squircle` to control this and add class `.corner-squircle` and `.no-corner-squircle` for users' custom squircle elements.
+
 ## 2.1.2
 
 ### Patch Changes
