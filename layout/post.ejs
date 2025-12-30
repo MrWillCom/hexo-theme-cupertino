@@ -36,9 +36,7 @@
   <% if (!page.no_about) { %>
   <div class="about" data-pagefind-ignore>
     <h2><%= __('about_this_post') %></h2>
-    <div class="details">
-      <p><%- __('this_post_is_written_by_licensed_under', { author: config.author, license: `<a href="${theme.license_link}">${theme.license}</a>` }) %></p>
-    </div>
+    <div class="details"><%- __('this_post_is_written_by_licensed_under', { author: config.author, license: `<a href="${theme.license_link}">${theme.license}</a>` }) %></div>
     <% if (page.tags && page.tags.length) { %>
     <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
       <i class="bi bi-tags icon"></i>

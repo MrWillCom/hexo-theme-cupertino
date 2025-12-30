@@ -32,6 +32,10 @@ body {
         font-size: 13px;
         margin-right: 6px;
         text-decoration: none;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
 
@@ -301,14 +305,15 @@ body {
       border-radius: 0;
     }
 
-    h1 {
-      margin: 0;
-    }
+    h2,
+    .details,
+    .tags,
+    & > .extra {
+      margin-top: 0;
+      margin-bottom: 16px;
 
-    .details {
-      margin: 16px 0;
-      p {
-        margin: 6px 0;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 
