@@ -1,5 +1,12 @@
 # hexo-theme-cupertino
 
+## 2.2.1
+
+### Patch Changes
+
+- 1a3698b: `<a />`s in post list items now fill their parent element.
+- 1a3698b: The cover image zooms out and becomes darker when post list item is clicked.
+
 ## 2.2.0
 
 ### Minor Changes
