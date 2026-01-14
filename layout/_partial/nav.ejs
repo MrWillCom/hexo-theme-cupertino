@@ -1,12 +1,9 @@
 
 <% if (theme.nav_blur_gradient) { %>
 <div class="nav-mask">
-  <div order="1"></div>
-  <div order="2"></div>
-  <div order="3"></div>
-  <div order="4"></div>
-  <div order="5"></div>
-  <div order="6"></div>
+  <% for (let i = 1; i <= 6; i++) { %>
+  <div style="--sharp: <%- i %>"></div>
+  <%} %>
 </div>
 <% } %>
 <nav id="theme-nav">
