@@ -26,23 +26,27 @@ $textTransforms: uppercase, lowercase, capitalize;
 }
 
 @mixin corner-squircle {
-  [data-corner-squircle='true'] & {
+  @container document-body style(--config-corner-squircle: true) {
     @supports (corner-shape: squircle) {
-      corner-shape: squircle;
-      @include var.radii(true);
+      & {
+        corner-shape: squircle;
+        @include var.radii(true);
 
-      * {
-        @include var.radii();
+        * {
+          @include var.radii();
+        }
       }
     }
   }
 }
 
 @mixin no-corner-squircle {
-  [data-corner-squircle='true'] & {
+  @container document-body style(--config-corner-squircle: true) {
     @supports (corner-shape: initial) {
-      corner-shape: initial;
-      @include var.radii();
+      & {
+        corner-shape: initial;
+        @include var.radii();
+      }
     }
   }
 }
