@@ -69,22 +69,7 @@
   </div>
 
   <% if (!page.no_comments) { %>
-    <% if (config.waline) { %>
-    <div class="container">
-      <div id="waline"></div>
-      <script>
-        new Waline({
-          el: "#waline",
-          <% for (const i in config.waline) { %>
-          <%- i %>: <%- config.waline[i] %>,
-          <% } %>
-        });
-      </script>
-    </div>
-    <% } %>
-    <% if (config.giscus) { %>
-    <%- config.giscus %>
-    <% } %>
+    <%- theme.insertions.comments_section %>
   <% } %>
 </article>
 <% } %>

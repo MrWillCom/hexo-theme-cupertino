@@ -142,5 +142,6 @@ insertions:
     ending: ''
   body:
     ending: ''
+  comments_section: ''
 
 squircle: true

@@ -85,9 +85,6 @@
   <% if (theme.toc) { %>
   <%- css('css/toc') %>
   <% } %>
-  <% if (config.giscus) { %>
-    <%- css('css/giscus') %>
-  <% } %>
   <% if (page.path == "index.html") { %>
   <%- css('css/index') %>
   <% } %>
@@ -118,11 +115,6 @@
   <script src="<%- getCdnUrl('lenis', '1', 'dist/lenis.min.js') %>"></script>
   <%- css(getCdnUrl('lenis', '1', 'dist/lenis.css')) %>
   <%- js('js/smooth-scroll.js') %>
-  <% } %>
-
-  <% if (config.waline) { %>
-  <script src="<%- getCdnUrl('@waline/client', '2', 'dist/waline.js') %>"></script>
-  <link rel="stylesheet" href="<%- getCdnUrl('@waline/client', '2', 'dist/waline.css') %>" />
   <% } %>
 
   <%- js('js/head.js') %>
