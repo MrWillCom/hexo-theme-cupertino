@@ -1,5 +1,17 @@
 # hexo-theme-cupertino
 
+## 2.3.0
+
+### Minor Changes
+
+- 80c1d98: Decrease the radius of navigation blur gradient.
+- 4405bdd: Add component `<htc-callout />`.
+
+### Patch Changes
+
+- d5606ce: Fix missing cover image in Open Graph.
+- 50a21c9: Fix `lenis` and `raf` exposure to global environment.
+
 ## 2.2.1
 
 ### Patch Changes
