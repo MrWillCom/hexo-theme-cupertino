@@ -1,5 +1,3 @@
-window.ThemeCupertino = {}
-
 ThemeCupertino['ColorScheme'] = new (class {
   constructor() {
     window

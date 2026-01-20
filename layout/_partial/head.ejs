@@ -39,6 +39,8 @@
 
   <%- open_graph({ image: page.cover_image }) %>
 
+  <script>window.ThemeCupertino = {}</script>
+
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <% if (theme.simple_icons) { %>
@@ -52,11 +54,27 @@
   <%- css('css/main') %>
   <%- css('css/typography') %>
   <%- css('css/code-highlighting') %>
-  <% for (const i in theme.builtin_components) { %>
-  <% if (theme.builtin_components[i]) { %>
-  <%- css('css/components/' + i) %>
+
+  <% if (theme.builtin_components.card) { %>
+  <%- css('css/components/card') %>
   <% } %>
+  <% if (theme.builtin_components.button) { %>
+  <%- css('css/components/button') %>
   <% } %>
+  <% if (theme.builtin_components.badge) { %>
+  <%- css('css/components/badge') %>
+  <% } %>
+  <% if (theme.builtin_components.utilities) { %>
+  <%- css('css/components/utilities') %>
+  <% } %>
+  <% if (theme.builtin_components.carousel) { %>
+  <%- css('css/components/carousel') %>
+  <% } %>
+  <% if (theme.builtin_components.callout) { %>
+  <script>ThemeCupertino['_calloutStyles'] = `<%- css('css/components/callout') %>`</script>
+  <%- js('js/components/callout.js') %>
+  <% } %>
+
   <%- css('css/nav') %>
   <%- css('css/paginator') %>
   <%- css('css/footer') %>

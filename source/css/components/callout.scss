@@ -1,0 +1,71 @@
+@use 'utilities.scss';
+
+:host {
+  display: block;
+  border-radius: var(--radius-medium);
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  @include utilities.corner-squircle;
+
+  &:host([type='warning']) {
+    background-color: var(--color-background-warning);
+    $c: var(--color-text-warning);
+    color: color-mix(in oklch, var(--color-text-primary) 60%, $c);
+
+    .header {
+      color: $c;
+    }
+  }
+
+  &:host([type='accent']) {
+    background-color: var(--color-background-accent-lite);
+    $c: var(--color-text-accent);
+    color: color-mix(in oklch, var(--color-text-primary) 60%, $c);
+
+    .header {
+      color: $c;
+    }
+  }
+
+  &:host([type='success']) {
+    background-color: var(--color-background-success);
+    $c: var(--color-text-success);
+    color: color-mix(in oklch, var(--color-text-primary) 60%, $c);
+
+    .header {
+      color: $c;
+    }
+  }
+}
+
+.container {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.content {
+  font-size: 15px;
+}
+
+.hidden {
+  display: none;
+}
