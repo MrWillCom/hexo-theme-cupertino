@@ -29,7 +29,7 @@
 
 <p align="center">✨ <em>Give a star if you like this!</em> ✨</p>
 
-![A screenshot](https://blog.mrwillcom.com/img/000048.webp)
+![Highlights until v2.3.0](https://github.com/user-attachments/assets/4308aa70-4e32-4482-aa02-4205ecb02600)
 
 This is a modern and elegant theme for your Hexo blog, which is beautifully designed and has gorgeous details. It's based on Cupertino Design, so it looks similar to [Apple Newsroom](https://www.apple.com/newsroom/).
 
