@@ -1,5 +1,11 @@
 # hexo-theme-cupertino
 
+## 2.4.0
+
+### Minor Changes
+
+- 7b2f97a: Add insertion position `insertions.comments_section` and remove undocumented comment features.
+
 ## 2.3.0
 
 ### Minor Changes
