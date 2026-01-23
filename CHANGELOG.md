@@ -1,5 +1,11 @@
 # hexo-theme-cupertino
 
+## 2.4.2
+
+### Patch Changes
+
+- 880485e: Fix post list item too high in Safari.
+
 ## 2.4.1
 
 ### Patch Changes
