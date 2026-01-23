@@ -8,7 +8,7 @@
   <h1 class="section-title"><%- __('latest_posts') %></h1>
   <% } %>
 
-  <%- partial('_partial/post-list', { posts: page.posts }) %>
+  <%- partial('_partial/post-list', { posts: page.posts, isNotIndex: page.path != "index.html" }) %>
 
   <%- partial('_partial/paginator') %>
 </div>

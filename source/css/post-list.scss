@@ -13,6 +13,10 @@
     grid-template-columns: 1fr;
     max-width: 366px;
   }
+
+  &.not-index {
+    margin-top: 100px;
+  }
 }
 
 .post-list-item {

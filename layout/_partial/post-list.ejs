@@ -1,4 +1,4 @@
-<div class="post-list<% if (typeof isArchives === 'boolean' && isArchives === true) { %> archives<% } %>">
+<div class="post-list<% if (typeof isArchives === 'boolean' && isArchives === true) { %> archives<% } %><% if (typeof isNotIndex === 'boolean' && isNotIndex === true) { %> not-index<% } %>">
   <% posts.each(function (post) { %>
   <article class="post-list-item">
     <a href="<%- url_for(post.path) %>">
