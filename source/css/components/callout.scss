@@ -1,4 +1,4 @@
-@use 'utilities.scss';
+@use './utilities_partial.scss' as utilities;
 
 :host {
   display: block;

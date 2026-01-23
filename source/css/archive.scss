@@ -1,6 +1,6 @@
 /* in archive page, use a more compact list view */
 
-@use 'components/utilities.scss';
+@use './components/utilities_partial.scss' as utilities;
 
 .post-list.archives {
   display: block;
