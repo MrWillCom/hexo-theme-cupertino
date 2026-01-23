@@ -1,5 +1,12 @@
 # hexo-theme-cupertino
 
+## 2.4.1
+
+### Patch Changes
+
+- a457218: Fix post list being obscured by navigation.
+- cb4a1d3: Fix duplicating styles caused by `@use`.
+
 ## 2.4.0
 
 ### Minor Changes
