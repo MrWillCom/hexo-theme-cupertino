@@ -4,9 +4,11 @@
 
 <h1 align="center">Hexo Theme Cupertino</h1>
 
-<p align="center">The Hexo Blog Theme Cupertino.<p>
+<p align="center">The Hexo Blog Theme Cupertino.</p>
 
 <p align="center"><a href="https://blog.mrwillcom.com/"><strong>Preview</strong></a> / <a href="https://cupertino.mrwillcom.com/">Docs</a></p>
+
+<p align="center"><a href="https://www.producthunt.com/products/hexo-theme-cupertino?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-hexo-theme-cupertino" target="_blank" rel="noopener noreferrer"><img alt="Product Hunt Badge" width="200" height="40.5" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1067113&amp;theme=light&amp;t=1769262103936"></a></p>
 
 <p align="center">
   <a href="https://github.com/MrWillCom/hexo-theme-cupertino/releases/latest">
