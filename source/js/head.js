@@ -1,3 +1,5 @@
+window.ThemeCupertino = {}
+
 ThemeCupertino['ColorScheme'] = new (class {
   constructor() {
     window
@@ -31,5 +33,6 @@ ThemeCupertino['ColorScheme'] = new (class {
       current = value
     }
     document.body.dataset.currentColorScheme = current
+    window.dispatchEvent(new CustomEvent('color-scheme-change', { detail: current }))
   }
 })()

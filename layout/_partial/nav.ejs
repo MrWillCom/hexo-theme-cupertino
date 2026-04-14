@@ -1,21 +1,144 @@
+<!-- 这一段 CSS 用来美化切换按钮 -->
+<style>
+  /* 隐藏原本丑丑的单选框圆点 */
+  #theme-color-scheme-toggle input {
+    display: none;
+  }
+
+  /* 切换器整体容器样式：灰色半透明背景，圆角 */
+  #theme-color-scheme-toggle {
+  background: var(--color-background-primary);
+  padding: 0 2px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: 8px;
+  transform: scale(0.9);
+  transform-origin: left center;
+  height: 32px;
+  border: 1px solid var(--color-border-primary);
+}
+
+  /* 每一个选项（浅色/深色/自动）的样式 */
+  #theme-color-scheme-toggle label {
+    cursor: pointer;
+    padding: 1px 10px;
+    border-radius: 15px;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    color: var(--text-color-sub, #888); /* 默认灰色 */
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  /* 鼠标悬停时的效果 */
+  #theme-color-scheme-toggle label:hover {
+    color: var(--text-color, #fff);
+  }
+
+  /* 选中状态的样式：白色背景，深色文字，看起来像个按钮 */
+  #theme-color-scheme-toggle input:checked + span {
+    color: #000;
+    background: #fff;
+    padding: 0 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 20px;
+    line-height: 20px;
+  }
+
+  /* 未选中时的文字稍微给一点内边距，防止跳动 */
+  #theme-color-scheme-toggle span {
+    padding: 0 8px;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  /* 导航按钮容器 */
+  .nav-buttons-container {
+    background: var(--color-background-primary);
+    padding: 0 2px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+    margin-top: 11px;
+    transform: scale(0.9);
+    transform-origin: left center;
+    height: 26px;
+    border: 1px solid var(--color-border-primary);
+  }
+
+  /* 导航按钮样式 */
+  .nav-buttons-container .nav-item {
+    cursor: pointer;
+    padding: 1px 6px;
+    border-radius: 15px;
+    transition: all 0.2s ease;
+    font-size: 10px;
+    color: var(--text-color-sub, #888);
+    margin: 0;
+    line-height: 1.2;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  /* 搜索图标缩小 */
+  .nav-buttons-container .nav-item.is-icon {
+    font-size: 12px;
+    padding: 1px 4px;
+  }
+
+  /* 导航按钮悬停效果 */
+  .nav-buttons-container .nav-item:hover {
+    color: var(--text-color, #fff);
+  }
+</style>
 
 <% if (theme.nav_blur_gradient) { %>
 <div class="nav-mask">
-  <% for (let i = 1; i <= 6; i++) { %>
-  <div style="--sharp: <%- i %>"></div>
-  <%} %>
+  <div order="1"></div>
+  <div order="2"></div>
+  <div order="3"></div>
+  <div order="4"></div>
+  <div order="5"></div>
+  <div order="6"></div>
 </div>
 <% } %>
+
 <nav id="theme-nav">
   <div class="inner">
     <a class="title" href="<%= config.root %>"><%= theme.nav.title %></a>
     <div class="nav-arrow"></div>
     <div class="nav-items">
-      <a class="nav-item nav-item-home" href="<%= config.root %>" style="--index: 0"><%- __('home') %></a>
+      
+      <!-- 外观切换按钮 (结构没变，样式由上面的 CSS 控制) -->
+      <% if (theme.show_color_scheme_toggle) { %>
+        <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+          <label>
+            <input type="radio" value="light">
+            <span><%- __('light') %></span>
+          </label>
+          <label>
+            <input type="radio" value="dark">
+            <span><%- __('dark') %></span>
+          </label>
+          <label>
+            <input type="radio" value="auto">
+            <span><%- __('auto') %></span>
+          </label>
+        </div>
+      <% } %>
 
-      <% theme.nav.items.forEach((item, i) => { %>
-      <a class="nav-item<% if (item.is_icon) { %> is-icon<% } %>" href="<%= url_for(item.url) %>" style="--index: <%- i + 1 %>"><%- item.name %></a>
-      <% }) %>
+      <!-- 导航按钮容器 -->
+      <div class="nav-buttons-container">
+        <% theme.nav.items.forEach((item, i) => { %>
+        <a class="nav-item<% if (item.is_icon) { %> is-icon<% } %>" href="<%= url_for(item.url) %>" style="--index: <%- i %>"><%- item.name %></a>
+        <% }) %>
+      </div>
     </div>
   </div>
 </nav>

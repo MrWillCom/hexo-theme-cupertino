@@ -4,11 +4,9 @@
 
 <h1 align="center">Hexo Theme Cupertino</h1>
 
-<p align="center">The Hexo Blog Theme Cupertino.</p>
+<p align="center">The Hexo Blog Theme Cupertino.<p>
 
 <p align="center"><a href="https://blog.mrwillcom.com/"><strong>Preview</strong></a> / <a href="https://cupertino.mrwillcom.com/">Docs</a></p>
-
-<p align="center"><a href="https://www.producthunt.com/products/hexo-theme-cupertino?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-hexo-theme-cupertino" target="_blank" rel="noopener noreferrer"><img alt="Product Hunt Badge" width="200" height="40.5" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1067113&amp;theme=light&amp;t=1769262103936"></a></p>
 
 <p align="center">
   <a href="https://github.com/MrWillCom/hexo-theme-cupertino/releases/latest">
@@ -31,7 +29,7 @@
 
 <p align="center">✨ <em>Give a star if you like this!</em> ✨</p>
 
-![Highlights until v2.3.0](https://github.com/user-attachments/assets/d58b92f4-83dc-4048-9ba3-ead3795f6367)
+![A screenshot](https://blog.mrwillcom.com/img/000048.webp)
 
 This is a modern and elegant theme for your Hexo blog, which is beautifully designed and has gorgeous details. It's based on Cupertino Design, so it looks similar to [Apple Newsroom](https://www.apple.com/newsroom/).
 

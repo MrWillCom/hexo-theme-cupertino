@@ -1,25 +1,23 @@
 .badge {
+  --color: var(--color-text-accent);
   font-size: 16px;
   line-height: 1;
-  background-color: var(--color-background-accent-lite);
-  color: var(--color-text-accent);
+  background-color: color-mix(in oklab, var(--color) 20%, transparent);
+  color: var(--color);
   padding: 6px 12px;
   border-radius: var(--radius-full);
   height: min-content;
   display: inline-block;
 
   &.warning {
-    background-color: var(--color-background-warning);
-    color: var(--color-text-warning);
+    --color: #fdc008;
   }
 
   &.secondary {
-    background-color: var(--color-background-secondary);
-    color: var(--color-text-secondary);
+    --color: var(--color-text-secondary);
   }
 
   &.success {
-    background-color: var(--color-background-success);
-    color: var(--color-text-success);
+    --color: #31b14e;
   }
 }

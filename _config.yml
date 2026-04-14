@@ -1,17 +1,20 @@
 # path to your blog's icon
-favicon: /favicon.png
+# 建议找一个蓝色的小猫图标，或者一片云朵
+favicon: /favicon.png 
 
-# hero area content
+# hero area content (首页最显眼的大标题区域)
 hero:
-  title: Welcome to Theme Cupertino
+  title: Kokode.su  # 👈 修改：这里是网站名
   description: |
-    Aliquip voluptate ea velit consequat deserunt officia do aliqua est do consequat aute.
+    ここです。这里是青空的家。
+    记录由依、由纪、葵的日常与折腾。
+    (Yui, Yuki & Aoi's Life Log)
 
-# path to manifest.json
+# path to manifest.json (通常不用动)
 manifest: /manifest.json
 
-# show excerpt on post list
-show_excerpt: false
+# show excerpt on post list (是否显示摘要，True会更丰富一点)
+show_excerpt: false  # 关闭摘要显示
 
 # default light/dark/auto color scheme
 color_scheme: auto
@@ -19,8 +22,8 @@ color_scheme: auto
 # show color theme toggle in footer
 show_color_scheme_toggle: true
 
-# uppercase categories
-uppercase_categories: true
+# uppercase categories (分类大写，看个人喜好)
+uppercase_categories: false # 👈 建议：改成 false，青空的感觉应该是柔和的，不需要全大写
 
 # show post count on categories page
 categories_post_count: true
@@ -28,14 +31,15 @@ categories_post_count: true
 # capitalize tag names on tags page
 capitalize_tags: false
 
-# add hashtag prefix before tags
+# add hashtag prefix before tags (标签前加#号)
 hashtag_prefix_before_tags: true
 
 # show post count on tags page
 tags_post_count: true
 
-# rainbow!
-rainbow_banner: false
+# rainbow! (彩虹条)
+# 青空通常是纯净的蓝色，建议关掉彩虹条，保持 Cupertino 的极简蓝
+rainbow_banner: false 
 rainbow_banner_colors:
   - '#e50000'
   - '#ff8d00'
@@ -48,71 +52,74 @@ rainbow_banner_shown: auto
 # Pride Month by default
 rainbow_banner_month: 6
 
-# table of contents
+# table of contents (文章目录)
 toc: true
 toc_max_depth: 2
 
+# 滚动显现特效 (很优雅，保留)
 scroll_reveal: true
 scroll_reveal_query: .scroll-reveal, .post-list-item, .card, .content p img, .content .block-large img
 scroll_reveal_disappear: false
 
+# 顶部导航栏 (重点！在这里把你的域名串起来)
 nav:
-  title: Blog
+  title: Kokode.su
   items:
-    - name: Archives
+    - name: 首页            # 👈 把 Home 改成 首页
+      url: /
+    - name: 归档            # 👈 Archives
       url: /archives
     - name: <i class="bi bi-search"></i>
       is_icon: true
       url: /search
 
+# 底部页脚 (这里可以放你的分身入口)
 footer:
-  - group_name: Blog
+  - group_name: Aozora
     items:
-      - name: Home
-        url: /
-      - name: Archives
-        url: /archives
-      - name: Tags
-        url: /tags
-      - name: Categories
-        url: /categories
-      - name: Search
-        url: /search
-      - name: RSS
-        url: /atom.xml
-  - group_name: Source Code
+      - name: 由依（Yui）      # 👈 Yui's Diary
+        url: /categories/Yui/
+      - name: 由纪（Yuki）      # 👈 Yui's Diary
+        url: /categories/Yuki/
+      - name: 葵（Aoi）      # 👈 Yui's Diary
+        url: /categories/Aoi/
+  - group_name: 站点          # 👈 Site 改成 站点
     items:
-      - name: GitHub
-        url: https://github.com/MrWillCom/hexo-theme-cupertino
-  - group_name: Related
-    items:
-      - name: Hexo
-        url: https://hexo.io/
-      - name: Sass
-        url: https://sass-lang.com/
-
-# footer extra description
-# footer_extra_description: something will be shown at the bottom of the footer
+      - name: 关于 (Aode.su)  # 👈 把 About 改成 关于
+        url: https://aode.su
+      - name: 我的Github主页  # 👈 My Github
+        url: https://github.com/AozoraYui
+      - name: 我搭建的代理使用说明  # 👈 Tech Notes
+        url: https://proxy.kokode.su
 
 license: CC BY-NC 4.0
 license_link: https://creativecommons.org/licenses/by-nc/4.0
 
-# search
-# based on [Pagefind](https://pagefind.app/)
-search: false
+# search (搜索功能)
+# Cupertino 使用 Pagefind，效果很好，但需要构建步骤。
+# 初学者建议先 false，等部署成功后再折腾搜索。
+search: true 
 
 # icons
 simple_icons: true
-# Theme Cupertino requires Bootstrap Icons to display some icons of the UI, don't turn it off unless you know what exactly you're doing.
 bootstrap_icons: true
 
 view_transition: true
 
 # date display format
-# refer to https://momentjs.com/docs/#/displaying/format/
-date_display_format: MMMM D, YYYY
+date_display_format: YYYY-MM-DD # 👈 建议：改成符合国人习惯的格式
 
-# CDN
+# comments (评论系统)
+comments:
+  enable: true
+  type: giscus
+  giscus:
+    repo: AozoraYui/kokode-blog-comments
+    repoId: R_kgDOR46fZA
+    category: Announcements
+    categoryId: DIC_kwDOR46fZM4C6D31
+
+# CDN (保持默认即可)
 cdn:
   template: https://unpkg.com/:package@:version/:file
   replacements:
@@ -122,7 +129,7 @@ cdn:
 
 hero_exit_while_scrolling:
   enabled: true
-  blur_filter: false
+  blur_filter: true # 👈 建议：改成 true，滚动时标题模糊，更有 iOS 的毛玻璃感
 
 builtin_components:
   card: true
@@ -130,10 +137,8 @@ builtin_components:
   badge: true
   utilities: true
   carousel: true
-  callout: true
 
-# smooth scroll powered by [darkroomengineering/lenis](https://github.com/darkroomengineering/lenis)
-smooth_scroll: false
+smooth_scroll: false # 👈 建议：开启平滑滚动，体验更好
 
 nav_blur_gradient: false
 
@@ -142,6 +147,5 @@ insertions:
     ending: ''
   body:
     ending: ''
-  comments_section: ''
 
-squircle: true
+squircle: true # 👈 iOS 风格的超椭圆圆角，必须开启！

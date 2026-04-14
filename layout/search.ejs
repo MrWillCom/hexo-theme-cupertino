@@ -1,0 +1,184 @@
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<!-- 内联样式：绝对强制覆盖Pagefind的白色搜索框！ -->
+<style>
+  /* 最高优先级样式 - 暗色模式搜索框绝对不能是白色！ */
+  body[data-color-scheme='dark'] #search .pagefind-ui__search-input,
+  body[data-color-scheme='dark'] .pagefind-ui__search-input,
+  #search .pagefind-ui__search-input {
+    background-color: var(--color-background-secondary) !important;
+    background: var(--color-background-secondary) !important;
+    color: var(--color-text-primary) !important;
+    border-color: var(--color-border-primary) !important;
+    border-radius: 12px !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 搜索表单去掉边框 */
+  .pagefind-ui__form {
+    border: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+  }
+
+  /* 搜索框焦点高亮 - 浅色模式 */
+  #search .pagefind-ui__search-input:focus {
+    outline: none !important;
+    border-color: #666666 !important;
+    box-shadow: 0 0 0 4px rgba(102, 102, 102, 0.3) !important;
+  }
+
+  /* 搜索框焦点高亮 - 暗色模式 */
+  body[data-color-scheme='dark'] #search .pagefind-ui__search-input:focus,
+  body[data-color-scheme='dark'] .pagefind-ui__search-input:focus {
+    outline: none !important;
+    border-color: #dddddd !important;
+    box-shadow: 0 0 0 4px rgba(221, 221, 221, 0.4) !important;
+  }
+
+  /* 手动暗色主题 - 用硬编码颜色，最保险！ */
+  body[data-color-scheme='dark'] #search .pagefind-ui__search-input,
+  body[data-color-scheme='dark'] .pagefind-ui__search-input {
+    background-color: #181818 !important;
+    background: #181818 !important;
+    color: #dddddd !important;
+    border-color: #88888844 !important;
+  }
+
+  /* 确保搜索表单内所有元素都垂直居中 */
+  .pagefind-ui__form > * {
+    align-self: center !important;
+  }
+
+  /* 清除按钮 - 只有文字，没有边框 */
+  .pagefind-ui__search-clear {
+    background-color: transparent !important;
+    color: var(--color-text-secondary) !important;
+    border: none !important;
+    font-size: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 12px !important;
+    transition: all 0.2s ease !important;
+  }
+
+  /* 暗色主题下的清除按钮 - 只有文字 */
+  body[data-color-scheme='dark'] .pagefind-ui__search-clear {
+    background-color: transparent !important;
+    color: #999999 !important;
+    border: none !important;
+  }
+
+  /* 搜索结果分割线 - 暗色主题适配 */
+  body[data-color-scheme='dark'] .pagefind-ui__result {
+    border-bottom-color: #88888844 !important;
+  }
+
+  /* 搜索结果元数据标签 - 暗色主题适配 */
+  body[data-color-scheme='dark'] .pagefind-ui__result-meta {
+    color: #808080 !important;
+  }
+
+  body[data-color-scheme='dark'] .pagefind-ui__result-meta-label {
+    color: #999999 !important;
+  }
+
+  body[data-color-scheme='dark'] .pagefind-ui__result-meta-value {
+    color: #808080 !important;
+  }
+
+  /* 搜索结果项 - 浅色模式边框 */
+  .pagefind-ui__result {
+    margin-bottom: 8px !important;
+    border: 2px solid #aaaaaa !important;
+    border-radius: 12px !important;
+    background-color: var(--color-background-secondary) !important;
+  }
+
+  /* 去掉搜索结果区域和提示信息的分割线，保留搜索结果项的边框 */
+  .pagefind-ui__results-area,
+  .pagefind-ui__message {
+    border: none !important;
+    border-bottom: none !important;
+  }
+
+  /* 搜索结果项 - 暗色主题适配 */
+  body[data-color-scheme='dark'] .pagefind-ui__result {
+    border: 2px solid #aaaaaa66 !important;
+    border-radius: 12px !important;
+    background-color: #181818 !important;
+  }
+
+  /* 自动暗色主题 - 跟随系统 */
+  @media (prefers-color-scheme: dark) {
+    body[data-color-scheme='auto'] #search .pagefind-ui__search-input,
+    body[data-color-scheme='auto'] .pagefind-ui__search-input {
+      background-color: #181818 !important;
+      background: #181818 !important;
+      color: #dddddd !important;
+      border-color: #88888844 !important;
+    }
+
+    body[data-color-scheme='auto'] .pagefind-ui__search-clear {
+      background-color: transparent !important;
+      color: #999999 !important;
+      border: none !important;
+    }
+
+    body[data-color-scheme='auto'] .pagefind-ui__result {
+      border-bottom-color: #88888844 !important;
+    }
+
+    body[data-color-scheme='auto'] .pagefind-ui__result-meta {
+      color: #808080 !important;
+    }
+
+    body[data-color-scheme='auto'] .pagefind-ui__result-meta-label {
+      color: #999999 !important;
+    }
+
+    body[data-color-scheme='auto'] .pagefind-ui__result-meta-value {
+      color: #808080 !important;
+    }
+
+    /* 自动暗色主题的搜索框焦点高亮 */
+    body[data-color-scheme='auto'] #search .pagefind-ui__search-input:focus,
+    body[data-color-scheme='auto'] .pagefind-ui__search-input:focus {
+      outline: none !important;
+      border-color: #dddddd !important;
+      box-shadow: 0 0 0 4px rgba(221, 221, 221, 0.4) !important;
+    }
+
+    /* 自动暗色主题的搜索结果项 */
+    body[data-color-scheme='auto'] .pagefind-ui__result {
+      border: 2px solid #aaaaaa66 !important;
+      border-radius: 12px !important;
+      background-color: #181818 !important;
+    }
+  }
+</style>
+
+<div class="container">
+  <h1 style="margin-top: 128px; margin-bottom: 64px; text-align: center; font-size: 48px;"><%= page.title %></h1>
+  <div id="search"></div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      new PagefindUI({
+        element: "#search",
+        showSubResults: true,
+        metaFields: {
+          date: "Date",
+          categories: "Categories"
+        },
+        translations: {
+          placeholder: "搜索文章...",
+        }
+      })
+    })
+  </script>
+</div>

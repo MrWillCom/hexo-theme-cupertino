@@ -5,6 +5,29 @@
   user-select: none;
 }
 
+/* 代码块滚动条样式 */
+.highlight {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar) transparent;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar);
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--color-scrollbar-hover);
+    }
+  }
+}
+
 @mixin light-styles {
   .name {
     color: #22863a;
@@ -88,4 +111,67 @@ body[data-color-scheme='dark'] {
   .highlight {
     @include dark-styles;
   }
+}
+
+/* 代码块复制按钮 */
+.highlight {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  right: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: inherit;
+  z-index: 10;
+}
+
+/* 单行代码块：按钮居中 */
+.copy-button.single-line {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 多行代码块：按钮在右上角 */
+.copy-button:not(.single-line) {
+  top: 8px;
+  transform: none;
+}
+
+.highlight:hover .copy-button {
+  opacity: 1;
+}
+
+.copy-button:hover {
+  background: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+}
+
+.copy-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.copy-button:not(.single-line):active {
+  transform: scale(0.95);
+}
+
+.copy-button.copied {
+  color: #22c55e;
+  border-color: #22c55e;
+}
+
+.copy-button i {
+  font-size: 14px;
 }

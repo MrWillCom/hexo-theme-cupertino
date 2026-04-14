@@ -1,4 +1,4 @@
-@use './components/utilities_partial.scss' as utilities;
+@use 'components/utilities.scss';
 
 body {
   margin-top: 0;
@@ -6,6 +6,13 @@ body {
 
 .post {
   margin-bottom: 64px;
+
+  /* 大屏幕：主内容居中 */
+  @media (min-width: 1200px) {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin ctn {
@@ -13,6 +20,22 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 16px;
+}
+
+/* 大屏幕时适当增加最大宽度 */
+@media (min-width: 1200px) {
+  @mixin ctn {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+  }
+  
+  .post {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @mixin meta($primary, $secondary, $link) {
@@ -32,10 +55,6 @@ body {
         font-size: 13px;
         margin-right: 6px;
         text-decoration: none;
-
-        &:last-child {
-          margin-right: 0;
-        }
       }
     }
 
@@ -105,28 +124,35 @@ body {
   }
 
   /* only `#{$content} > pre`, do not include <pre /> in <figure /> */
-  #{$content} > p,
-  #{$content} > h1,
-  #{$content} > h2,
-  #{$content} > h3,
-  #{$content} > h4,
-  #{$content} > h5,
-  #{$content} > h6,
-  #{$content} > figure,
+  #{$content} p,
+  #{$content} h1,
+  #{$content} h2,
+  #{$content} h3,
+  #{$content} h4,
+  #{$content} h5,
+  #{$content} h6,
+  #{$content} figure,
   #{$content} > pre,
-  #{$content} > .divider,
+  .divider,
   .container,
-  #{$content} > hr,
-  & > aside > .toc,
-  #{$content} > blockquote,
-  #{$content} > table,
-  #{$content} > video,
-  #{$content} > ul,
-  #{$content} > ol,
+  hr,
+  #{$content} blockquote,
+  #{$content} table,
+  #{$content} video,
+  #{$content} ul,
+  #{$content} ol,
   #{$content} > mjx-container,
   #{$content} > .katex,
   .about {
     @include ctn;
+  }
+  
+  /* 为侧边栏 TOC 单独设置样式，避免继承 ctn 样式导致的宽度问题 */
+  .post > aside .toc {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
   }
 
   #{$content} p img,
@@ -305,15 +331,14 @@ body {
       border-radius: 0;
     }
 
-    h2,
-    .details,
-    .tags,
-    & > .extra {
-      margin-top: 0;
-      margin-bottom: 16px;
+    h1 {
+      margin: 0;
+    }
 
-      &:last-child {
-        margin-bottom: 0;
+    .details {
+      margin: 16px 0;
+      p {
+        margin: 6px 0;
       }
     }
 
@@ -432,4 +457,153 @@ body {
       }
     }
   }
+}
+
+// TOC 公共样式 mixin
+@mixin toc-base-styles {
+  .post > aside {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(-100% + 20px));
+    background-color: rgba(180, 180, 180, 0.75);
+    backdrop-filter: var(--filter-blur-toc);
+    border-radius: 0 12px 12px 0;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  // 三点指示器
+  .post > aside::before {
+    content: '';
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 3px;
+    background-color: var(--color-text-primary);
+    border-radius: 50%;
+    box-shadow: 0 -6px 0 0 var(--color-text-primary), 0 6px 0 0 var(--color-text-primary);
+    transition: background-color 0.3s ease;
+  }
+  
+  .post > aside:hover::before,
+  .post > aside.toc-expanded::before {
+    background-color: var(--color-background-accent);
+    box-shadow: 0 -6px 0 0 var(--color-background-accent), 0 6px 0 0 var(--color-background-accent);
+  }
+  
+  // 展开状态
+  .post > aside:hover,
+  .post > aside.toc-expanded {
+    transform: translateY(-50%) translateX(0);
+  }
+  
+  // 滚动预览：只多露出约 15px（约 6%）
+  .post > aside.toc-peek {
+    transform: translateY(-50%) translateX(calc(-100% + 35px));
+  }
+  
+  // TOC 内容
+  .post > aside .toc {
+    margin: 0;
+    padding: 16px;
+    padding-right: 24px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .post > aside .toc p {
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .post > aside .toc a {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    box-sizing: border-box;
+    line-height: 1.4;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .post > aside .toc a:hover,
+  .post > aside .toc a.active {
+    background-color: var(--color-background-accent);
+    color: var(--color-background-accent-contrast);
+  }
+  
+  .post > aside .toc a.active {
+    font-weight: 600;
+  }
+}
+
+// 手机端（≤600px）：贴边浮动 TOC
+@media (max-width: 600px) {
+  .post > aside {
+    width: 240px;
+    max-width: 80vw;
+    max-height: calc(100vh - 120px);
+  }
+  
+  @include toc-base-styles;
+  
+  .post > aside .toc a {
+    font-size: 13px;
+    padding: 10px 12px;
+    margin: 2px 0;
+    border-radius: 8px;
+  }
+}
+
+// 平板端（601px - 1199px）：贴边浮动 TOC
+@media (min-width: 601px) and (max-width: 1199px) {
+  .post {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .post > aside {
+    width: 260px;
+    max-height: calc(100vh - 120px);
+  }
+  
+  @include toc-base-styles;
+  
+  .post > aside .toc a {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 2px 0;
+    border-radius: 8px;
+  }
+}
+
+// PC 端（≥1200px）：贴边浮动 TOC
+@media (min-width: 1200px) {
+  .post > aside {
+    width: 260px;
+    max-height: calc(100vh - 120px);
+  }
+  
+  @include toc-base-styles;
+  
+  .post > aside .toc a {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 2px 0;
+    border-radius: 8px;
+  }
+}
+
+// 深色模式下 TOC 使用更浅的背景色（所有屏幕尺寸）
+body[data-color-scheme="dark"] .post > aside {
+  background-color: rgba(60, 60, 60, 0.75);
 }

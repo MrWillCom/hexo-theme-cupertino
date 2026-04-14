@@ -1,43 +1,5 @@
 # hexo-theme-cupertino
 
-## 2.4.2
-
-### Patch Changes
-
-- 880485e: Fix post list item too high in Safari.
-
-## 2.4.1
-
-### Patch Changes
-
-- a457218: Fix post list being obscured by navigation.
-- cb4a1d3: Fix duplicating styles caused by `@use`.
-
-## 2.4.0
-
-### Minor Changes
-
-- 7b2f97a: Add insertion position `insertions.comments_section` and remove undocumented comment features.
-
-## 2.3.0
-
-### Minor Changes
-
-- 80c1d98: Decrease the radius of navigation blur gradient.
-- 4405bdd: Add component `<htc-callout />`.
-
-### Patch Changes
-
-- d5606ce: Fix missing cover image in Open Graph.
-- 50a21c9: Fix `lenis` and `raf` exposure to global environment.
-
-## 2.2.1
-
-### Patch Changes
-
-- 1a3698b: `<a />`s in post list items now fill their parent element.
-- 1a3698b: The cover image zooms out and becomes darker when post list item is clicked.
-
 ## 2.2.0
 
 ### Minor Changes

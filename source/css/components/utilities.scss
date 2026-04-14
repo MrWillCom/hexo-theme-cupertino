@@ -1,4 +1,4 @@
-@use './utilities_partial.scss' as *;
+@use '../var.scss';
 
 .block-large {
   max-width: 1000px;
@@ -9,15 +9,41 @@
   user-select: none;
 }
 
+$textAligns: left, center, right;
+
 @each $align in $textAligns {
   .text-#{$align} {
     text-align: $align;
   }
 }
 
+$textTransforms: uppercase, lowercase, capitalize;
+
 @each $transform in $textTransforms {
   .text-#{$transform} {
     text-transform: $transform;
+  }
+}
+
+@mixin corner-squircle {
+  [data-corner-squircle='true'] & {
+    @supports (corner-shape: squircle) {
+      corner-shape: squircle;
+      @include var.radii(true);
+
+      * {
+        @include var.radii();
+      }
+    }
+  }
+}
+
+@mixin no-corner-squircle {
+  [data-corner-squircle='true'] & {
+    @supports (corner-shape: initial) {
+      corner-shape: initial;
+      @include var.radii();
+    }
   }
 }
 

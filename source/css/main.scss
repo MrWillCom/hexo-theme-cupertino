@@ -2,14 +2,28 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  margin-top: 56px;
+  padding-top: 56px;
   color: var(--color-text-primary);
   background-color: var(--color-background-primary);
   font-family: var(--font-sans-serif);
   font-feature-settings: var(--font-sans-serif-feature-settings);
-  container-name: document-body;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 a {
