@@ -1,0 +1,17 @@
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<div class="container">
+  <div id="search"></div>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => { 
+      new PagefindUI({ 
+        element: "#search", 
+        showSubResults: true,
+        translations: {
+          placeholder: "搜索文章...",
+        }
+      }) 
+    })
+  </script>
+</div>

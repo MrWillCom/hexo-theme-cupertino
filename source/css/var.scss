@@ -1,0 +1,139 @@
+@mixin radii($squircle: false) {
+  @if ($squircle) {
+    --radius-tiny: 10px;
+    --radius-small: 20px;
+    --radius-medium: 30px;
+    --radius-large: 40px;
+    --radius-full: 999px;
+  } @else {
+    --radius-tiny: 4px;
+    --radius-small: 8px;
+    --radius-medium: 12px;
+    --radius-large: 16px;
+    --radius-full: 999px;
+  }
+}
+
+@mixin global {
+  --filter-blur: blur(50px);
+  --filter-blur-toc: blur(10px);
+
+  @include radii();
+
+  --font-sans-serif: Inter, sans-serif, system-ui;
+  --font-sans-serif-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+
+  @supports (font-variation-settings: normal) {
+    --font-sans-serif: InterVariable, sans-serif, system-ui;
+  }
+}
+
+@mixin light-colors {
+  --color-background-underlying: #e0e0e0;
+  --color-background-primary: #d8d8d8;
+  --color-background-primary-hover: #e0e0e0;
+  --color-background-primary-active: #d0d0d0;
+  --color-background-primary-translucent: #d8d8d833;
+  --color-background-secondary: #e8e8e8;
+  --color-background-secondary-hover: #e0e0e0;
+  --color-background-secondary-translucent: #e8e8e877;
+  --color-background-accent: #99ccff;
+  --color-background-accent-contrast: #ffffff;
+  --color-background-accent-hover: #b3d9ff;
+  --color-background-accent-active: #80bfff;
+
+  --color-text-primary: #333333;
+  --color-text-primary-hover: #000000;
+  --color-text-primary-active: #666666;
+  --color-text-secondary: #666666;
+  --color-text-secondary-hover: #333333;
+  --color-text-tertiary: #808080;
+  --color-text-accent: #0066cc;
+
+  --color-border-primary: #88888822;
+  --color-border-secondary: #d8d8d8;
+  
+  --color-scrollbar: #b8b8b8;
+  --color-scrollbar-hover: #989898;
+}
+
+@mixin dark-colors {
+  --color-background-underlying: #000000;
+  --color-background-primary: #101010;
+  --color-background-primary-hover: #181818;
+  --color-background-primary-active: #141414;
+  --color-background-primary-translucent: #10101033;
+  --color-background-secondary: #181818;
+  --color-background-secondary-hover: #202020;
+  --color-background-secondary-translucent: #00000066;
+  --color-background-accent: #99ccff;
+  --color-background-accent-contrast: #ffffff;
+  --color-background-accent-hover: #b3d9ff;
+  --color-background-accent-active: #80bfff;
+
+  --color-text-primary: #dddddd;
+  --color-text-primary-hover: #ffffff;
+  --color-text-primary-active: #999999;
+  --color-text-secondary: #999999;
+  --color-text-secondary-hover: #cccccc;
+  --color-text-tertiary: #808080;
+  --color-text-accent: #69b9ff;
+
+  --color-border-primary: #88888844;
+  --color-border-secondary: #1a1a1a;
+  
+  --color-scrollbar: #484848;
+  --color-scrollbar-hover: #606060;
+}
+
+:root {
+  @include global;
+}
+
+body[data-color-scheme='auto'],
+body[data-color-scheme='light'] {
+  @include light-colors;
+}
+
+@media (prefers-color-scheme: dark) {
+  body[data-color-scheme='auto'] {
+    @include dark-colors;
+  }
+}
+
+body[data-color-scheme='dark'] {
+  @include dark-colors;
+}
+
+/* 主内容区域居中 */
+#main-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* 确保文章页面的内容也居中 */
+.post {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 64px auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* 确保搜索页面的内容也居中 */
+.search-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* 确保页面内容相对于整个横向空间居中 */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}

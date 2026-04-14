@@ -1,0 +1,160 @@
+<% if (theme.search == true && page.type == 'search') { %>
+  <%- partial('_partial/search') %>
+<% } else if (page.type == 'tags') { %>
+  <%- partial('_partial/tags') %>
+<% } else if (page.type == 'categories') { %>
+  <%- partial('_partial/categories') %>
+<% } else { %>
+<article class="post">
+  <% if (page.cover_image) { %>
+  <div class="cover">
+    <img src="<%= page.cover_image %>" alt="<%= page.cover_image_alt %>" class="cover-img" data-pagefind-meta="image[src], image_alt[alt]" />
+  </div>
+  <% } %>
+  <div class="meta">
+    <% if (page.categories && page.categories.length) { %>
+    <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>" data-pagefind-meta="categories">
+    <% page.categories.forEach((category) => { %>
+      <a href="<%= config.root + category.path %>"><%= category.name %></a>
+    <% }) %>
+    </div>
+    <% } %>
+
+    <% if (!page.no_date) { %>
+    <time class="date" datetime="<%- moment(page.date).format() %>" data-pagefind-meta="date">
+      <%- moment(page.date).format(theme.date_display_format) %>
+    </time>
+    <% } %>
+
+    <h1 class="title" data-pagefind-meta="title"><%= page.title %></h1>
+  </div>
+
+  <div class="content">
+    <%- page.content %>
+  </div>
+
+  <% if (!page.no_about) { %>
+  <div class="about" data-pagefind-ignore>
+    <h2><%= __('about_this_post') %></h2>
+    <div class="details">
+      <p><%- __('this_post_is_written_by_licensed_under', { author: config.author, license: `<a href="${theme.license_link}">${theme.license}</a>` }) %></p>
+    </div>
+    <% if (page.tags && page.tags.length) { %>
+    <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
+      <i class="bi bi-tags icon"></i>
+      <% page.tags.forEach(tag => { %>
+      <a href="<%- url_for(tag.path) %>" class="tag"><% if (theme.hashtag_prefix_before_tags) { %>#<% } %><%- tag.name %></a>
+      <% }) %>
+    </p>
+    <% } %>
+    <% if (page.about_extra_description) { %><div class="extra"><%- page.about_extra_description %></div><% } %>
+  </div>
+  <% } %>
+
+  <div class="container post-prev-next" data-pagefind-ignore>
+    <% if (page.prev) { %>
+    <a href="<%= url_for(page.prev.path) %>" class="next">
+      <div class="text">
+        <p class="label"><%= __('next_post') %></p>
+        <h3 class="title"><%= page.prev.title %></h3>
+      </div>
+    </a>
+    <% } else { %><a class="next"></a><% } %>
+    <% if (page.next) { %>
+    <a href="<%= url_for(page.next.path) %>" class="prev">
+      <div class="text">
+        <p class="label"><%= __('prev_post') %></p>
+        <h3 class="title"><%= page.next.title %></h3>
+      </div>
+    </a>
+    <% } else { %><a class="prev"></a><% } %>
+  </div>
+
+  <% if (!page.no_comments) { %>
+    <% if (config.waline) { %>
+    <div class="container">
+      <div id="waline"></div>
+      <script>
+        new Waline({
+          el: "#waline",
+          <% for (const i in config.waline) { %>
+          <%- i %>: <%- config.waline[i] %>,
+          <% } %>
+        });
+      </script>
+    </div>
+    <% } %>
+    <% if (config.giscus) { %>
+    <%- config.giscus %>
+    <% } %>
+    <% if (theme.comments.enable && theme.comments.type == 'giscus') { %>
+    <div class="container" id="comments">
+      <script>
+        (function() {
+          function getGiscusTheme() {
+            try {
+              var stored = localStorage.getItem('color-scheme') || 'auto';
+            } catch(e) {
+              var stored = 'auto';
+            }
+            var isDark = stored === 'dark' || 
+              (stored === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            return isDark ? 'dark_dimmed' : 'light';
+          }
+          
+          function updateGiscusTheme() {
+            var iframe = document.querySelector('iframe.giscus-frame');
+            if (!iframe) return;
+            var theme = getGiscusTheme();
+            var message = { giscus: { setConfig: { theme: theme } } };
+            iframe.contentWindow.postMessage(message, 'https://giscus.app');
+          }
+          
+          var giscusScript = document.createElement('script');
+          giscusScript.src = 'https://giscus.app/client.js';
+          giscusScript.setAttribute('data-repo', '<%= theme.comments.giscus.repo %>');
+          giscusScript.setAttribute('data-repo-id', '<%= theme.comments.giscus.repoId %>');
+          giscusScript.setAttribute('data-category', '<%= theme.comments.giscus.category %>');
+          giscusScript.setAttribute('data-category-id', '<%= theme.comments.giscus.categoryId %>');
+          giscusScript.setAttribute('data-mapping', 'pathname');
+          giscusScript.setAttribute('data-strict', '0');
+          giscusScript.setAttribute('data-reactions-enabled', '1');
+          giscusScript.setAttribute('data-emit-metadata', '0');
+          giscusScript.setAttribute('data-input-position', 'top');
+          giscusScript.setAttribute('data-theme', getGiscusTheme());
+          giscusScript.setAttribute('data-lang', 'zh-CN');
+          giscusScript.setAttribute('crossorigin', 'anonymous');
+          document.getElementById('comments').appendChild(giscusScript);
+          
+          window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+            setTimeout(updateGiscusTheme, 100);
+          });
+          window.addEventListener('color-scheme-change', function() {
+            setTimeout(updateGiscusTheme, 100);
+          });
+        })();
+      </script>
+    </div>
+    <% } %>
+    <% if (theme.comments.enable && theme.comments.type == 'gitalk') { %>
+    <div class="container">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+      <div id="gitalk"></div>
+      <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+      <script>
+        const gitalk = new Gitalk({
+          clientID: '<%= theme.comments.gitalk.clientID %>',
+          clientSecret: '<%= theme.comments.gitalk.clientSecret %>',
+          repo: '<%= theme.comments.gitalk.repo %>',
+          owner: '<%= theme.comments.gitalk.owner %>',
+          admin: ['<%= theme.comments.gitalk.owner %>'],
+          id: location.pathname,
+          distractionFreeMode: false
+        });
+        gitalk.render('gitalk');
+      </script>
+    </div>
+    <% } %>
+  <% } %>
+</article>
+<% } %>

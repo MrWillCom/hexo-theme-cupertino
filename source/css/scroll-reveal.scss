@@ -1,0 +1,26 @@
+@mixin from {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+@mixin to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal {
+  @include from;
+
+  &.scroll-reveal-show {
+    animation: 0.8s cubic-bezier(0.2, 0.2, 0.2, 1) 0.15s forwards scroll-reveal;
+  }
+}
+
+@keyframes scroll-reveal {
+  from {
+    @include from;
+  }
+  to {
+    @include to;
+  }
+}

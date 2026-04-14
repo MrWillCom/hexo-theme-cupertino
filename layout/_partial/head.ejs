@@ -1,0 +1,112 @@
+<head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archives');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    if (theme.hashtag_prefix_before_tags) {
+      title = '#' + page.tag;
+    } else {
+      title = __('tag') + ': ' + page.tag;
+    }
+  } else if (theme.search == true && page.type == 'search') {
+    title = __('search')
+  } else if (page.type == 'tags') {
+    title = __('tags');
+  } else if (page.type == 'categories') {
+    title = __('categories');
+  }
+  %>
+  <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
+  <% if (theme.favicon){ %>
+    <%- favicon_tag(theme.favicon) %>
+  <% } %>
+  <% if (theme.manifest) { %>
+  <link rel='manifest' href='<%= theme.manifest %>'>
+  <% } %>
+
+  <%- open_graph() %>
+
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <% if (theme.simple_icons) { %>
+  <%- css(getCdnUrl('simple-icons-font', '15', 'font/simple-icons.min.css')) %>
+  <% } %>
+  <% if (theme.bootstrap_icons) { %>
+  <%- css(getCdnUrl('bootstrap-icons', '1', 'font/bootstrap-icons.min.css')) %>
+  <% } %>
+
+  <%- css('css/var') %>
+  <%- css('css/main') %>
+  <%- css('css/typography') %>
+  <%- css('css/code-highlighting') %>
+  <% for (const i in theme.builtin_components) { %>
+  <% if (theme.builtin_components[i]) { %>
+  <%- css('css/components/' + i) %>
+  <% } %>
+  <% } %>
+  <%- css('css/nav') %>
+  <%- css('css/paginator') %>
+  <%- css('css/footer') %>
+  <%- css('css/post-list') %>
+  <% if (theme.rainbow_banner) { %>
+  <%- css('css/rainbow-banner') %>
+  <% } %>
+  <% if (theme.toc) { %>
+  <%- css('css/toc') %>
+  <% } %>
+  <% if (config.giscus) { %>
+    <%- css('css/giscus') %>
+  <% } %>
+  <% if (page.path == "index.html") { %>
+  <%- css('css/index') %>
+  <% } %>
+  <% if (page.path != "index.html") { %>
+  <%- css('css/post') %>
+  <% } %>
+  <% if (is_archive() || is_category() || is_tag()) { %>
+  <%- css('css/archive') %>
+  <% } %>
+  <% if (theme.search == true && page.type == 'search') { %>
+  <%- css('pagefind/pagefind-ui.css') %>
+  <%- js('pagefind/pagefind-ui.js') %>
+  <%- css('css/search') %>
+  <% } %>
+  <% if (page.type == 'tags') { %>
+  <%- css('css/tags') %>
+  <% } %>
+  <% if (page.type == 'categories') { %>
+  <%- css('css/categories') %>
+  <% } %>
+  <% if (theme.scroll_reveal) { %>
+  <%- css('css/scroll-reveal') %>
+  <% } %>
+  <% if (theme.view_transition) { %>
+  <%- css('css/view-transition') %>
+  <% } %>
+  <% if (theme.smooth_scroll) { %>
+  <script src="<%- getCdnUrl('lenis', '1', 'dist/lenis.min.js') %>"></script>
+  <%- css(getCdnUrl('lenis', '1', 'dist/lenis.css')) %>
+  <%- js('js/smooth-scroll.js') %>
+  <% } %>
+
+  <% if (config.waline) { %>
+  <script src="<%- getCdnUrl('@waline/client', '2', 'dist/waline.js') %>"></script>
+  <link rel="stylesheet" href="<%- getCdnUrl('@waline/client', '2', 'dist/waline.css') %>" />
+  <% } %>
+
+  <%- js('js/head.js') %>
+  <%- theme.insertions.head.ending %>
+</head>

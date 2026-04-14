@@ -1,0 +1,342 @@
+/* 搜索页面 - 只定制搜索UI样式 */
+#search {
+  --pagefind-ui-primary: var(--color-background-accent);
+  --pagefind-ui-text: var(--color-text-primary);
+  --pagefind-ui-background: var(--color-background-secondary);
+  --pagefind-ui-border: var(--color-border-primary);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 12px;
+  --pagefind-ui-image-border-radius: var(--radius-small);
+  --pagefind-ui-font: var(--font-sans-serif);
+
+  /* 最高优先级覆盖 - 搜索框样式 */
+  .pagefind-ui__search-input {
+    background-color: var(--color-background-secondary) !important;
+    background: var(--color-background-secondary) !important;
+    color: var(--color-text-primary) !important;
+    border-color: var(--color-border-primary) !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+/* 全局最高优先级覆盖 - 暗色主题下绝对不能是白色！ */
+html body[data-color-scheme='dark'] #search .pagefind-ui__search-input,
+html body[data-color-scheme='dark'] .pagefind-ui__search-input {
+  background-color: #181818 !important;
+  background: #181818 !important;
+  color: #dddddd !important;
+  border-color: #88888844 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html body[data-color-scheme='auto'] #search .pagefind-ui__search-input,
+  html body[data-color-scheme='auto'] .pagefind-ui__search-input {
+    background-color: #181818 !important;
+    background: #181818 !important;
+    color: #dddddd !important;
+    border-color: #88888844 !important;
+  }
+}
+
+/* 手动暗色主题 - 最强优先级 */
+html body[data-color-scheme='dark'] #search .pagefind-ui__search-input,
+html body[data-color-scheme='dark'] .pagefind-ui__search-input {
+  background-color: #181818 !important;
+  background: #181818 !important;
+  color: #dddddd !important;
+  border-color: #88888844 !important;
+}
+
+/* 正常主题的其他样式 */
+#search {
+  .pagefind-ui {
+    font-feature-settings: var(--font-sans-serif-feature-settings);
+    background-color: var(--color-background) !important;
+  }
+
+  /* 确保搜索表单容器也使用主题色 */
+  .pagefind-ui__form {
+    background-color: var(--color-background) !important;
+  }
+
+  /* 搜索表单 - 居中，确保垂直对齐，去掉边框 */
+  .pagefind-ui__form {
+    margin-bottom: 32px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+  }
+
+  /* 确保搜索表单内所有元素都垂直居中 */
+  .pagefind-ui__form > * {
+    align-self: center !important;
+  }
+
+  /* 搜索输入框 */
+  .pagefind-ui__search-input {
+    padding: 14px 16px !important;
+    font-size: 16px !important;
+    border-radius: 12px !important;
+    border: 1px solid var(--color-border-primary) !important;
+    width: 100% !important;
+    flex: 1 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: border-color 0.2s, box-shadow 0.2s !important;
+
+    &:focus {
+      outline: none !important;
+      border-color: #666666 !important;
+      box-shadow: 0 0 0 4px rgba(102, 102, 102, 0.3) !important;
+    }
+
+    &::placeholder {
+      color: var(--color-text-tertiary) !important;
+    }
+  }
+
+  /* 搜索按钮 */
+  .pagefind-ui__search-submit {
+    padding: 14px 20px !important;
+    font-size: 16px !important;
+    border-radius: 0 var(--radius-medium) var(--radius-medium) 0 !important;
+    border: 1px solid var(--color-background-accent) !important;
+    background-color: var(--color-background-accent) !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+
+    &:hover {
+      background-color: var(--color-background-accent-dark, #0097a7) !important;
+      border-color: var(--color-background-accent-dark, #0097a7) !important;
+    }
+  }
+
+  /* 清除按钮 - 只有文字，没有边框 */
+  .pagefind-ui__search-clear {
+    background-color: transparent !important;
+    color: var(--color-text-secondary) !important;
+    border: none !important;
+    font-size: 12px !important;
+    margin-left: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+
+    &:hover {
+      color: var(--color-text-primary) !important;
+    }
+  }
+
+  /* 搜索提示信息 - 居中，去掉分割线 */
+  .pagefind-ui__message {
+    margin-bottom: 32px !important;
+    color: var(--color-text-secondary) !important;
+    font-size: 14px !important;
+    text-align: center !important;
+    border: none !important;
+    border-bottom: none !important;
+  }
+
+  /* 去掉搜索结果区域的所有分割线 */
+  .pagefind-ui__results-area {
+    border: none !important;
+  }
+
+  /* 搜索结果区域 */
+  .pagefind-ui__results-area {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* 搜索结果项 */
+  .pagefind-ui__result {
+    margin-bottom: 8px !important;
+    padding: 20px !important;
+    border: 2px solid #aaaaaa !important;
+    border-radius: 12px !important;
+    background-color: var(--color-background-secondary) !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    &:hover {
+      box-shadow: none !important;
+      transform: none !important;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+      border-bottom: none !important;
+    }
+  }
+
+  /* 覆盖 Pagefind 的 result-inner 样式 */
+  .pagefind-ui__result-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* 搜索结果标题 */
+  .pagefind-ui__result-link {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: var(--color-text-primary) !important;
+    text-decoration: none !important;
+    margin-bottom: 16px !important;
+    display: block !important;
+    line-height: 1.4 !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto 16px auto !important;
+
+    &:hover {
+      color: var(--color-text-accent) !important;
+      text-decoration: underline !important;
+    }
+  }
+
+  /* 搜索结果摘要 */
+  .pagefind-ui__result-excerpt {
+    margin-top: 4px !important;
+    line-height: 1.8 !important;
+    color: var(--color-text-secondary) !important;
+    font-size: 15px !important;
+    text-align: center !important;
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 搜索结果元数据 */
+  .pagefind-ui__result-meta {
+    margin-top: 12px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    font-size: 12px !important;
+    color: var(--color-text-tertiary) !important;
+    width: 100% !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 搜索结果元数据项 */
+  .pagefind-ui__result-meta-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+  }
+
+  /* 搜索结果元数据标签 */
+  .pagefind-ui__result-meta-label {
+    font-weight: 500 !important;
+    color: var(--color-text-secondary) !important;
+  }
+
+  /* 搜索结果元数据值 */
+  .pagefind-ui__result-meta-value {
+    color: var(--color-text-tertiary) !important;
+  }
+
+  /* 搜索结果标记高亮 */
+  .pagefind-ui__mark {
+    background-color: rgba(0, 188, 212, 0.35) !important;
+    color: inherit !important;
+    padding: 1px 3px !important;
+    border-radius: 2px !important;
+    font-weight: 600 !important;
+  }
+
+  /* 子结果区域 */
+  .pagefind-ui__result-nested {
+    margin-top: 16px !important;
+    padding: 12px 16px !important;
+    border-left: 3px solid #00bcd4 !important;
+    border-radius: 0 !important;
+    background-color: var(--color-background-secondary) !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* 子结果标题 */
+  .pagefind-ui__result-nested .pagefind-ui__result-link {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin-bottom: 6px !important;
+    color: var(--color-text-secondary) !important;
+    text-align: center !important;
+    width: 100% !important;
+
+    &:hover {
+      color: var(--color-text-accent) !important;
+    }
+  }
+
+  /* 子结果摘要 */
+  .pagefind-ui__result-nested .pagefind-ui__result-excerpt {
+    font-size: 13px !important;
+    color: var(--color-text-tertiary) !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* 加载和错误状态 */
+  .pagefind-ui__loading,
+  .pagefind-ui__message-empty {
+    color: var(--color-text-secondary) !important;
+    text-align: center !important;
+    padding: 60px 20px !important;
+    font-size: 15px !important;
+  }
+}
+
+/* 暗色主题下的搜索框焦点高亮 - 灰白色 */
+body[data-color-scheme='dark'] #search .pagefind-ui__search-input:focus,
+body[data-color-scheme='dark'] .pagefind-ui__search-input:focus {
+  outline: none !important;
+  border-color: #dddddd !important;
+  box-shadow: 0 0 0 4px rgba(221, 221, 221, 0.4) !important;
+}
+
+/* 自动暗色主题的搜索框焦点高亮 - 灰白色 */
+@media (prefers-color-scheme: dark) {
+  body[data-color-scheme='auto'] #search .pagefind-ui__search-input:focus,
+  body[data-color-scheme='auto'] .pagefind-ui__search-input:focus {
+    outline: none !important;
+    border-color: #dddddd !important;
+    box-shadow: 0 0 0 4px rgba(221, 221, 221, 0.4) !important;
+  }
+}

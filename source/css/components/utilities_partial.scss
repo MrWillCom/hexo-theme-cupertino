@@ -1,0 +1,31 @@
+@use '../var_partial.scss' as var;
+
+$textAligns: left, center, right;
+
+$textTransforms: uppercase, lowercase, capitalize;
+
+@mixin corner-squircle {
+  @container document-body style(--config-corner-squircle: true) {
+    @supports (corner-shape: squircle) {
+      & {
+        corner-shape: squircle;
+        @include var.radii(true);
+
+        * {
+          @include var.radii();
+        }
+      }
+    }
+  }
+}
+
+@mixin no-corner-squircle {
+  @container document-body style(--config-corner-squircle: true) {
+    @supports (corner-shape: initial) {
+      & {
+        corner-shape: initial;
+        @include var.radii();
+      }
+    }
+  }
+}

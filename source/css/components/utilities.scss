@@ -1,0 +1,56 @@
+@use '../var.scss';
+
+.block-large {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.no-select {
+  user-select: none;
+}
+
+$textAligns: left, center, right;
+
+@each $align in $textAligns {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+
+$textTransforms: uppercase, lowercase, capitalize;
+
+@each $transform in $textTransforms {
+  .text-#{$transform} {
+    text-transform: $transform;
+  }
+}
+
+@mixin corner-squircle {
+  [data-corner-squircle='true'] & {
+    @supports (corner-shape: squircle) {
+      corner-shape: squircle;
+      @include var.radii(true);
+
+      * {
+        @include var.radii();
+      }
+    }
+  }
+}
+
+@mixin no-corner-squircle {
+  [data-corner-squircle='true'] & {
+    @supports (corner-shape: initial) {
+      corner-shape: initial;
+      @include var.radii();
+    }
+  }
+}
+
+.corner-squircle {
+  @include corner-squircle;
+}
+
+.no-corner-squircle {
+  @include no-corner-squircle;
+}
