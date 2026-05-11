@@ -7,15 +7,18 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
-          cache: 'pnpm'
+          node-version: 24
+      - name: Install corepack
+        run: npm install -g corepack
+      - name: Install package manager
+        run: corepack install
 
       - name: Install dependencies
-        run: pnpm i
+        run: corepack pnpm install
 
-      - run: pnpx pkg-pr-new publish
+      - run: corepack pnpm dlx pkg-pr-new publish
