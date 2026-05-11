@@ -123,7 +123,6 @@ body {
   #{$content} > video,
   #{$content} > ul,
   #{$content} > ol,
-  #{$content} > mjx-container,
   #{$content} > .katex,
   .about {
     @include ctn;
@@ -273,7 +272,12 @@ body {
   }
 
   /* for [hexo-math](https://github.com/hexojs/hexo-math): */
-  #{$content} > mjx-container,
+  #{$content} > p:has(mjx-container) {
+    max-width: none;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    text-align: center;
+  }
   #{$content} > .katex {
     display: block;
     text-align: center;
