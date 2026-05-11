@@ -1,5 +1,12 @@
 # hexo-theme-cupertino
 
+## 2.4.3
+
+### Patch Changes
+
+- edc9408: Fix gutter of code block scrollable.
+- 8f0c8b3: Fix math formula making container oversized.
+
 ## 2.4.2
 
 ### Patch Changes
