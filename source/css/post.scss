@@ -222,7 +222,8 @@ body {
     background-color: var(--color-background-secondary);
     border-radius: var(--radius-medium);
     @include utilities.corner-squircle;
-    max-width: calc(800px - 16px * 2);
+    padding: 0;
+    max-width: 800px;
 
     @media (max-width: 800px) {
       border-radius: 0;
@@ -235,7 +236,10 @@ body {
     }
 
     .gutter {
-      padding-right: 16px;
+      padding-left: 16px;
+      position: sticky;
+      left: 0;
+      text-align: right;
     }
   }
 
