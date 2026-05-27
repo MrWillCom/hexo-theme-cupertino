@@ -272,7 +272,7 @@ body {
   }
 
   /* for [hexo-math](https://github.com/hexojs/hexo-math): */
-  #{$content} > p:has(mjx-container[display="true"]) {
+  #{$content} > p:has(mjx-container[display='true']) {
     max-width: none;
     overflow-x: auto;
     overscroll-behavior-x: contain;
