@@ -1,5 +1,11 @@
 # hexo-theme-cupertino
 
+## 2.4.4
+
+### Patch Changes
+
+- 6b4e54a: Fix inline formulas causing their paragraphes centered.
+
 ## 2.4.3
 
 ### Patch Changes
