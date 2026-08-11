@@ -1,5 +1,11 @@
 # hexo-theme-cupertino
 
+## 2.5.0
+
+### Minor Changes
+
+- 8fa46aa: Turn linear gradient masks in cover images to the easing ones.
+
 ## 2.4.4
 
 ### Patch Changes
