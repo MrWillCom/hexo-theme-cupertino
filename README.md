@@ -37,6 +37,9 @@ This is a modern and elegant theme for your Hexo blog, which is beautifully desi
 
 With Theme Cupertino, your blogging experience will be hugely elevated, and your ideas can be shared in an effortless way.
 
+> [!TIP]
+> **Looking for an Astro-based blog template?** Check out [Astro Blog Cupertino](https://github.com/VacuolePaoo/astro-blog-cupertino), an independent project maintained by [@VacuolePaoo](https://github.com/VacuolePaoo). (Not affiliated with or endorsed by this project.)
+
 ## Installation
 
 Before getting started, make sure you have already set up a [Hexo](https://hexo.io/) blog.
